@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair
+        – Minimalist</title>
+        <link rel="stylesheet" href="./main.css">
+        <link href="//db.onlinewebfonts.com/c/74c3c29282b604a9eed88ac6ede61463?family=Apercu+Pro" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div id="Aoutercontainer">
+        <div id="Adetails">
+            <div id="Adetailsinnerdiv">
+                <div id="AdetailsinnerdivName">
+                    <h3>All Products</h3>
+                </div>
+                <div id="AdetailsinnerdivDetail">
+                    <p>Shop our efficacious, transparent, and research-backed range of skincare & haircare products. Each product is formulated to target your specific skin or hair concerns.</p>
+                </div>
+            </div>
+        </div>
+        <div id="Acontentcontainer">
+
+            <div id="Asortfilter">
+                <div id="filter">
+    
+                </div>
+                <div id="sort">
+    
+                </div>
+            </div>
+            <div id="Aitems">
+    
+            </div>
+
+        </div>
+    </div>
+</body>
+<!-- <script src="./main.js"></script> -->
+<script type="module">
+// let objectArray = [
+//     {
+//     image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Hairgrowthserum1200-2-min_540x.png?v=1646492070",
+//     title:"Hair Growth Actives 18%",
+//     stars:"★ ★ ★ ☆ ☆",
+//     review:"180 reviews",
+//     originalPrice: 799,
+//     offerPrice: 795
+//     }
+//     ]
+
+let objectArray = [
+    // 1
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/AlphaArbutin2_1200-1-min_540x.png?v=1646543550",
+title:"Alpha Arbutin 02%",
+stars:"★ ★ ★ ★ ☆",
+review:"1089 reviews",
+originalPrice: 549,
+offerPrice: 539
+},
+// 2
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Niacinamide10_1200-1-min_540x.png?v=1646396068",
+title:"Niacinamide 10%",
+stars:"★ ★ ★ ★ ☆",
+review:"1296 reviews",
+originalPrice: 599,
+offerPrice: 595
+},
+// 3
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/VitaminC10_1200-1-min_540x.png?v=1646543848",
+title:"Vitamin C 10%",
+stars:"★ ★ ★ ★ ☆",
+review:"1008 reviews",
+originalPrice: 699,
+offerPrice: 695
+},
+// 4
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SalicylicAcid2_1200-1-min_540x.png?v=1646458899",
+title:"Salicylic Acid 02%",
+stars:"★ ★ ★ ★ ☆",
+review:"973 reviews",
+originalPrice: 549,
+offerPrice: 545
+},
+// 5
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SepicalmMoisturizer1200-2_540x.png?v=1646471109",
+title:"Sepicalm 03% Moisturizer",
+stars:"★ ★ ★ ★ ☆",
+review:"704 reviews",
+originalPrice: 349,
+offerPrice: 345
+},
+// 6
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/AHAPHABHA32_1200-1-min_540x.png?v=1646480856",
+title:"AHA PHA BHA 32%",
+stars:"★ ★ ★ ★ ☆",
+review:"622 reviews",
+originalPrice: 699,
+offerPrice: 689
+},
+// 7
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/HAPGA2_1200-1-min_540x.png?v=1646395962",
+title:"Hyaluronic + PGA 02%",
+stars:"★ ★ ★ ★ ☆", //star,
+review:"524 reviews",
+originalPrice: 599,
+offerPrice: 595
+},
+// 8
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/GranactiveRetinoid2_1200-1-min_540x.png?v=1646480830",
+title:"Granactive Retinoid 02%",
+stars:"★ ★ ★ ★ ☆" ,
+review:"353 reviews",
+originalPrice: 699,
+offerPrice: 695
+},
+// 9
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/PHAToner1200-2-min_540x.png?v=1646482828",
+title:"Polyhydroxy Acid (PHA) 03% Toner",
+stars:"★ ★ ★ ★ ☆" ,
+review:"349 reviews",
+originalPrice: 399,
+offerPrice: 395
+},
+// 10
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Niacinamide5_1200-1-min_540x.png?v=1646458955",
+title:"Niacinamide 05%",
+stars:"★ ★ ★ ★ ☆", //star
+review:"510 reviews",
+originalPrice: 599,
+offerPrice: 595
+},
+// 11
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SalicylicLHACleanser1200-2-min_540x.png?v=1646485312",
+title:"Salicylic + LHA 02% Face Cleanser",
+stars:"★ ★ ★ ★ ☆" ,
+review:"366 reviews",
+originalPrice: 299,
+offerPrice: 295
+},
+// 12
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Tranexamicserum1200-2-min_1_540x.png?v=1646489297",
+title:"Tranexamic 03%",
+stars:"★ ★ ★ ★ ☆" ,
+review:"397 reviews",
+originalPrice: 649,
+offerPrice: 645
+},
+// 13//
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SPF501200-2-min_540x.png?v=1646515554",
+title:"SPF 50 Sunscreen",
+stars:"★ ★ ★ ★ ☆" ,
+review:"217 reviews",
+originalPrice: 399,
+offerPrice: 389
+},
+// 14//
+
+
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Hairgrowthserum1200-2-min_540x.png?v=1646492070",
+title:"Hair Growth Actives 18%",
+stars:"★ ★ ★ ☆ ☆",
+review:"1089 reviews",
+originalPrice: 549,
+offerPrice: 539
+},
+
+
+
+
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/aha-bha-10-1200--1min-1645781661616_540x.png?v=1647004182",
+title:"AHA BHA 10%",
+stars:"★ ★ ★ ★ ☆" ,
+review:"165 reviews",
+originalPrice: 599,
+offerPrice: 589
+},
+// 15//
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Retinolserum1200-2-min_540x.png?v=1646504012",
+title:"Retinol 0.3%",
+stars:"★ ★ ★ ★ ☆" ,
+review:"157 reviews",
+originalPrice: 599,
+offerPrice: 589
+},
+// 16//
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Squalane1200-2-min_540x.png?v=1646506336",
+title:"Squalane 100%",
+stars:"★ ★ ★ ★ ☆" ,
+review:"246 reviews",
+originalPrice: 699,
+offerPrice: 695
+},
+// 17//
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/MultipeptideSerum1200-2-min_540x.png?v=1646591527",
+title:"Multi-Peptides 10%",
+stars:"★ ★ ★ ★ ☆" ,
+review:"139 reviews",
+originalPrice: 699,
+offerPrice: 695
+},
+// 18//
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/rosehipoil1100-min_540x.png?v=1646248003",
+title:"Rosehip Oil + VC-IP 3%",
+stars:"★ ★ ★ ★ ☆" , 
+review:"75 reviews",
+originalPrice: 649,
+offerPrice: 645
+},
+// 19//
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SPF601200-2-min_540x.png?v=1646571969",
+title:"SPF 60 Sunscreen",
+stars:"★ ★ ★ ★ ☆" ,
+review:"64 reviews",
+originalPrice: 599,
+offerPrice: 589
+},
+// 20//
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Azeclair1100-min_540x.png?v=1646247882",
+title:"Azeclair 17% + Propolis",
+stars:"★ ★ ★ ★ ☆" ,
+review:"85 reviews",
+originalPrice: 699,
+offerPrice: 689
+},
+// 21//
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/B5Moisturizer1200-2-min_540x.png?v=1646580727",
+title:"Vitamin B5 10% Moisturizer",
+stars:"★ ★ ★ ★ ☆" ,
+review:"40 reviews",
+originalPrice: 349,
+offerPrice: 329
+},
+// 22//
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/MarulaMoisturizer1200-2-min_540x.png?v=1646585372",
+title:"Marula Oil 05% Moisturizer",
+stars:"★ ★ ★ ★ ☆" ,
+review:"21 reviews",
+originalPrice: 299,
+offerPrice: 279
+},
+// 23//
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/ceramide-madecassoside--3min-1646379049769_540x.webp?v=1647430525",
+title:"Ceramides 0.3% + Madecassoside",
+stars:"★ ★ ★ ★ ☆" ,
+review:"13 reviews",
+originalPrice: 599,
+offerPrice: 589
+},
+// 24//
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/ceramidebisabolol1100-min_540x.png?v=1646247885",
+title:"Ceramides 0.3% + Bisabolol",
+stars:"★ ★ ★ ★ ☆" ,
+review:"14 reviews",
+originalPrice: 599,
+offerPrice: 589
+},
+
+{
+image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/GlycolicTranexamic1200-2-min_540x.png?v=1648205949",
+title:"Glycolic + Tranexamic 11% Body Exfoliator",
+stars:"★ ☆ ☆  ☆ ☆",
+review:"3 reviews",
+originalPrice: 699,
+offerPrice: 689
+}
+
+
+
+
+]
+
+
+    import displaydata from "./main.js"
+    let parent = document.getElementById("Aitems")  
+    displaydata(objectArray, parent)  
+
+
+
+
+</script>
+</html>
