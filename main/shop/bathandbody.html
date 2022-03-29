@@ -1,63 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hair
         – Minimalist</title>
-        <link rel="stylesheet" href="./main.css">
-        <link href="//db.onlinewebfonts.com/c/74c3c29282b604a9eed88ac6ede61463?family=Apercu+Pro" rel="stylesheet" type="text/css"/>
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <link href="//db.onlinewebfonts.com/c/74c3c29282b604a9eed88ac6ede61463?family=Apercu+Pro" rel="stylesheet"
+        type="text/css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
+
 <body>
     <div id="Aoutercontainer">
-        <div id="Adetails">
-            <div id="Adetailsinnerdiv">
-                <div id="AdetailsinnerdivName">
-                    <h3>Bath & Body</h3>
+        <div id="Aall">
+
+            <div id="Adetails">
+                <div id="Adetailsinnerdiv">
+                    <div id="AdetailsinnerdivName">
+                        <h3>Bath & Body</h3>
+                    </div>
+                    <div id="AdetailsinnerdivDetail">
+                        <p>Treat your body from head to toe with our range of science-backed & efficacious range of body
+                            care products. Protect every last inch of your skin</p>
+                    </div>
                 </div>
-                <div id="AdetailsinnerdivDetail">
-                    <p>Treat your body from head to toe with our range of science-backed &  efficacious range of body care products. Protect every last inch of your skin</p>
+            </div>
+            <div id="Acontentcontainer">
+
+                <div id="Asortfilter">
+                    <div id="filter">
+                        <span>Filter</span>
+                        <span class="fas fa-caret-down"></span>
+                    </div>
+                    <div id="sort">
+                        Sort<span class="fas fa-caret-down"></span>
+                    </div>
                 </div>
+                <hr>
+                <div id="Aitems">
+
+                </div>
+
             </div>
         </div>
-        <div id="Acontentcontainer">
-
-            <div id="Asortfilter">
-                <div id="filter">
-                    <span>Filter</span>
-                    <span class="fas fa-caret-down"></span>
+        <div id="Asortconatiner">
+            <div id="Asortinnercontainer1">
+                <div id="Asortclose">
+                    <h3>Sort</h3>
+                    <span id="Close">X</span>
                 </div>
-                <div id="sort">
-                    Sort<span class="fas fa-caret-down"></span>
+                <div id="Asortcategory">
+                    <ul>
+                        <li>
+                            <input type="radio" id="Featured">
+                            <label class="label" for="Featured">Featured</label>
+
+                            <input type="radio" id="Bestselling">
+                            <label class="label" for="Bestselling">Best selling</label>
+
+                            <input type="radio" id="Alphabeticallya_z">
+                            <label class="label" for="Alphabeticallya_z">Alphabetically, A-Z</label>
+
+                            <input type="radio" id="Alphabeticallyz_a">
+                            <label class="label" for="Alphabeticallyz_a">Alphabetically, Z-A</label>
+
+                            <input type="radio" id="Pricel2h">
+                            <label class="label" for="Pricel2h">Price,low to high</label>
+
+                            <input type="radio" id="Priceh2l">
+                            <label class="label" for="Priceh2l">Price,high to low</label>
+
+                            <input type="radio" id="Dateo2n">
+                            <label class="label" for="Dateo2n">Date,old to new</label>
+
+                            <input type="radio" id="Daten2o">
+                            <label class="label" for="Daten2o">Date,new to old</label>
+                        </li>
+                    </ul>
+                </div>
+                <div id="Asortapply">
+                    <button id="Aapply">Apply</button>
                 </div>
             </div>
-            <hr>
-            <div id="Aitems">
-    
-            </div>
-
+            <!-- <div id="Asortinnercontainer2"></div> -->
         </div>
+        <!---------------- filterdata ---------------------->
+
+        <div>
+
+
+            <div id="Afiltercontainer">
+                <div id="filterclose">
+                    <h3 id="filtername">Filter</h3>
+                    <h3 id="Aclosesign">X</h3>
+                </div>
+                <div>
+                    <p>Category</p>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdbody">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIdbody">
+                            <div class="Acheckbox__box"></div>
+                            Body
+                        </label>
+                        <span>1</span>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Step</p>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdtreat">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIdtreat">
+                            <div class="Acheckbox__box"></div>
+                            Treat
+                        </label>
+                        <span>1</span>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Type of Product</p>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdbodyx">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIdbodyx">
+                            <div class="Acheckbox__box"></div>
+                            Body Exfolicator
+                        </label>
+                        <span>1</span>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Concern</p>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIduneven">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIduneven">
+                            <div class="Acheckbox__box"></div>
+                            Uneven/Bumpy Texture
+                        </label>
+                        <span>1</span>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p></p>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIduneven">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIduneven">
+                            <div class="Acheckbox__box"></div>
+                            Body
+                        </label>
+                        <span>1</span>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Ingredient</p>
+                    <di>
+                        <div class="AinnerDiv">
+                            <label class="Acheckbox" for="AmyCheckboxIduningredient">
+                                <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                    id="AmyCheckboxIduningredient">
+                                <div class="Acheckbox__box"></div>
+                                AHA
+                            </label>
+                            <span>1</span>
+                        </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Avaiabilty</p>
+                    <div class="AinnerDiv">
+                        <div>
+                            <label class="Acheckbox" for="AmyCheckboxIdunavailability">
+                                <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                    id="AmyCheckboxIdunavailability">
+                                <div class="Acheckbox__box"></div>
+                                Instock
+                            </label>
+                        </div>
+                        <span>1</span>
+
+                    </div>
+                </div>
+                <div>
+                    <div class="AinnerDiv">
+                        <div>
+                            <label class="Acheckbox" for="AmyCheckboxIdunavailability1">
+                                <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                    id="AmyCheckboxIdunavailability1">
+                                <div class="Acheckbox__box"></div>
+                                Out of stock
+                            </label>
+                        </div>
+                        <span>1</span>
+                    </div>
+                </div>
+
+            </div>
+            <div id="Afilterapply">
+                <button id="Aapply">Apply</button>
+            </div>
+        </div>
+
+
+
+
+
+
     </div>
 </body>
 
 <script type="module">
-    
-let objectArray = [
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/GlycolicTranexamic1200-2-min_540x.png?v=1648205949",
-title:"Glycolic + Tranexamic 11% Body Exfoliator",
-stars:"★ ☆ ☆  ☆ ☆",
-review:"3 reviews",
-originalPrice: 699,
-offerPrice: 689
-}
-]
 
-import displaydata from "./main.js"
-    let parent = document.getElementById("Aitems")  
-    displaydata(objectArray, parent)  
+    let objectArray = [
+        {
+            image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/GlycolicTranexamic1200-2-min_540x.png?v=1648205949",
+            title: "Glycolic + Tranexamic 11% Body Exfoliator",
+            stars: "★ ☆ ☆  ☆ ☆",
+            review: "3 reviews",
+            originalPrice: 699,
+            offerPrice: 689
+        }
+    ]
+
+    import displaydata from "./main.js"
+    let parent = document.getElementById("Aitems")
+    displaydata(objectArray, parent)
+
+
+    let Sort = document.getElementById("sort")
+    Sort.addEventListener("click", () => {
+        document.getElementById("Asortconatiner").style.display = "block"
+        document.querySelector("#Aall").style.opacity = .3
+        // document.querySelector("body").style.backgroundColor = "rgba(0, 0, 0, 0.267)"
+        document.querySelector("body").style.position = "fixed"
+        document.getElementById("Asortconatiner").style.opacity = 1
+    })
+
+    let Close = document.getElementById("Close")
+    Close.addEventListener("click", () => {
+        document.getElementById("Asortconatiner").style.display = "none"
+        // document.querySelector("body").style.backgroundColor = "white"
+        document.querySelector("#Aall").style.opacity = 1
+        document.querySelector("body").style.position = "relative"
+    })
+
+    let Filter = document.getElementById("filter")
+    Filter.addEventListener("click", () => {
+        document.getElementById("Afiltercontainer").style.display = "block"
+        document.getElementById("Afilterapply").style.display = "flex"
+        document.querySelector("#Aall").style.opacity = .3
+        document.querySelector("body").style.position = "fixed"
+
+    })
+
+    let FClose = document.getElementById("Aclosesign")
+    FClose.addEventListener("click", () => {
+        document.getElementById("Afiltercontainer").style.display = "none"
+        document.getElementById("Afilterapply").style.display = "none"
+        // document.querySelector("body").style.backgroundColor = "white"
+        document.querySelector("#Aall").style.opacity = 1
+        document.querySelector("body").style.position = "relative"
+    })
+
+
+
+
 
 
 </script>
