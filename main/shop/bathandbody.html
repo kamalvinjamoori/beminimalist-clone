@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hair
+            – Minimalist</title>
+        <link rel="stylesheet" href="./main.css">
+        <link href="//db.onlinewebfonts.com/c/74c3c29282b604a9eed88ac6ede61463?family=Apercu+Pro" rel="stylesheet"
+            type="text/css" />
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+
+    <body>
+        <div id="Aoutercontainer">
+            <div id="Adetails">
+                <div id="Adetailsinnerdiv">
+                    <div id="AdetailsinnerdivName">
+                        <h3>Bath & Body</h3>
+                    </div>
+                    <div id="AdetailsinnerdivDetail">
+                        <p>Treat your body from head to toe with our range of science-backed & efficacious range of body
+                            care products. Protect every last inch of your skin</p>
+                    </div>
+                </div>
+            </div>
+            <div id="Acontentcontainer">
+
+                <div id="Asortfilter">
+                    <div id="filter">
+                        <span>Filter</span>
+                        <span class="fas fa-caret-down"></span>
+                    </div>
+                    <div id="sort">
+                        Sort<span class="fas fa-caret-down"></span>
+                    </div>
+                </div>
+                <hr>
+                <div id="Aitems">
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+
+    <script type="module">
+
+        let objectArray = [
+            {
+                image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/GlycolicTranexamic1200-2-min_540x.png?v=1648205949",
+                title: "Glycolic + Tranexamic 11% Body Exfoliator",
+                stars: "★ ☆ ☆  ☆ ☆",
+                review: "3 reviews",
+                originalPrice: 699,
+                offerPrice: 689
+            }
+        ]
+
+        import displaydata from "./main.js"
+        let parent = document.getElementById("Aitems")
+        displaydata(objectArray, parent)
+
+
+    </script>
+
+</html>
+
+
+<!-- https://cdn.shopify.com/s/files/1/0410/9608/5665/products/GlycolicTranexamic1200-1-min_300x300.png?v=1648196548 -->
