@@ -1,0 +1,112 @@
+{
+    "product": [
+        {
+            "name": "Alpha Arbutin 02%",
+            "url": "https://beminimalist.co/products/alpha-arbutin-2",
+            "price": "₹ 539",
+            "striked": "₹ 549",
+            "reviews": "1089 reviews",
+            "image": "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/AlphaArbutin2_1200-1-min_300x300.png?v=1646543550",
+            "image_url": "https://beminimalist.co/products/alpha-arbutin-2"
+        },
+        {
+            "name": "Niacinamide 10%",
+            "url": "https://beminimalist.co/products/niacinamide-10",
+            "price": "₹ 595",
+            "striked": "₹ 599",
+            "reviews": "1296 reviews",
+            "image": "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Niacinamide10_1200-1-min_300x300.png?v=1646396068",
+            "image_url": "https://beminimalist.co/products/niacinamide-10"
+        },
+        {
+            "name": "Vitamin C 10%",
+            "url": "https://beminimalist.co/products/vitamin-c-ethyl-ascorbic-acid-10-acetyl-glucosamine-1",
+            "price": "₹ 695",
+            "striked": "₹ 699",
+            "reviews": "1008 reviews",
+            "image": "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/VitaminC10_1200-1-min_300x300.png?v=1646543848",
+            "image_url": "https://beminimalist.co/products/vitamin-c-ethyl-ascorbic-acid-10-acetyl-glucosamine-1"
+        },
+        {
+            "name": "Salicylic Acid 02%",
+            "url": "https://beminimalist.co/products/salicylic-acid-2",
+            "price": "₹ 545",
+            "striked": "₹ 549",
+            "reviews": "973 reviews",
+            "image": "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SalicylicAcid2_1200-1-min_300x300.png?v=1646458899",
+            "image_url": "https://beminimalist.co/products/salicylic-acid-2"
+        },
+        {
+            "name": "Sepicalm 03% Moisturizer",
+            "url": "https://beminimalist.co/products/sepicalm-3-oat-moisturiser",
+            "price": "₹ 345",
+            "striked": "₹ 349",
+            "reviews": "704 reviews",
+            "image": "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SepicalmMoisturizer1200-2_300x300.png?v=1646471109",
+            "image_url": "https://beminimalist.co/products/sepicalm-3-oat-moisturiser"
+        },
+        {
+            "name": "AHA PHA BHA 32%",
+            "url": "https://beminimalist.co/products/aha-25-pha-5-bha-2",
+            "price": "₹ 689",
+            "striked": "₹ 699",
+            "reviews": "622 reviews",
+            "image": "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/AHAPHABHA32_1200-1-min_300x300.png?v=1646480856",
+            "image_url": "https://beminimalist.co/products/aha-25-pha-5-bha-2"
+        },
+        {
+            "name": "Hyaluronic + PGA 02%",
+            "url": "https://beminimalist.co/products/2-hyaluronic-acid",
+            "price": "₹ 595",
+            "striked": "₹ 599",
+            "reviews": "524 reviews",
+            "image": "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/HAPGA2_1200-1-min_300x300.png?v=1646395962",
+            "image_url": "https://beminimalist.co/products/2-hyaluronic-acid"
+        },
+        {
+            "name": "Granactive Retinoid 02%",
+            "url": "https://beminimalist.co/products/retinoid-2",
+            "price": "₹ 695",
+            "striked": "₹ 699",
+            "reviews": "353 reviews",
+            "image": "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/GranactiveRetinoid2_1200-1-min_300x300.png?v=1646480830",
+            "image_url": "https://beminimalist.co/products/retinoid-2"
+        },
+        {
+            "name": "Polyhydroxy Acid (PHA) 03% Toner",
+            "url": "https://beminimalist.co/products/pha-3-biotic-toner",
+            "price": "₹ 395",
+            "striked": "₹ 399",
+            "reviews": "349 reviews",
+            "image": "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/PHAToner1200-2-min_300x300.png?v=1646482828",
+            "image_url": "https://beminimalist.co/products/pha-3-biotic-toner"
+        },
+        {
+            "name": "Niacinamide 05%",
+            "url": "https://beminimalist.co/products/niacinamide-5-hyaluronic-acid-1",
+            "price": "₹ 595",
+            "striked": "₹ 599",
+            "reviews": "510 reviews",
+            "image": "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Niacinamide5_1200-1-min_300x300.png?v=1646458955",
+            "image_url": "https://beminimalist.co/products/niacinamide-5-hyaluronic-acid-1"
+        },
+        {
+            "name": "Salicylic + LHA 02% Face Cleanser",
+            "url": "https://beminimalist.co/products/salicylic-lha-2-cleanser",
+            "price": "₹ 295",
+            "striked": "₹ 299",
+            "reviews": "366 reviews",
+            "image": "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SalicylicLHACleanser1200-2-min_300x300.png?v=1646485312",
+            "image_url": "https://beminimalist.co/products/salicylic-lha-2-cleanser"
+        },
+        {
+            "name": "Tranexamic 03%",
+            "url": "https://beminimalist.co/products/tranexamic-3-hpa",
+            "price": "₹ 645",
+            "striked": "₹ 649",
+            "reviews": "397 reviews",
+            "image": "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Tranexamicserum1200-2-min_1_300x300.png?v=1646489297",
+            "image_url": "https://beminimalist.co/products/tranexamic-3-hpa"
+        }
+    ]
+}
