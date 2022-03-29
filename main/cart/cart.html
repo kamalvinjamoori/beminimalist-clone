@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gcontainer{
+          width: 50%;
+        text-align: center;
+            
+        margin: auto;
+        margin-top: 100px;
+        }
+
+        #gcontainer>div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #gcartiteams>img{
+            width: 120px;
+            height: 120px;
+        
+        }
+        a{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="gcontainer">
+        <h1>Your cart</h1>
+        <div id="gdetails">
+        </div>
+        <div id="gcartiteams" ></div>
+        </div>
+    
+</body>
+</html>
+<script>
+let main = document.getElementById("gcontainer");
+let detail = document.getElementById("gdetails");
+let items = document.getElementById("gcartiteams");
+let div1 = document.createElement("div");
+let div2 = document.createElement("div");
+div1.innerText="Product";
+div2.innerHTML=`${'Quantity'} ${'Total'}`
+detail.append(div1,div2)
+let img = document.createElement("img");
+img.src="https://cdn.shopify.com/s/files/1/0410/9608/5665/products/AlphaArbutin2_1200-1-min_180x.png?v=1646543550"
+
+let div3 = document.createElement("div");
+let div4 = document.createElement("div")
+let name = document.createElement("a");
+name.innerHTML="Glycolic + Tranexamic 11% Body Exfoliator";
+let div5 = document.createElement("div");
+div5.append(name);
+let price = document.createElement("div");
+price.innerHTML=`₹ 650`;
+div4.append(div5,price);
+div3.append(div4)
+items.append(img,div3)
+main.append(detail,items);
+
+
+</script>
