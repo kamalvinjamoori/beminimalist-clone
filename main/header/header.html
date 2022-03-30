@@ -1,67 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 
     <style>
-    #navbar{
-        display: grid;
+        #navbar {
+            display: grid;
             grid-template-columns: 20% 50% 30%;
             gap: 10px;
-     height: 120px;
-     width: 100%;
-     background-color: black;
-    }
-    #navbar>div{
-        
-        border: 1px solid white;
-        height:100%;
-        color: white;
-        text-align: center;
-        font-size: larger;
-    }
-    /* #nav1{
+            height: 120px;
+            width: 100%;
+            background-color: black;
+        }
+
+        #navbar>div {
+
+            border: 1px solid white;
+            height: 100%;
+            color: white;
+            text-align: center;
+            font-size: larger;
+        }
+
+        /* #nav1{
         margin-top: 40px;
     } */
-    .material-icons{
+        .material-icons {
+            padding-top: 20px;
+            font-size: 50px;
+            border-width: 1px;
+            color: white;
+            /* background-color: aqua; */
+        }
 
-        font-size: 80px;
-        border-width: 1px;
-    }
+        #menu{
+            position: fixed;
+            top: 20px;
+            font-size: 50px;
+            border-width: 1px;
+            left: 70px;
+            color: white;
+            cursor: pointer;
+            z-index: 2;
 
 
+        }
+
+        #sidenav{
+       padding: 100px 0px;
+       position: fixed;
+       width: 250px;
+       height: 100vh;
+       backdrop-filter: blur(10px);
+       box-shadow: inset 10px 10px 10px gray;
+       /* background-color: red; */
+       background:rgba(17, 15, 15, 0.37);
+       /* top: 0; */
+       left: 0;
+        }
+
+        .a>li{
+          list-style: none; 
+
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            margin: 10px;
+            display: block;
+            padding: 10px;
+            /* background-color: aqua; */
+        }
+        a:hover{
+            background-color:rgba(255,255,255,0.4);
+            transition: 0.4s;
+        }
     </style>
 </head>
+
 <body>
     <div id="navbar">
-    
-            <div class="material-icons">
+
+        <div><span class="material-icons" id="menu">
                 menu
-                </div>
-        
-   
-    <div><h2>Minimalist</h2></div>
-    <div><span class="material-icons">
-        search
-        </span>
-        <span class="material-icons">
-            person_outline
             </span>
-        <span class="material-icons">
-        shopping_bag
-        </span>
-    
-    </div>
+
+        </div>
+
+
+        <div>
+            <h2>Minimalist</h2>
+        </div>
+        <div><span class="material-icons">
+                search
+            </span>
+            <span class="material-icons">
+                person_outline
+            </span>
+            <span class="material-icons">
+                shopping_bag
+            </span>
+
+        </div>
 
 
 
     </div>
+    <div id="sidenav">
+        <div class="a">
+            <li><a href="#">Home</a></li>
+        </div>
+        <div class="a">
+            <li><a href="#">Shop</a></li>
+        </div>
+        <div class="a">
+            <li><a href="#">Knowledge</a></li>
+        </div>
+        <div class="a">
+            <li><a href="#">Track Order</a></li>
+        </div>
+        <div class="a">
+            <li><a href="#">Register / Login</a></li>
+        </div>
+        </div>
 </body>
+
 </html>
+<!-- <script type="text/javascript">
+
+var menu=document.getElementById("menu");
+var sidenav=document.getElementById("sidenav");
+
+sidenav.style.width="0px";
+menu.onclick =function(){
+ 
+    if(sidenav.style.width=="0px"){
+        sidenav.style.width=="250px";
+    }
+    else{
+       sidenav.style.width="0px"; 
+    }
+}
+ -->
+
+
+</script>
