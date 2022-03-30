@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .createsubmit {
+        #createsubmit {
             font-family: "Roboto", sans-serif;
             outline: 1;
 
-            background-color: black;
+            background-color: black !important;
             color: white;
             width: 100%;
             border: 0;
@@ -19,11 +19,13 @@
             padding: 25px;
             box-sizing: border-box;
             font-size: 24px;
+            border-radius: 5px;
+            box-shadow: 4px 4px 5px grey;
         }
 
-        .createsubmit:hover {
-            background-color: greenyellow;
-            color: red;
+        #createsubmit:hover {
+            background-color: #222222   !important;
+            /* color: red; */
         }
     </style>
 
@@ -31,17 +33,17 @@
 </head>
 
 <body>
-    <div id="login-page">
+    <div id="signup-page">
         <h1 id="hlogin">Create Account</h1>
         <div class="form">
 
-            <form id="login-form">
-                <input type="text" id="name" placeholder="First Name" />
-                <input type="text" id="lastname" placeholder="Last Name" />
-                <input type="email" id="email" placeholder="Email Address" />
-                <input type="password" id="password" placeholder="Password" />
-                <!-- <input class="loginsubmit" type="submit" value="Create" style="background: #000000; color: white;"/> -->
-                <button class="createsubmit" onclick="createAcc()">Create</button>
+            <form id="signup-form">
+                <input type="text" id="name" name="name" placeholder="First Name" required />
+                <input type="text" id="lastname"name="lastname"  placeholder="Last Name" required />
+                <input type="email" id="email" name="email" placeholder="Email Address" required />
+                <input type="password" id="password" placeholder="Password" required />
+                <input id="createsubmit" type="submit" value="Create" />
+                <!-- <button type = "submit" id="createsubmit" onclick="createAcc()">Create</button> -->
 
             </form>
 
@@ -52,10 +54,68 @@
     </div>
 
 </body>
-
+<h1>hello</h1>
 </html>
+
 <script>
-    window.addEventListener("load",()=>{
-        let signupform = document.getElementById("")
-    })
+    let arr = []
+    const createAcc=()=>{
+
+        event.preventDefault()
+        let name = document.getElementById("name").value 
+        let lastname  = document.getElementById("lastname").value 
+        let email = document.getElementById("email").value 
+        let password  = document.getElementById("password").value 
+        function signup(n,l,e,p){
+            this.name = name;
+            this.lastname = lastname;
+            this.email = email;
+            this.password = password;
+        }
+        let pro = new signup(name,lastname,email,password)
+        arr.push(pro)
+        console.log(arr)
+        localStorage.setItem("signupdetails",JSON.stringify(arr))
+        window.location.href= "login.html"
+    }
+ document.getElementById("signup-form").addEventListener("submit",createAcc)
+
+//    const createAcc=(e)=>{
+   
+//     event.preventDefault()
+    
+    
+ 
+//    }
+   
 </script>
+<!-- <script>
+            // const createAcc = ()=>{
+                document.getElementById("signup-form").addEventListener("submit",createAcc)
+        // let createsubmit = document.getElementById("createsubmit")
+        // createsubmit.addEventListener("click",()=>{
+        function createAcc(){
+            event.preventDefault()
+             console.log("hello")
+
+             const formData = new FormData(createsubmit)
+             let name = formData.get("name")
+             let lastname = formData.get("lastname")
+             let email = formData.get("email")
+             let password = formData.get("email")
+             let arr = []
+             let obj ={
+                 name,
+                 lastname,
+                 email,
+                 password
+             }
+           let data = JSON.stringify(obj)
+             console.log(data)
+             localStorage.setItem('signupdetails',data)
+        
+
+
+    }
+
+</script> -->
