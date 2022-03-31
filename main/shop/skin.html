@@ -1,272 +1,824 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hair
-        – Minimalist</title>
-        <link rel="stylesheet" href="./main.css">
-        <link href="//db.onlinewebfonts.com/c/74c3c29282b604a9eed88ac6ede61463?family=Apercu+Pro" rel="stylesheet" type="text/css"/>
+    <title>Skin - Minimalist</title>
+    <link rel="stylesheet" href="./main.css">
+    <link href="//db.onlinewebfonts.com/c/74c3c29282b604a9eed88ac6ede61463?family=Apercu+Pro" rel="stylesheet"
+        type="text/css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
+
 <body>
     <div id="Aoutercontainer">
-        <div id="Adetails">
-            <div id="Adetailsinnerdiv">
-                <div id="AdetailsinnerdivName">
-                    <h3>Skin</h3>
+        <div id="Aall">
+
+            <div id="Adetails">
+                <div id="Adetailsinnerdiv">
+                    <div id="AdetailsinnerdivName">
+                        <h3>Skin</h3>
+                    </div>
+                    <div id="AdetailsinnerdivDetail">
+                        <p>Shop our efficacious, transparent, and research-backed range of skincare products. Each product is formulated to target your specific skin concerns.</p>
+                    </div>
                 </div>
-                <div id="AdetailsinnerdivDetail">
-                    <p>Shop our efficacious, transparent, and research-backed range of skincare products. Each product is formulated to target your specific skin concerns.</p>
+            </div>
+            <div id="Acontentcontainer">
+
+                <div id="Asortfilter">
+                    <div id="filter">
+                        <span>Filter</span>
+                        <span class="fas fa-caret-down"></span>
+                    </div>
+                    <div id="sort">
+                        Sort<span class="fas fa-caret-down"></span>
+                    </div>
                 </div>
+                <hr>
+                <div id="Aitems">
+
+                </div>
+
             </div>
         </div>
-        <div id="Acontentcontainer">
-
-            <div id="Asortfilter">
-                <div id="filter">
-    
+        <div id="Asortconatiner">
+            <div id="Asortinnercontainer1">
+                <div id="Asortclose">
+                    <h3>Sort</h3>
+                    <span id="Close">X</span>
                 </div>
-                <div id="sort">
-    
+                <div id="Asortcategory">
+                    <ul>
+                        <li>
+                            <input type="radio" name="selected" id="Featured" value="Featured">
+                            <label class="label" for="Featured">Featured</label>
+
+                            <input type="radio" name="selected" id="Bestselling" value="Bestselling">
+                            <label class="label" for="Bestselling">Best selling</label>
+
+                            <input type="radio" name="selected" id="Alphabeticallya_z" value="Alphabeticallya_z">
+                            <label class="label" for="Alphabeticallya_z">Alphabetically, A-Z</label>
+
+                            <input type="radio" name="selected" id="Alphabeticallyz_a" value="Alphabeticallyz_a">
+                            <label class="label" for="Alphabeticallyz_a">Alphabetically, Z-A</label>
+
+                            <input type="radio" name="selected" id="Pricel2h" value="Pricel2h">
+                            <label class="label" for="Pricel2h">Price,low to high</label>
+
+                            <input type="radio" name="selected" id="Priceh2l" value="Priceh2l">
+                            <label class="label" for="Priceh2l">Price,high to low</label>
+
+                            <input type="radio" name="selected" id="Dateo2n" value="Dateo2n">
+                            <label class="label" for="Dateo2n">Date,old to new</label>
+
+                            <input type="radio" name="selected" id="Daten2o" value="Daten2o">
+                            <label class="label" for="Daten2o">Date,new to old</label>
+                        </li>
+                    </ul>
+                </div>
+                <div id="Asortapply">
+                    <button id="Aapply">Apply</button>
                 </div>
             </div>
-            <div id="Aitems">
-    
-            </div>
-
+            <!-- <div id="Asortinnercontainer2"></div> -->
         </div>
-    </div>
+        <!---------------- filterdata ---------------------->
+
+        <!-- <div> -->
+
+
+        <div id="Afiltercontainer">
+            <div id="Afilterclose">
+                <h3 id="filtername">Filter</h3>
+                <h3 id="Aclosesign">X</h3>
+            </div>
+            <div>
+                <p>Category</p>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdbody">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdbody"
+                            value="Body">
+                        <div class="Acheckbox__box"></div>
+                        Body
+                    </label>
+                    <span>1</span>
+
+                </div>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdhair">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdhair"
+                            value="Hair">
+                        <div class="Acheckbox__box"></div>
+                        Hair
+                    </label>
+                    <span>1</span>
+
+                </div>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdskin">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdskin"
+                            value="skin">
+                        <div class="Acheckbox__box"></div>
+                        Skin
+                    </label>
+                    <span>24</span>
+
+                </div>
+            </div>
+            <!-- <hr> -->
+            <!-- <div>
+                    <p>Step</p>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdtreat">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIdtreat" value="treat">
+                            <div class="Acheckbox__box"></div>
+                            Treat
+                        </label>
+                        <span>1</span>
+                    </div>
+                </div> -->
+            <hr>
+            <div>
+                <p>Type of Product</p>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdantiox">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdantiox"
+                            value="Anti">
+                        <div class="Acheckbox__box"></div>
+                        Anti Oxidant
+                    </label>
+                    <!-- <span>1</span> -->
+                </div>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdbodyx">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdbodyx"
+                            value="Exfoliator">
+                        <div class="Acheckbox__box"></div>
+                        Body Exfolicator
+                    </label>
+                    <!-- <span>1</span> -->
+                </div>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdcleanser">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdcleanser"
+                            value="Cleanser">
+                        <div class="Acheckbox__box"></div>
+                        Cleanser
+                    </label>
+                    <!-- <span>1</span> -->
+                </div>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdfacacid">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdfacacid"
+                            value="Acid">
+                        <div class="Acheckbox__box"></div>
+                        Face Acids
+                    </label>
+                    <!-- <span>1</span> -->
+                </div>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdfaceoil">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdfaceoil"
+                            value="Oil">
+                        <div class="Acheckbox__box"></div>
+                        Face Oils
+                    </label>
+                    <!-- <span>1</span> -->
+                </div>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdmoisturizer">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                            id="AmyCheckboxIdmoisturizer" value="Moisturizer">
+                        <div class="Acheckbox__box"></div>
+                        Moisturizer
+                    </label>
+                    <!-- <span>1</span> -->
+                </div>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdSPF">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdSPF"
+                            value="SPF">
+                        <div class="Acheckbox__box"></div>
+                        SPF
+                    </label>
+                    <!-- <span>1</span> -->
+                </div>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdserum">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdserum">
+                        <div class="Acheckbox__box"></div>
+                        Serum
+                    </label>
+                    <!-- <span>1</span> -->
+                </div>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdtoner">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdtoner"
+                            value="Toner">
+                        <div class="Acheckbox__box"></div>
+                        Toner
+                    </label>
+                    <!-- <span>1</span> -->
+                </div>
+            </div>
+            <!-- <hr> -->
+            <!-- <div>
+                    <p>Concern</p>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIduneven">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIduneven">
+                            <div class="Acheckbox__box"></div>
+                            Uneven/Bumpy Texture
+                        </label>
+                        <span>1</span>
+                    </div>
+                </div> -->
+            <hr>
+            <div>
+                <p>Price</p>
+                <p>The highest price is Rs 795</p>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdprice1">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdprice1"
+                            value=300>
+                        <div class="Acheckbox__box"></div>
+                        Less than 300
+                    </label>
+                    <!-- <span>1</span> -->
+                </div>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdprice2">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdprice2"
+                            value=300_500>
+                        <div class="Acheckbox__box"></div>
+                        300 - 500
+                    </label>
+                    <!-- <span>1</span> -->
+                </div>
+                <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdprice3">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdprice3"
+                            value=500above>
+                        <div class="Acheckbox__box"></div>
+                        More than 500
+                    </label>
+                    <!-- <span>1</span> -->
+                </div>
+               
+            </div>
+            <hr>
+            <div>
+                <div id="Afilterapply">
+                    <button id="AapplyF">Apply</button>
+                </div>
+
+            </div>
+            <!-- </div> -->
+        </div>
 </body>
+
 <script type="module">
+   let objectArray = [
+  // 1
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/AlphaArbutin2_1200-1-min_540x.png?v=1646543550",
+      title: "Alpha Arbutin 02%",
+      stars: "★ ★ ★ ★ ☆",
+      review: "1089 reviews",
+      originalPrice: 549,
+      offerPrice: 539
+  },
+  // 2
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Niacinamide10_1200-1-min_540x.png?v=1646396068",
+      title: "Niacinamide 10%",
+      stars: "★ ★ ★ ★ ☆",
+      review: "1296 reviews",
+      originalPrice: 599,
+      offerPrice: 595
+  },
+  // 3
+  {
+  "web-scraper-order": "1648539103-502",
+  "web-scraper-start-url": "https://beminimalist.co/collections/all-products",
+  "prods": "Vitamin C 10%",
+  stars: "★ ★ ★ ★ ☆",
+  "prods-href": "https://beminimalist.co/products/vitamin-c-ethyl-ascorbic-acid-10-acetyl-glucosamine-1",
+  "title": "Vitamin C 10%",
+  "specs": "fragrance free • non-comedogenic • 30ml",
+  "review": "1009 reviews",
+  "img1-src": "https://cdn.shopify.com/s/files/1/0410/9608/5665/t/3/assets/vitamin-c-10-serum-1200--3min-1645952199563.png?v=1645952236",
+  "image": "https://cdn.shopify.com/s/files/1/0410/9608/5665/t/3/assets/vitamin-c-10-1200--1min-1645781661874.png?v=1645781719",
+  "img3-src": "https://cdn.shopify.com/s/files/1/0410/9608/5665/t/3/assets/vitamin-c-10-serum-1200--2min-1645952199528.png?v=1645952213",
+  "originalPrice": "₹ 695",
+  "originalPrice": "₹ 699",
+  "used1": "For Brighter, Glowing & Healthy Looking Skin",
+  "used2": "A glow-boosting daily serum packaged with the goodness of Vitamin C & Polyhydroxy Acid (PHA) that brightens and tones sun damaged and dull skin with dark spots",
+  "what_special": "What makes it special",
+  "para1": "Made with stabilized Vitamin C derivative \"Ethyl Ascorbic Acid\" that has 86% pure Vitamin C content. That is much higher than 40-50% content present in other Vitamin C derivatives. At a pH of ~4.0 it is highly stable and effective",
+  "para2": "Contains 1% Acetyl Glucosamine (AG), an amino-monosaccharide (simple sugar) and a precursor of hyaluronic acid, that provides skin moisturization, boosts natural Hyaluronic Acid synthesis, and regulates natural exfoliation",
+  "para3": "Boosted with Polyhydroxy Acid (PHA) which are new age hydroxy acids, suitable even for sensitive skin. PHAs gently remove dead skin cells to give skin a glow. Also have antioxidant/chelation, barrier strengthening, and moisturizing effects",
+  "para4": "Boosted with Polyhydroxy Acid (PHA) which are new age hydroxy acids, suitable even for sensitive skin. PHAs gently remove dead skin cells to give skin a glow. Also have antioxidant/chelation, barrier strengthening, and moisturizing effects",
+  "para5": "Formulated in Centella Water to soothe and heal skin",
+  "Skin concerns it targets": "Dull skin · Dark spots · Uneven tone · Loss of elasticity",
+  "Suitable for": "All skin types",
+  "highlights": "Fragrance free · Essential Oil Free · Non-comedogenic",
+  "pha": "3.8 - 4.8",
+  "Consumer study results": "88% subjects felt this serum improved skin radiance in 4 weeks",
+  "cp1": "90% subjects said their dark spots faded after 8 weeks",
+  "cp2": "93% subjects said skin felt healthier after 4 weeks of usage",
+  "cp3": null,
+  "video": "[{\"video\":\"\",\"video-src\":\"https://cdn.shopify.com/s/files/1/0410/9608/5665/files/Minimalist-Vitamin-C-10-Usage.mp4?v=1645967540\"}]",
+  "video-src": "",
+  "ingred1": "Not only lightens skin tone, it also promotes synthesis of Hyaluronic Acid to improve skin hydration",
+  "ingred2": "They not just exfoliate gently, but also functions as humectants. Also provide protection against UV radiations",
+  "ingred3": null,
+  "ingredt": "You may also like"
+},
+  // 4
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SalicylicAcid2_1200-1-min_540x.png?v=1646458899",
+      title: "Salicylic Acid 02%",
+      stars: "★ ★ ★ ★ ☆",
+      review: "973 reviews",
+      originalPrice: 549,
+      offerPrice: 545
+  },
+  // 5
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SepicalmMoisturizer1200-2_540x.png?v=1646471109",
+      title: "Sepicalm 03% Moisturizer",
+      stars: "★ ★ ★ ★ ☆",
+      review: "704 reviews",
+      originalPrice: 349,
+      offerPrice: 345
+  },
+  // 6
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/AHAPHABHA32_1200-1-min_540x.png?v=1646480856",
+      title: "AHA PHA BHA 32%",
+      stars: "★ ★ ★ ★ ☆",
+      review: "622 reviews",
+      originalPrice: 699,
+      offerPrice: 689
+  },
+  // 7
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/HAPGA2_1200-1-min_540x.png?v=1646395962",
+      title: "Hyaluronic + PGA 02%",
+      stars: "★ ★ ★ ★ ☆", //star,
+      review: "524 reviews",
+      originalPrice: 599,
+      offerPrice: 595
+  },
+  // 8
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/GranactiveRetinoid2_1200-1-min_540x.png?v=1646480830",
+      title: "Granactive Retinoid 02%",
+      stars: "★ ★ ★ ★ ☆",
+      review: "353 reviews",
+      originalPrice: 699,
+      offerPrice: 695
+  },
+  // 9
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/PHAToner1200-2-min_540x.png?v=1646482828",
+      title: "Polyhydroxy Acid (PHA) 03% Toner",
+      stars: "★ ★ ★ ★ ☆",
+      review: "349 reviews",
+      originalPrice: 399,
+      offerPrice: 395
+  },
+  // 10
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Niacinamide5_1200-1-min_540x.png?v=1646458955",
+      title: "Niacinamide 05%",
+      stars: "★ ★ ★ ★ ☆", //star
+      review: "510 reviews",
+      originalPrice: 599,
+      offerPrice: 595
+  },
+  // 11
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SalicylicLHACleanser1200-2-min_540x.png?v=1646485312",
+      title: "Salicylic + LHA 02% Face Cleanser",
+      stars: "★ ★ ★ ★ ☆",
+      review: "366 reviews",
+      originalPrice: 299,
+      offerPrice: 295
+  },
+  // 12
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Tranexamicserum1200-2-min_1_540x.png?v=1646489297",
+      title: "Tranexamic 03%",
+      stars: "★ ★ ★ ★ ☆",
+      review: "397 reviews",
+      originalPrice: 649,
+      offerPrice: 645
+  },
+  // 13//
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SPF501200-2-min_540x.png?v=1646515554",
+      title: "SPF 50 Sunscreen",
+      stars: "★ ★ ★ ★ ☆",
+      review: "217 reviews",
+      originalPrice: 399,
+      offerPrice: 389
+  },
+  // 14//
 
 
-let objectArray = [
-    // 1
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/AlphaArbutin2_1200-1-min_540x.png?v=1646543550",
-title:"Alpha Arbutin 02%",
-stars:"★ ★ ★ ★ ☆",
-review:"1089 reviews",
-originalPrice: 549,
-offerPrice: 539
-},
-// 2
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Niacinamide10_1200-1-min_540x.png?v=1646396068",
-title:"Niacinamide 10%",
-stars:"★ ★ ★ ★ ☆",
-review:"1296 reviews",
-originalPrice: 599,
-offerPrice: 595
-},
-// 3
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/VitaminC10_1200-1-min_540x.png?v=1646543848",
-title:"Vitamin C 10%",
-stars:"★ ★ ★ ★ ☆",
-review:"1008 reviews",
-originalPrice: 699,
-offerPrice: 695
-},
-// 4
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SalicylicAcid2_1200-1-min_540x.png?v=1646458899",
-title:"Salicylic Acid 02%",
-stars:"★ ★ ★ ★ ☆",
-review:"973 reviews",
-originalPrice: 549,
-offerPrice: 545
-},
-// 5
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SepicalmMoisturizer1200-2_540x.png?v=1646471109",
-title:"Sepicalm 03% Moisturizer",
-stars:"★ ★ ★ ★ ☆",
-review:"704 reviews",
-originalPrice: 349,
-offerPrice: 345
-},
-// 6
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/AHAPHABHA32_1200-1-min_540x.png?v=1646480856",
-title:"AHA PHA BHA 32%",
-stars:"★ ★ ★ ★ ☆",
-review:"622 reviews",
-originalPrice: 699,
-offerPrice: 689
-},
-// 7
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/HAPGA2_1200-1-min_540x.png?v=1646395962",
-title:"Hyaluronic + PGA 02%",
-stars:"★ ★ ★ ★ ☆", //star,
-review:"524 reviews",
-originalPrice: 599,
-offerPrice: 595
-},
-// 8
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/GranactiveRetinoid2_1200-1-min_540x.png?v=1646480830",
-title:"Granactive Retinoid 02%",
-stars:"★ ★ ★ ★ ☆" ,
-review:"353 reviews",
-originalPrice: 699,
-offerPrice: 695
-},
-// 9
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/PHAToner1200-2-min_540x.png?v=1646482828",
-title:"Polyhydroxy Acid (PHA) 03% Toner",
-stars:"★ ★ ★ ★ ☆" ,
-review:"349 reviews",
-originalPrice: 399,
-offerPrice: 395
-},
-// 10
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Niacinamide5_1200-1-min_540x.png?v=1646458955",
-title:"Niacinamide 05%",
-stars:"★ ★ ★ ★ ☆", //star
-review:"510 reviews",
-originalPrice: 599,
-offerPrice: 595
-},
-// 11
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SalicylicLHACleanser1200-2-min_540x.png?v=1646485312",
-title:"Salicylic + LHA 02% Face Cleanser",
-stars:"★ ★ ★ ★ ☆" ,
-review:"366 reviews",
-originalPrice: 299,
-offerPrice: 295
-},
-// 12
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Tranexamicserum1200-2-min_1_540x.png?v=1646489297",
-title:"Tranexamic 03%",
-stars:"★ ★ ★ ★ ☆" ,
-review:"397 reviews",
-originalPrice: 649,
-offerPrice: 645
-},
-// 13//
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SPF501200-2-min_540x.png?v=1646515554",
-title:"SPF 50 Sunscreen",
-stars:"★ ★ ★ ★ ☆" ,
-review:"217 reviews",
-originalPrice: 399,
-offerPrice: 389
-},
-// 14//
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/aha-bha-10-1200--1min-1645781661616_540x.png?v=1647004182",
-title:"AHA BHA 10%",
-stars:"★ ★ ★ ★ ☆" ,
-review:"165 reviews",
-originalPrice: 599,
-offerPrice: 589
-},
-// 15//
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Retinolserum1200-2-min_540x.png?v=1646504012",
-title:"Retinol 0.3%",
-stars:"★ ★ ★ ★ ☆" ,
-review:"157 reviews",
-originalPrice: 599,
-offerPrice: 589
-},
-// 16//
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Squalane1200-2-min_540x.png?v=1646506336",
-title:"Squalane 100%",
-stars:"★ ★ ★ ★ ☆" ,
-review:"246 reviews",
-originalPrice: 699,
-offerPrice: 695
-},
-// 17//
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/MultipeptideSerum1200-2-min_540x.png?v=1646591527",
-title:"Multi-Peptides 10%",
-stars:"★ ★ ★ ★ ☆" ,
-review:"139 reviews",
-originalPrice: 699,
-offerPrice: 695
-},
-// 18//
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/rosehipoil1100-min_540x.png?v=1646248003",
-title:"Rosehip Oil + VC-IP 3%",
-stars:"★ ★ ★ ★ ☆" , 
-review:"75 reviews",
-originalPrice: 649,
-offerPrice: 645
-},
-// 19//
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SPF601200-2-min_540x.png?v=1646571969",
-title:"SPF 60 Sunscreen",
-stars:"★ ★ ★ ★ ☆" ,
-review:"64 reviews",
-originalPrice: 599,
-offerPrice: 589
-},
-// 20//
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Azeclair1100-min_540x.png?v=1646247882",
-title:"Azeclair 17% + Propolis",
-stars:"★ ★ ★ ★ ☆" ,
-review:"85 reviews",
-originalPrice: 699,
-offerPrice: 689
-},
-// 21//
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/B5Moisturizer1200-2-min_540x.png?v=1646580727",
-title:"Vitamin B5 10% Moisturizer",
-stars:"★ ★ ★ ★ ☆" ,
-review:"40 reviews",
-originalPrice: 349,
-offerPrice: 329
-},
-// 22//
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/MarulaMoisturizer1200-2-min_540x.png?v=1646585372",
-title:"Marula Oil 05% Moisturizer",
-stars:"★ ★ ★ ★ ☆" ,
-review:"21 reviews",
-originalPrice: 299,
-offerPrice: 279
-},
-// 23//
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/ceramide-madecassoside--3min-1646379049769_540x.webp?v=1647430525",
-title:"Ceramides 0.3% + Madecassoside",
-stars:"★ ★ ★ ★ ☆" ,
-review:"13 reviews",
-originalPrice: 599,
-offerPrice: 589
-},
-// 24//
-{
-image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/ceramidebisabolol1100-min_540x.png?v=1646247885",
-title:"Ceramides 0.3% + Bisabolol",
-stars:"★ ★ ★ ★ ☆" ,
-review:"14 reviews",
-originalPrice: 599,
-offerPrice: 589
-},
 
+
+
+
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/aha-bha-10-1200--1min-1645781661616_540x.png?v=1647004182",
+      title: "AHA BHA 10%",
+      stars: "★ ★ ★ ★ ☆",
+      review: "165 reviews",
+      originalPrice: 599,
+      offerPrice: 589
+  },
+  // 15//
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Retinolserum1200-2-min_540x.png?v=1646504012",
+      title: "Retinol 0.3%",
+      stars: "★ ★ ★ ★ ☆",
+      review: "157 reviews",
+      originalPrice: 599,
+      offerPrice: 589
+  },
+  // 16//
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Squalane1200-2-min_540x.png?v=1646506336",
+      title: "Squalane 100%",
+      stars: "★ ★ ★ ★ ☆",
+      review: "246 reviews",
+      originalPrice: 699,
+      offerPrice: 695
+  },
+  // 17//
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/MultipeptideSerum1200-2-min_540x.png?v=1646591527",
+      title: "Multi-Peptides 10%",
+      stars: "★ ★ ★ ★ ☆",
+      review: "139 reviews",
+      originalPrice: 699,
+      offerPrice: 695
+  },
+  // 18//
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/rosehipoil1100-min_540x.png?v=1646248003",
+      title: "Rosehip Oil + VC-IP 3%",
+      stars: "★ ★ ★ ★ ☆",
+      review: "75 reviews",
+      originalPrice: 649,
+      offerPrice: 645
+  },
+  // 19//
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/SPF601200-2-min_540x.png?v=1646571969",
+      title: "SPF 60 Sunscreen",
+      stars: "★ ★ ★ ★ ☆",
+      review: "64 reviews",
+      originalPrice: 599,
+      offerPrice: 589
+  },
+  // 20//
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Azeclair1100-min_540x.png?v=1646247882",
+      title: "Azeclair 17% + Propolis",
+      stars: "★ ★ ★ ★ ☆",
+      review: "85 reviews",
+      originalPrice: 699,
+      offerPrice: 689
+  },
+  // 21//
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/B5Moisturizer1200-2-min_540x.png?v=1646580727",
+      title: "Vitamin B5 10% Moisturizer",
+      stars: "★ ★ ★ ★ ☆",
+      review: "40 reviews",
+      originalPrice: 349,
+      offerPrice: 329
+  },
+  // 22//
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/MarulaMoisturizer1200-2-min_540x.png?v=1646585372",
+      title: "Marula Oil 05% Moisturizer",
+      stars: "★ ★ ★ ★ ☆",
+      review: "21 reviews",
+      originalPrice: 299,
+      offerPrice: 279
+  },
+  // 23//
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/ceramide-madecassoside--3min-1646379049769_540x.webp?v=1647430525",
+      title: "Ceramides 0.3% + Madecassoside",
+      stars: "★ ★ ★ ★ ☆",
+      review: "13 reviews",
+      originalPrice: 599,
+      offerPrice: 589
+  },
+  // 24//
+  {
+      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/ceramidebisabolol1100-min_540x.png?v=1646247885",
+      title: "Ceramides 0.3% + Bisabolol",
+      stars: "★ ★ ★ ★ ☆",
+      review: "14 reviews",
+      originalPrice: 599,
+      offerPrice: 589
+  },
 ]
 
+
+
     import displaydata from "./main.js"
-    let parent = document.getElementById("Aitems")  
-    displaydata(objectArray, parent)  
+    let parent = document.getElementById("Aitems")
+    displaydata(objectArray, parent)
 
 
+
+    let Sort = document.getElementById("sort")
+    Sort.addEventListener("click", () => {
+        document.getElementById("Asortconatiner").style.display = "block"
+        document.querySelector("#Aall").style.opacity = .3
+        // document.querySelector("body").style.backgroundColor = "rgba(0, 0, 0, 0.267)"
+        document.querySelector("body").style.position = "fixed"
+        document.getElementById("Asortconatiner").style.opacity = 1
+    })
+
+    let Close = document.getElementById("Close")
+    Close.addEventListener("click", () => {
+        document.getElementById("Asortconatiner").style.display = "none"
+        // document.querySelector("body").style.backgroundColor = "white"
+        document.querySelector("#Aall").style.opacity = 1
+        document.querySelector("body").style.position = "relative"
+    })
+
+    let Filter = document.getElementById("filter")
+    Filter.addEventListener("click", () => {
+        document.getElementById("Afiltercontainer").style.display = "block"
+        document.getElementById("Afilterapply").style.display = "flex"
+        document.querySelector("#Aall").style.opacity = .3
+        document.querySelector("body").style.position = "fixed"
+
+    })
+
+    let FClose = document.getElementById("Aclosesign")
+    FClose.addEventListener("click", () => {
+        document.getElementById("Afiltercontainer").style.display = "none"
+        document.getElementById("Afilterapply").style.display = "none"
+        // document.querySelector("body").style.backgroundColor = "white"
+        document.querySelector("#Aall").style.opacity = 1
+        document.querySelector("body").style.position = "relative"
+    })
+
+
+
+    let Featured = document.getElementById("Featured")
+    Featured.addEventListener("click", () => {
+
+        console.log(Featured.value)
+        localStorage.setItem("sort", Featured.value)
+    })
+    let Bestselling = document.getElementById("Bestselling")
+    Bestselling.addEventListener("click", () => {
+        console.log(Bestselling.value)
+        localStorage.setItem("sort", Bestselling.value)
+    })
+    let Alphabeticallya_z = document.getElementById("Alphabeticallya_z")
+    Alphabeticallya_z.addEventListener("click", () => {
+        console.log(Alphabeticallya_z.value)
+        localStorage.setItem("sort", Alphabeticallya_z.value)
+    })
+    let Alphabeticallyz_a = document.getElementById("Alphabeticallyz_a")
+    Alphabeticallyz_a.addEventListener("click", () => {
+        console.log(Alphabeticallyz_a.value)
+        localStorage.setItem("sort", Alphabeticallyz_a.value)
+    })
+    let Pricel2h = document.getElementById("Pricel2h")
+    Pricel2h.addEventListener("click", () => {
+        console.log(Pricel2h.value)
+        localStorage.setItem("sort", Pricel2h.value)
+    })
+    let Priceh2l = document.getElementById("Priceh2l")
+    Priceh2l.addEventListener("click", () => {
+        console.log(Priceh2l.value)
+        localStorage.setItem("sort", Priceh2l.value)
+    })
+    let Dateo2n = document.getElementById("Dateo2n")
+    Dateo2n.addEventListener("click", () => {
+        console.log(Dateo2n.value)
+        localStorage.setItem("sort", Dateo2n.value)
+    })
+    let Daten2o = document.getElementById("Daten2o")
+    Daten2o.addEventListener("click", () => {
+        console.log(Daten2o.value)
+        localStorage.setItem("sort", Daten2o.value)
+    })
+
+
+
+    //function to sort
+
+    const sort = document.getElementById("Aapply")
+    sort.addEventListener("click", () => {
+        let selectedsort = localStorage.getItem("sort")
+        console.log('selectedsort:', selectedsort)
+        if (selectedsort === "Pricel2h") {
+            objectArray.sort((a, b) => {
+                return a.offerPrice - b.offerPrice
+            })
+            parent.innerHTML = ""
+            displaydata(objectArray, parent)
+        }
+        if (selectedsort === "Priceh2l") {
+            objectArray.sort((a, b) => {
+                return b.offerPrice - a.offerPrice
+            })
+            parent.innerHTML = ""
+            displaydata(objectArray, parent)
+        }
+        if (selectedsort === "Alphabeticallya_z") {
+            objectArray.sort((a, b) => {
+                if (a.title > b.title) {
+                    return 1
+                }
+                else {
+                    return -1
+                }
+            })
+            parent.innerHTML = ""
+            displaydata(objectArray, parent)
+        }
+        if (selectedsort === "Alphabeticallyz_a") {
+            objectArray.sort((a, b) => {
+                if (b.title > a.title) {
+                    return 1
+                }
+                else {
+                    return -1
+                }
+            })
+            parent.innerHTML = ""
+            displaydata(objectArray, parent)
+        }
+    })
+
+
+
+    let body = document.getElementById("AmyCheckboxIdbody")
+    console.log('body:', body)
+
+    body.addEventListener("click", () => {
+        console.log(body.value)
+        localStorage.setItem("filter", body.value)
+    })
+    let hair = document.getElementById("AmyCheckboxIdhair")
+    console.log('hair:', hair)
+
+    hair.addEventListener("click", () => {
+        console.log(hair.value)
+        localStorage.setItem("filter", hair.value)
+    })
+    let skin = document.getElementById("AmyCheckboxIdskin")
+    console.log('skin:', skin)
+
+    skin.addEventListener("click", () => {
+        console.log(skin.value)
+        localStorage.setItem("filter", skin.value)
+    })
+    let Anti = document.getElementById("AmyCheckboxIdantiox")
+    console.log('Anti:', Anti)
+
+    Anti.addEventListener("click", () => {
+        console.log(Anti.value)
+        localStorage.setItem("filter", Anti.value)
+    })
+
+    let bodyEx = document.getElementById("AmyCheckboxIdbodyx")
+    console.log('bodyEx:', bodyEx)
+
+    bodyEx.addEventListener("click", () => {
+        console.log(bodyEx.value)
+        localStorage.setItem("filter", bodyEx.value)
+    })
+
+    let cleanser = document.getElementById("AmyCheckboxIdcleanser")
+    console.log('cleanser:', cleanser)
+
+    cleanser.addEventListener("click", () => {
+        console.log(cleanser.value)
+        localStorage.setItem("filter", cleanser.value)
+    })
+    let Acids = document.getElementById("AmyCheckboxIdfacacid")
+    console.log('Acids:', Acids)
+
+    Acids.addEventListener("click", () => {
+        console.log(Acids.value)
+        localStorage.setItem("filter", Acids.value)
+    })
+    let oils = document.getElementById("AmyCheckboxIdfaceoil")
+    console.log('oils:', oils)
+
+    oils.addEventListener("click", () => {
+        console.log(oils.value)
+        localStorage.setItem("filter", oils.value)
+    })
+
+    let moisturizer = document.getElementById("AmyCheckboxIdmoisturizer")
+    console.log('moisturizer:', moisturizer)
+
+    moisturizer.addEventListener("click", () => {
+        console.log(moisturizer.value)
+        localStorage.setItem("filter", moisturizer.value)
+    })
+    let spf = document.getElementById("AmyCheckboxIdSPF")
+    console.log('spf:', spf)
+
+    spf.addEventListener("click", () => {
+        console.log(spf.value)
+        localStorage.setItem("filter", spf.value)
+    })
+    let serum = document.getElementById("AmyCheckboxIdserum")
+    console.log('serum:', serum)
+
+    serum.addEventListener("click", () => {
+        console.log(serum.value)
+        localStorage.setItem("filter", serum.value)
+    })
+    let tone = document.getElementById("AmyCheckboxIdtoner")
+    console.log('tone:', tone)
+
+    tone.addEventListener("click", () => {
+        console.log(tone.value)
+        localStorage.setItem("filter", tone.value)
+    })
+
+    let price1 = document.getElementById("AmyCheckboxIdprice1")
+    price1.addEventListener("click", () => {
+        localStorage.setItem("filter", price1.value)
+        console.log('price1.value:', price1.value)
+    })
+    let price2 = document.getElementById("AmyCheckboxIdprice2")
+    price2.addEventListener("click", () => {
+        localStorage.setItem("filter", price2.value)
+        console.log('price2.value:', price2.value)
+    })
+    let price3 = document.getElementById("AmyCheckboxIdprice3")
+    price3.addEventListener("click", () => {
+        localStorage.setItem("filter", price3.value)
+        console.log('price3.value:', price3.value)
+    })
+
+
+    let applyFilter = document.getElementById("AapplyF")
+    applyFilter.addEventListener("click", () => {
+        let selectedfilter = localStorage.getItem("filter")
+        if (selectedfilter === "skin") {
+            let ObjectArray = objectArray.slice(0, 24)
+            parent.innerHTML = ""
+            displaydata(ObjectArray, parent)
+        }
+        else if(selectedfilter === "300") {
+            let FilterArray = objectArray.filter( (ele) => {
+                return ele.offerPrice <300
+            })
+            parent.innerHTML = ""
+            displaydata(FilterArray, parent)
+        }
+        else if(selectedfilter === "300_500") {
+            let FilterArray = objectArray.filter( (ele) => {
+                return ele.offerPrice >300 && ele.offerPrice<500
+            })
+            parent.innerHTML = ""
+            displaydata(FilterArray, parent)
+        }
+        else if(selectedfilter === "500above") {
+            let FilterArray = objectArray.filter( (ele) => {
+                return  ele.offerPrice>500
+            })
+            parent.innerHTML = ""
+            displaydata(FilterArray, parent)
+        }
+        else {
+
+            let FilterArray = objectArray.filter((ele) => {
+                return ele.title.includes(selectedfilter)
+            })
+            parent.innerHTML = ""
+            displaydata(FilterArray, parent)
+        }
+    })
 
 
 </script>
+
 </html>

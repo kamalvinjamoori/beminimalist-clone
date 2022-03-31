@@ -6,6 +6,14 @@
   font-family: sans-serif;
  
 }
+#AdetailsinnerdivName h3{
+  font-size: 25px
+}
+#AdetailsinnerdivDetail p{
+  line-height: 26px;
+  word-spacing: 5px;
+  font-size: 20px;
+}
 #Aoutercontainer {
   width: 1440px;
   margin: auto;
@@ -187,9 +195,22 @@ input[type="radio"]:checked+label::after{
   transition: all 1s ease-in-out;
   cursor: pointer;
 }
-#Close::after{
+/* #Close::after{
 
+} */
+#ORIG{
+  text-decoration: line-through;
+  margin-right: 5px;
 }
+#Afilterclose{
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  padding: 40px 0px;
+}
+#Aclosesign{
+    font-weight: lighter;
+  }
 /* #Close:hover{
 transform: scale(1.15);
 background-color: #f5f5f523;
@@ -202,7 +223,7 @@ background-color: #f5f5f523;
 
 
 #Afiltercontainer{
-  /* position: relative; */
+  position: relative;
   position: absolute;
   /* position: fixed; */
   background-color: #000;
@@ -211,8 +232,8 @@ background-color: #f5f5f523;
   padding: 30px 50px 10px 80px;
   top: 0;
   bottom: 0;
-  right: -96px; 
-  height: 80vh;
+  right: -98px; 
+  height: 100vh;
   overflow: scroll;
   display: none
 }
@@ -284,8 +305,8 @@ margin-bottom: 30px;
   height:150px;
   /* padding: 20px 60px 20px 64px; */
   position: absolute;
-  bottom: 554px;
-  right: -96px;
+  bottom: -923px;
+  right: 0;
   background-color: #000;
   display: none;
 
@@ -297,3 +318,9 @@ margin-bottom: 30px;
 #Aclosesign{
   cursor: pointer;
 }
+h5{
+  cursor: pointer;
+}
+
+
+

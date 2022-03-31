@@ -19,6 +19,10 @@
             let NameDiv =  document.createElement("div")
             let Name = document.createElement("h5")
             Name.innerText = ele.title
+            Name.addEventListener("click", () =>{
+               
+                toProductPage(ele)
+            })
             NameDiv.append(Name)
 
             let reviewDiv = document.createElement("div")
@@ -33,8 +37,10 @@
             priceDiv.id = "Aprice"
             let originalPrice = document.createElement("span")
             originalPrice.innerText = ele.originalPrice
+            originalPrice.id = "ORIG"
             let offerPrice = document.createElement("span")
             offerPrice.innerText = ele.offerPrice
+            offerPrice.id = "OFFER"
             priceDiv.append(originalPrice, offerPrice)
 
             innerdiv.append(Image, NameDiv, reviewDiv, priceDiv)
@@ -44,5 +50,23 @@
             parent.append(div)
         })
     }
+
+    
+    const toProductPage = (ele)=>{
+        let selectedProducts=[]
+        selectedProducts.push(ele)
+        localStorage.setItem("product",JSON.stringify(selectedProducts))
+        window.location.href = "product.html"
+    }
+
+    // let selectedFilter = localStorage.getItem("filter")
+    // let selectedSort = localStorage.getItem("sort")
+    // document.getElementById("FILTER").innerText = selectedFilter
+    // document.getElementById("SORT").innerText = selectedSort
+    //    let clear = document.createElement("div");
+    //    clear.innerText = "CLEAR"
+
+    
+
     // displaydata(objectArray)
     export default displaydata
