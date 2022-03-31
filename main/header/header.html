@@ -53,10 +53,37 @@
 
         }
 
+
+        #search{
+            /* position: fixed; */
+            /* top: 20px; */
+            /* font-size: 50px; */
+            /* border-width: 1px; */
+            /* left: 70px; */
+            color: white;
+            cursor: pointer;
+            z-index: 2;
+
+
+        }
+
+        #cart{
+            /* position: fixed; */
+            /* top: 20px; */
+            /* font-size: 50px; */
+            /* border-width: 1px; */
+            /* left: 70px; */
+            color: white;
+            cursor: pointer;
+            z-index: 2;
+
+
+        }
+
         #sidenav{
        padding: 100px 0px;
        position: fixed;
-       width: 250px;
+       width: 600px;
        height: 100vh;
        backdrop-filter: blur(10px);
        box-shadow: inset 10px 10px 10px gray;
@@ -65,6 +92,35 @@
        /* top: 0; */
        left: 0;
         }
+
+        #sidenav1{
+       padding: 100px 0px;
+       position: fixed;
+       width: 600px;
+       height: 100vh;
+       backdrop-filter: blur(10px);
+       box-shadow: inset 10px 10px 10px gray;
+       /* background-color: red; */
+       background:rgba(17, 15, 15, 0.37);
+       /* top: 0; */
+       right: 0;
+        }
+
+        #sidenav2{
+       padding: 100px 0px;
+       position: fixed;
+       width: 600px;
+       height: 100vh;
+       backdrop-filter: blur(10px);
+       box-shadow: inset 10px 10px 10px gray;
+       /* background-color: red; */
+       background:rgba(17, 15, 15, 0.37);
+       /* background-color: black; */
+       /* top: 0; */
+       right: 0;
+        }
+
+
 
         .a>li{
           list-style: none; 
@@ -83,6 +139,21 @@
             background-color:rgba(255,255,255,0.4);
             transition: 0.4s;
         }
+
+     
+
+input {
+    width: 400px;
+    padding: 0 20px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 17px;
+    line-height: 3;
+}
+
+
     </style>
 </head>
 
@@ -99,13 +170,13 @@
         <div>
             <h2>Minimalist</h2>
         </div>
-        <div><span class="material-icons">
+        <div><span class="material-icons" id="search">
                 search
             </span>
             <span class="material-icons">
                 person_outline
             </span>
-            <span class="material-icons">
+            <span class="material-icons" id="cart">
                 shopping_bag
             </span>
 
@@ -131,25 +202,81 @@
             <li><a href="#">Register / Login</a></li>
         </div>
         </div>
+
+
+        <div id="sidenav1">
+            <div class="a">
+                <li><a href="#">Search</a></li>
+            </div>
+            <div><input type="text" placeholder="What are you looking for?"> </div>
+           
+            </div>
+
+
+            <div id="sidenav2">
+                <div class="a">
+                    <li><a href="#">Cart</a></li>
+                </div>
+               <div><h3>Your cart is currently empty.</h3></div>
+               
+                </div>
 </body>
 
 </html>
-<!-- <script type="text/javascript">
+ <script type="text/javascript">
 
 var menu=document.getElementById("menu");
 var sidenav=document.getElementById("sidenav");
-
-sidenav.style.width="0px";
-menu.onclick =function(){
- 
-    if(sidenav.style.width=="0px"){
-        sidenav.style.width=="250px";
+let count=0;
+//sidenav.style.width="0px";
+sidenav.style.display ="none"
+menu.addEventListener("click",function(){
+   
+    if(count%2===0){
+        sidenav.style.display ="block"
     }
     else{
-       sidenav.style.width="0px"; 
+        sidenav.style.display =  "none"
     }
-}
- -->
+    count++;
+})
+
+var search=document.getElementById("search");
+var sidenav1=document.getElementById("sidenav1");
+let count1=0;
+//sidenav.style.width="0px";
+search.addEventListener("click",function(){
+   
+    if(count1%2===0){
+        sidenav1.style.display = "none"
+    }
+    else{
+        sidenav1.style.display = "block"
+    }
+    count1++;
+})
+ 
+    
+var cart=document.getElementById("cart");
+var sidenav2=document.getElementById("sidenav2");
+let count2=0;
+//sidenav.style.width="0px";
+cart.addEventListener("click",function(){
+   
+    if(count2%2===0){
+        sidenav2.style.display = "none"
+    }
+    else{
+        sidenav2.style.display = "block"
+    }
+    count2++;
+})
+ 
+
+
+
+
+
 
 
 </script>
