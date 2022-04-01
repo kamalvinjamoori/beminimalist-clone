@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 200px;
+
+        }
+
+        #movies {
+            height: 200px;
+            width: 206px;
+            border: 1px solid black;
+            border-top: none;
+            background-color: gray;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <input oninput="debounce(main,1000)" type="text" id="query" />
+    <div id="movies"></div>
+
+
+</body>
+
+</html>
+<script>
+let timerid;
+    let movies = document.getElementById("movies");
+    //http://demo3901492.mockable.io/data
+
+
+    //API-KEY:4ac9e285
+    //OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=1038f3cc
+    async function searchMovie() {
+        try {
+            let input = document.getElementById("query").value;
+            //console.log("input:",input);
+
+            let res = await fetch(`https://www.omdbapi.com/?apikey=1038f3cc&s=${input}`);
+
+            //let res=await fetch(`https://www.demo3901492.mockable.io/data&`);
+
+            let data = await res.json();
+
+            //console.log("data:",data);
+            return data.Search;
+            //appendmovies(data.Search);
+            console.log("data:", data);
+
+
+        }
+        catch (error) {
+            console.log("error:", error);
+        }
+    }
+    function appendmovies(data) {
+        movies.innerHTML = null;
+        //console.log(data);
+      
+
+
+        data.forEach(function (el) {
+
+            let p = document.createElement("p");
+            p.innerText = el.Title;
+
+            movies.append(p);
+        });
+
+    }
+
+    async function main() {
+
+        try{
+            let data = await searchMovie();
+        if (data === undefined) {
+            return false;
+        }
+        console.log(data);
+        appendmovies(data);
+        }
+        catch(error){
+            console.log("error:",error);
+        }
+        
+    }
+
+
+    function  debounce(func,delay){
+console.log("timerid:",timerid);
+
+    //timerid=2;
+    if(timerid){
+        clearTimeout(timerid);
+    }
+
+       timerid= setTimeout(function(){
+            func();
+
+        },delay);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

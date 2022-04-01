@@ -15,7 +15,7 @@
             display: grid;
             grid-template-columns: 20% 50% 30%;
             gap: 10px;
-            height: 120px;
+            height: 105px;
             width: 100%;
             background-color: black;
         }
@@ -86,9 +86,9 @@
        width: 600px;
        height: 100vh;
        backdrop-filter: blur(10px);
-       box-shadow: inset 10px 10px 10px gray;
-       /* background-color: red; */
-       background:rgba(17, 15, 15, 0.37);
+       /* box-shadow: inset 10px 10px 10px gray; */
+       background-color:black;
+       /* background:rgba(17, 15, 15, 0.37); */
        /* top: 0; */
        left: 0;
         }
@@ -99,9 +99,9 @@
        width: 600px;
        height: 100vh;
        backdrop-filter: blur(10px);
-       box-shadow: inset 10px 10px 10px gray;
-       /* background-color: red; */
-       background:rgba(17, 15, 15, 0.37);
+       /* box-shadow: inset 10px 10px 10px gray; */
+       background-color:black;
+       /* background:rgba(17, 15, 15, 0.37); */
        /* top: 0; */
        right: 0;
         }
@@ -112,10 +112,10 @@
        width: 600px;
        height: 100vh;
        backdrop-filter: blur(10px);
-       box-shadow: inset 10px 10px 10px gray;
+       /* box-shadow: inset 10px 10px 10px gray; */
        /* background-color: red; */
-       background:rgba(17, 15, 15, 0.37);
-       /* background-color: black; */
+       /* background:rgba(17, 15, 15, 0.37); */
+       background-color: black;
        /* top: 0; */
        right: 0;
         }
@@ -132,7 +132,9 @@
             font-size: 20px;
             margin: 10px;
             display: block;
-            padding: 10px;
+            /* padding: 7px; */
+            padding-left:80px;
+            font-size:30px;
             /* background-color: aqua; */
         }
         a:hover{
@@ -145,12 +147,19 @@
 input {
     width: 400px;
     padding: 0 20px;
+    color: white;
+    background-color: black;
 }
 
 input,
 input::-webkit-input-placeholder {
     font-size: 17px;
     line-height: 3;
+}
+
+#crt{
+    font-size:large;
+    padding-left: 30px;
 }
 
 
@@ -198,8 +207,8 @@ input::-webkit-input-placeholder {
         <div class="a">
             <li><a href="#">Track Order</a></li>
         </div>
-        <div class="a">
-            <li><a href="#">Register / Login</a></li>
+        <div class="a" >
+            <li><a style="font-size: 25px" href="#">Register / Login</a></li>
         </div>
         </div>
 
@@ -208,7 +217,7 @@ input::-webkit-input-placeholder {
             <div class="a">
                 <li><a href="#">Search</a></li>
             </div>
-            <div><input type="text" placeholder="What are you looking for?"> </div>
+            <div style="padding-left:80px"><input type="text" placeholder="What are you looking for?"> </div>
            
             </div>
 
@@ -217,7 +226,7 @@ input::-webkit-input-placeholder {
                 <div class="a">
                     <li><a href="#">Cart</a></li>
                 </div>
-               <div><h3>Your cart is currently empty.</h3></div>
+               <div><h3 style="color: white" id="crt">Your cart is currently empty.</h3></div>
                
                 </div>
 </body>
@@ -244,14 +253,15 @@ menu.addEventListener("click",function(){
 var search=document.getElementById("search");
 var sidenav1=document.getElementById("sidenav1");
 let count1=0;
+sidenav1.style.display = "none"
 //sidenav.style.width="0px";
 search.addEventListener("click",function(){
    
     if(count1%2===0){
-        sidenav1.style.display = "none"
+        sidenav1.style.display ="block" 
     }
     else{
-        sidenav1.style.display = "block"
+        sidenav1.style.display =  "none"
     }
     count1++;
 })
@@ -260,14 +270,15 @@ search.addEventListener("click",function(){
 var cart=document.getElementById("cart");
 var sidenav2=document.getElementById("sidenav2");
 let count2=0;
+sidenav2.style.display = "none"
 //sidenav.style.width="0px";
 cart.addEventListener("click",function(){
    
     if(count2%2===0){
-        sidenav2.style.display = "none"
+        sidenav2.style.display = "block" 
     }
     else{
-        sidenav2.style.display = "block"
+        sidenav2.style.display ="none"
     }
     count2++;
 })
