@@ -145,8 +145,9 @@ padding: 0px;
     color: white;
     font-weight: bold;
     width: 100%;
-    height: 300px;
+    height: auto;
     overflow: auto;
+    margin-bottom: 50px;
 }
 #parent>div{
     display: flex;
@@ -226,12 +227,12 @@ input[name="coupn"]{
     border-radius: 10px;
   }
   #couponshow{
-      color: rgb(113, 159, 199);
+      color: rgb(134, 192, 243);
       font-size: large;
       font-weight: bold;
   }
   #strikeprice{
-      color: red;
+      color: rgb(189, 29, 29);
       font-weight: lighter;
   }
 </style>
@@ -320,7 +321,7 @@ input[name="coupn"]{
 </html>
 <script>
 
-let data = JSON.parse(localStorage.getItem("cartiteams"))
+let data = JSON.parse(localStorage.getItem("cartList"))
 let parent = document.getElementById("parent");
 let parent2 = document.getElementById("subtotal");
 
@@ -337,6 +338,7 @@ pr.innerHTML=`₹  ${price*qty}`;
 div.append(image,nam);
 div1.append(div,pr)
 parent.append(div1);
+
 })
 
 
@@ -346,7 +348,7 @@ return acc+ele.qty*ele.price;
 
 },0)
 subtotal(total);
-let flag =false;
+
  function validate(coupon) {
     var myRe = "MASAI100";
     var coupon = myRe.trim();
@@ -421,6 +423,9 @@ div3.append(total,totalr)
 parent2.append(div1,div2,coupnediv,line,div3);
 
 }
+
+
+
 
 
 
