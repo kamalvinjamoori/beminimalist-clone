@@ -1,13 +1,16 @@
-// let objectArray = [
-//     {
-//     image:"https://cdn.shopify.com/s/files/1/0410/9608/5665/products/Hairgrowthserum1200-2-min_540x.png?v=1646492070",
-//     title:"Hair Growth Actives 18%",
-//     stars:"★ ★ ★ ☆ ☆",
-//     review:"180 reviews",
-//     originalPrice: 799,
-//     offerPrice: 795
-//     }
-//     ]
+const get = async(url) => {
+    try{
+        let res = await fetch(url)
+        let data = await res.json()
+        return data
+    }
+    catch(error) {
+        console.log('error:', error)
+    }
+}
+
+
+
 
     const displaydata = (objectArray,parent) => {
         objectArray.map( (ele) => {
@@ -59,14 +62,4 @@
         window.location.href = "product.html"
     }
 
-    // let selectedFilter = localStorage.getItem("filter")
-    // let selectedSort = localStorage.getItem("sort")
-    // document.getElementById("FILTER").innerText = selectedFilter
-    // document.getElementById("SORT").innerText = selectedSort
-    //    let clear = document.createElement("div");
-    //    clear.innerText = "CLEAR"
-
-    
-
-    // displaydata(objectArray)
-    export default displaydata
+    export  {get, displaydata}

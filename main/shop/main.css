@@ -321,6 +321,26 @@ margin-bottom: 30px;
 h5{
   cursor: pointer;
 }
-
+#AviewSelectedFilters{
+  display: flex;
+  margin-bottom: 10px;
+}
+#FILTER{
+  margin: 0px 15px ;
+  /* border: 1px solid black; */
+  padding: 5px;
+  border-radius: 5px;
+}
+#SORT{
+  margin: 0px 15px ;
+  padding: 5px;
+}
+#CLEAR{
+  margin: 0px 15px ;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 

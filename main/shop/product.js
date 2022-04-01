@@ -83,11 +83,11 @@ const displaydata = (SelectedProduct)=> {
         addtocartbut.innerText = "Add To Cart"
         addtocartbut.id = "toCart"
         document.getElementById("addtocartdiv").append(addtocartbut)
+        let cartProduct = JSON.parse(localStorage.getItem("cart"))||[]
         addtocartbut.addEventListener("click", () =>{
-           let cartProduct = []
            cartProduct.push(ele)
            localStorage.setItem("cart",JSON.stringify(cartProduct))
-        })
+        },{once:true})
 
 
 

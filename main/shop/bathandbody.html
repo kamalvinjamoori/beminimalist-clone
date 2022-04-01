@@ -111,7 +111,7 @@
                     <span>1</span>
 
                 </div>
-                <div class="AinnerDiv">
+                <!-- <div class="AinnerDiv">
                     <label class="Acheckbox" for="AmyCheckboxIdhair">
                         <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdhair"
                             value="Hair">
@@ -130,7 +130,7 @@
                     </label>
                     <span>24</span>
 
-                </div>
+                </div> -->
             </div>
             <!-- <hr> -->
             <!-- <div>
@@ -285,26 +285,15 @@
             <!-- </div> -->
         </div>
 </body>
-
 <script type="module">
-    
-let objectArray = [
-  // 1
-  {
-      image: "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/GlycolicTranexamic1200-2-min_540x.png?v=1648205949",
-      title: "Glycolic + Tranexamic 11% Body Exfoliator",
-      stars: "★ ☆ ☆  ☆ ☆",
-      review: "3 reviews",
-      originalPrice: 699,
-      offerPrice: 689
-  }
-]
-
-
-
-    import displaydata from "./main.js"
+    import {get, displaydata} from "./main.js"
+    let response = await get(`http://demo3901492.mockable.io/data`)
+    let bodyresponse = response.filter((ele) => {
+        return ele.title.includes("Body")
+    })
     let parent = document.getElementById("Aitems")
-    displaydata(objectArray, parent)
+    // console.log('response:', response)
+    displaydata(bodyresponse, parent)
 
 
 
@@ -390,27 +379,26 @@ let objectArray = [
 
 
     //function to sort
-
     const sort = document.getElementById("Aapply")
     sort.addEventListener("click", () => {
         let selectedsort = localStorage.getItem("sort")
         console.log('selectedsort:', selectedsort)
         if (selectedsort === "Pricel2h") {
-            objectArray.sort((a, b) => {
+            response.sort((a, b) => {
                 return a.offerPrice - b.offerPrice
             })
             parent.innerHTML = ""
-            displaydata(objectArray, parent)
+            displaydata(response, parent)
         }
         if (selectedsort === "Priceh2l") {
-            objectArray.sort((a, b) => {
+            response.sort((a, b) => {
                 return b.offerPrice - a.offerPrice
             })
             parent.innerHTML = ""
-            displaydata(objectArray, parent)
+            displaydata(response, parent)
         }
         if (selectedsort === "Alphabeticallya_z") {
-            objectArray.sort((a, b) => {
+            response.sort((a, b) => {
                 if (a.title > b.title) {
                     return 1
                 }
@@ -419,10 +407,10 @@ let objectArray = [
                 }
             })
             parent.innerHTML = ""
-            displaydata(objectArray, parent)
+            displaydata(response, parent)
         }
         if (selectedsort === "Alphabeticallyz_a") {
-            objectArray.sort((a, b) => {
+            response.sort((a, b) => {
                 if (b.title > a.title) {
                     return 1
                 }
@@ -431,10 +419,22 @@ let objectArray = [
                 }
             })
             parent.innerHTML = ""
-            displaydata(objectArray, parent)
+            displaydata(response, parent)
         }
-    })
 
+        let selectedSort = localStorage.getItem("sort")
+        console.log('selectedSort:', selectedSort)
+        //     let clear = document.createElement("div");
+        //    clear.innerText = "Clear filters"
+        //    clear.addEventListener("click", () =>{
+        //        localStorage.removeItem("filter")
+        //        localStorage.removeItem("sort")
+        //        window.location.reload()
+        //    })
+        //    document.getElementById("AviewSelectedFilters").append(clear)
+        document.getElementById("SORT").innerText = selectedSort
+
+    })
 
 
     let body = document.getElementById("AmyCheckboxIdbody")
@@ -541,47 +541,55 @@ let objectArray = [
         console.log('price3.value:', price3.value)
     })
 
-
     let applyFilter = document.getElementById("AapplyF")
     applyFilter.addEventListener("click", () => {
         let selectedfilter = localStorage.getItem("filter")
         if (selectedfilter === "skin") {
-            let ObjectArray = objectArray.slice(0, 24)
+            let response = response.slice(0, 24)
             parent.innerHTML = ""
-            displaydata(ObjectArray, parent)
+            displaydata(response, parent)
         }
-        else if(selectedfilter === "300") {
-            let FilterArray = objectArray.filter( (ele) => {
-                return ele.offerPrice <300
+        else if (selectedfilter === "300") {
+            let FilterArray = response.filter((ele) => {
+                return ele.offerPrice < 300
             })
             parent.innerHTML = ""
             displaydata(FilterArray, parent)
         }
-        else if(selectedfilter === "300_500") {
-            let FilterArray = objectArray.filter( (ele) => {
-                return ele.offerPrice >300 && ele.offerPrice<500
+        else if (selectedfilter === "300_500") {
+            let FilterArray = response.filter((ele) => {
+                return ele.offerPrice > 300 && ele.offerPrice < 500
             })
             parent.innerHTML = ""
             displaydata(FilterArray, parent)
         }
-        else if(selectedfilter === "500above") {
-            let FilterArray = objectArray.filter( (ele) => {
-                return  ele.offerPrice>500
+        else if (selectedfilter === "500above") {
+            let FilterArray = response.filter((ele) => {
+                return ele.offerPrice > 500
             })
             parent.innerHTML = ""
             displaydata(FilterArray, parent)
         }
         else {
 
-            let FilterArray = objectArray.filter((ele) => {
+            let FilterArray = response.filter((ele) => {
                 return ele.title.includes(selectedfilter)
             })
             parent.innerHTML = ""
             displaydata(FilterArray, parent)
         }
+        let selectedFilter = localStorage.getItem("filter")
+        document.getElementById("FILTER").innerText = selectedFilter
+        let clear = document.createElement("div");
+        clear.innerText = "Clear filters"
+        clear.addEventListener("click", () => {
+            localStorage.removeItem("filter")
+            localStorage.removeItem("sort")
+            window.location.reload()
+        })
+        document.getElementById("AviewSelectedFilters").append(clear)
     })
-
-
 </script>
+
 
 </html>
