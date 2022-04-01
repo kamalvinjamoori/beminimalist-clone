@@ -6,7 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Homepage</title>
+        <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./home.css">
+        <link rel="stylesheet" href="../header/header.css">
 
     </head>
 
@@ -62,7 +64,7 @@
                                         Brightens & illuminates
                                     </h3>
 
-                                    <button>Learn More</button>
+                                    <button id="rp0">Learn More</button>
 
                                 </div>
                             </div>
@@ -78,7 +80,7 @@
                                         Reduces pigmentation
                                     </h3>
 
-                                    <button>Learn More</button>
+                                    <button id="rp1">Learn More</button>
 
                                 </div>
                             </div>
@@ -94,7 +96,7 @@
                                         Repairs skin
                                     </h3>
 
-                                    <button>Learn More</button>
+                                    <button id="rp2">Learn More</button>
 
                                 </div>
                             </div>
@@ -110,7 +112,7 @@
                                         Hydrates & softens
                                     </h3>
 
-                                    <button>Learn More</button>
+                                    <button id="rp3">Learn More</button>
 
                                 </div>
                             </div>
@@ -128,7 +130,7 @@
                                         Reduces pigmentation
                                     </h3>
 
-                                    <button>Learn More</button>
+                                    <button id="rp1">Learn More</button>
 
                                 </div>
                             </div>
@@ -144,7 +146,7 @@
                                         Repairs skin
                                     </h3>
 
-                                    <button>Learn More</button>
+                                    <button id="rp2">Learn More</button>
 
                                 </div>
                             </div>
@@ -160,7 +162,7 @@
                                         Hydrates & softens
                                     </h3>
 
-                                    <button>Learn More</button>
+                                    <button id="rp3">Learn More</button>
 
                                 </div>
                             </div>
@@ -175,7 +177,7 @@
                                     <h3>
                                         Protects from UV
                                     </h3>
-                                    <button>Learn More</button>
+                                    <button id="rp4">Learn More</button>
 
                                 </div>
                             </div>
@@ -194,7 +196,7 @@
                                         Brightens & illuminates
                                     </h3>
 
-                                    <button>Learn More</button>
+                                    <button id="rp0">Learn More</button>
 
                                 </div>
                             </div>
@@ -210,7 +212,7 @@
                                         Reduces pigmentation
                                     </h3>
 
-                                    <button>Learn More</button>
+                                    <button id="rp1">Learn More</button>
 
                                 </div>
                             </div>
@@ -226,7 +228,7 @@
                                         Repairs skin
                                     </h3>
 
-                                    <button>Learn More</button>
+                                    <button id="rp2">Learn More</button>
 
                                 </div>
                             </div>
@@ -242,7 +244,7 @@
                                         Hydrates & softens
                                     </h3>
 
-                                    <button>Learn More</button>
+                                    <button id="rp3">Learn More</button>
 
                                 </div>
                             </div>
@@ -373,11 +375,122 @@
 
             </div>
 
+
         </div>
+
+        <div id="rfooter"></div>
 
     </body>
 
-
 </html>
 
+<script type=module>
 
+
+
+
+    let res = await fetch(`http://demo3901492.mockable.io/data`)
+    let data1 = await res.json()
+
+console.log('data:', data1)
+document.getElementById("rp1").addEventListener("click",()=>{
+  
+    data1.map((elem)=>{
+        if(elem.prods ===  "Niacinamide 10%")
+        {
+            console.log(elem)
+        }
+    })
+    
+})
+
+
+import {header,footer} from "../components/main1.js"
+console.log('header:', header)
+
+document.getElementById("rheader").innerHTML = header()
+
+
+document.querySelector("#mmenu").addEventListener("click", () => {
+        onClickMenu()
+    })
+    function onClickMenu() {
+        document.getElementById("mmenu").classList.toggle("icon")
+        document.getElementById("mnav").classList.toggle("change")
+    }
+
+
+
+
+    let sidenav2 = document.getElementById("sidenav2")
+    sidenav2.style.display = "none"
+    var sidenav1 = document.getElementById("sidenav1");
+    sidenav1.style.display = "none"
+    let count1 = 0;
+    console.log('count1:', count1)
+    let count2 = 0;
+    console.log('count2:', count2)
+
+
+
+    document.querySelector("#msearch").addEventListener("click", () => {
+        var search = document.getElementById("search");
+        var sidenav1 = document.getElementById("sidenav1");
+
+        sidenav1.style.display = "none"
+
+        displaySearch()
+    })
+
+
+    document.querySelector("#mcart").addEventListener("click", () => {
+
+        displayCart()
+    })
+
+
+
+    function displayCart() {
+
+        var sidenav2 = document.getElementById("sidenav2");
+        sidenav1.style.display = "none"
+
+        if (count2 % 2 === 0) {
+            sidenav2.style.display = "block"
+        }
+        else {
+            sidenav2.style.display = "none"
+        }
+        count2++;
+
+    }
+
+
+
+    function displaySearch() {
+
+        if (count1 % 2 === 0) {
+            sidenav1.style.display = "block"
+        }
+        else {
+            sidenav1.style.display = "none"
+        }
+        count1++;
+
+    }
+
+    
+    document.getElementById("rfooter").innerHTML = footer()
+
+    let a = document.getElementById("cartData").innerHTML
+    console.log('a:', a)
+
+
+    let cartarr = JSON.parse(localstorage.getItem('cartdata')) || []
+
+    cartarr.map(()=>{
+        // write append data function
+    })
+
+
+</script>

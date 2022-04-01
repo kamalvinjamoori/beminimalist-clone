@@ -1,5 +1,6 @@
 * {
-    font-family: aperc pro
+    font-family: aperc pro;
+    z-index: ;
 }
 
 #rcontainer1 {
@@ -9,6 +10,7 @@
     justify-content: space-between;
     /* border: 1px solid red; */
     align-items: center;
+    margin-top: 100px
 }
 
 #rleft {
@@ -68,19 +70,22 @@
 #rcontainer2 {
     width: 91%;
     margin: auto;
-    margin-top: 50px
-        /* border: 1px solid red; */
+    margin-top: 50px;
+
 
 }
 
 #rcontainer2 img {
     width: 275px;
     height: 401px;
+    margin-bottom: 20px;
+
 }
 
 #rslide1 {
     overflow: hidden;
-    margin-top: 20px
+    margin-top: 20px;
+
 }
 
 
@@ -90,6 +95,8 @@
     margin: 0;
     left: 0;
     animation: 10s rslide1 infinite;
+    z-index: -1;
+
 }
 
 #rproducts>div {
@@ -102,6 +109,7 @@
     display: flex;
     /* border: 1px solid rgb(0, 0, 0); */
     justify-content: space-between;
+
 }
 
 /* #rp1,
@@ -151,13 +159,14 @@
 .rp>div:nth-child(2)>h3:first-child {
     font-size: 16px;
     /* border: 1px solid red; */
-    padding-left: 10px;
-    padding-top: 10px;
+    /* padding-left: 10px; */
+    padding: 10px;
+
 }
 
 .rp>div:nth-child(2)>h3:nth-child(2) {
     font-size: 15px;
-    padding-left: 10px;
+    padding: 10px;
     color: #707070;
     /* border: 1px solid red; */
 }
@@ -203,7 +212,9 @@
 
 #rposter1 img {
     width: 100%;
-    margin-top: 40px
+    margin-top: 40px;
+    /* position: relative; */
+
 }
 
 #rposter2 {
@@ -234,6 +245,7 @@
     /* border: 1px solid red; */
     font-size: 22px;
     font-weight: bold;
+    z-index: 0;
 }
 
 #test1 {
@@ -335,6 +347,3 @@
     font-size: 18px;
     font-weight: bold;
 }
-
-
-

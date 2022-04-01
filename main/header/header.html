@@ -10,165 +10,7 @@
 
         <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
 
-        <style>
-            * {
-                margin: 0px;
-                padding: 0px;
-                font-family: apercu;
-            }
-
-            #mmain {
-                position: fixed;
-                width: 100%;
-                top: 0;
-                left: 0;
-            }
-
-            #mmenu {
-                width: 35px;
-                height: 30px;
-                margin: 30px 0px 20px 20px;
-                cursor: pointer;
-                z-index: 100;
-
-
-            }
-
-            .bar {
-                height: 3px;
-                width: 100%;
-                background-color: white;
-                display: block;
-                border-radius: 5px;
-                transition: 0.3s ease;
-                margin: 2px 0;
-            }
-
-            #bar1 {
-                transform: translateY(-4px)
-            }
-
-            #bar3 {
-                transform: translateY(4px)
-            }
-
-            .mnav li a {
-                color: white;
-                text-decoration: none;
-            }
-
-            .mnav li a:hover {
-                color: rgba(255, 255, 255, 0.4);
-
-
-            }
-
-            .mnav li {
-                list-style: none;
-                background-color: black;
-                padding: 16px 0;
-
-
-            }
-
-            .mnav {
-                padding: 0;
-                margin: 0 20px;
-                transition: 1s ease;
-                display: none;
-
-            }
-
-            .icon .bar {
-                background-color: white;
-            }
-
-            .icon #bar1 {
-                transform: translateY(4px) rotate(-45deg);
-            }
-
-            .icon #bar3 {
-                transform: translateY(-6px) rotate(45deg);
-            }
-
-            .icon #bar2 {
-                opacity: 0;
-            }
-
-            .change {
-                background-color: black;
-                height: 100vh;
-                margin: 0;
-                position: absolute;
-                font-size: 26px;
-                top: 0;
-                left: 0;
-                z-index: -100;
-                width: 50%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: left;
-                font-weight: bold;
-            }
-
-
-            #navbar {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                height: 40px;
-                width: 94%;
-                margin: auto;
-                background-color: black;
-                padding: 28px 40px;
-                color: white
-            }
-
-            #mflex {
-                width: 13%;
-                display: flex;
-                justify-content: space-between;
-                font-size: 30px;
-                color: white;
-
-            }
-
-            @font-face {
-                font-family: apercu;
-                src: url(./fonts/apercu_regular_pro.otf);
-            }
-
-            #sidenav1 {
-                padding: 100px 0px;
-                position: fixed;
-                width: 600px;
-                height: 100vh;
-
-                background-color: black;
-
-                right: 0;
-            }
-
-            #sidenav2 {
-                padding: 100px 0px;
-                position: fixed;
-                width: 50%;
-                height: 100vh;
-                backdrop-filter: blur(10px);
-                background-color: red;
-                background: rgba(17, 15, 15, 0.37);
-                background-color: black;
-                right: 0;
-            }
-
-            #change {
-                border: 1px solid red;
-                width: 100px;
-                height: 50px;
-            }
-        </style>
+        <link rel="stylesheet" href="./header.css">
     </head>
 
     <body>
@@ -176,7 +18,7 @@
             <div id="navbar">
 
                 <div id="mnavigation">
-                    <div id="mmenu" onclick="onClickMenu()">
+                    <div id="mmenu">
                         <div id="bar1" class="bar"></div>
                         <div id="bar2" class="bar"></div>
                         <div id="bar3" class="bar"></div>
@@ -194,34 +36,33 @@
                     <h1>Minimalist</h1>
                 </div>
                 <div id="mflex">
-                    <div id="msearch" onclick="displaySearch()"> <i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div id="msearch"><i class="fa-solid fa-magnifying-glass"></i></div>
 
-                    <i class="fa-solid fa-user" id="msearch" onclick="diaplaySearch()"></i>
-                    <i class="fa-solid fa-bag-shopping" id="mcart" onclick="displayCart()"></i>
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-bag-shopping" id="mcart"></i>
 
                 </div>
             </div>
 
             <div id="sidenav1">
 
-                <div class="a">
-                    <li><a href="#">Search</a></li>
+                <div id="productSearch">
+                    Search
                 </div>
-                <div style="padding-left:80px"><input type="text" placeholder="What are you looking for?"> </div>
+                <div style="padding-left:80px"><input type="text" id="productSearchinp"
+                        placeholder="What are you looking for?"> </div>
 
             </div>
 
 
             <div id="sidenav2">
-                <div class="a">
-                    <li><a href="#">Cart</a></li>
+                <div id="cartheading">
+                    Cart
                 </div>
-                <div>
-                    <h3 style="color: white" id="crt">
-                        <div>Your cart is currently empty.</div>
-                    </h3>
+                <div id="cartItems">
+                    Your cart is currently empty.
                 </div>
-
+                <button id="goTocart">Go to cart</button>
             </div>
         </div>
 
@@ -231,12 +72,46 @@
 
 <script type="text/javascript">
 
-    sidenav2.style.display = "none"
+
+    document.querySelector("#mmenu").addEventListener("click", () => {
+        onClickMenu()
+    })
     function onClickMenu() {
         document.getElementById("mmenu").classList.toggle("icon")
         document.getElementById("mnav").classList.toggle("change")
     }
+
+
+
+
+    let sidenav2 = document.getElementById("sidenav2")
+    sidenav2.style.display = "none"
+    var sidenav1 = document.getElementById("sidenav1");
+    sidenav1.style.display = "none"
+    let count1 = 0;
+    console.log('count1:', count1)
     let count2 = 0;
+    console.log('count2:', count2)
+
+
+
+    document.querySelector("#msearch").addEventListener("click", () => {
+        var search = document.getElementById("search");
+        var sidenav1 = document.getElementById("sidenav1");
+
+        sidenav1.style.display = "none"
+
+        displaySearch()
+    })
+
+
+    document.querySelector("#mcart").addEventListener("click", () => {
+
+        displayCart()
+    })
+
+
+
     function displayCart() {
 
         var sidenav2 = document.getElementById("sidenav2");
@@ -253,12 +128,9 @@
     }
 
 
-    var search = document.getElementById("search");
-    var sidenav1 = document.getElementById("sidenav1");
-    let count1 = 0;
-    sidenav1.style.display = "none"
+
     function displaySearch() {
-        sidenav2.style.display = "none"
+
         if (count1 % 2 === 0) {
             sidenav1.style.display = "block"
         }
