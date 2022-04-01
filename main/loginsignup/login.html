@@ -19,8 +19,8 @@
     padding:25px;
     box-sizing: border-box;
     font-size: 24px;
-    border-radius: 5px;
-            box-shadow: 4px 4px 15px brown;
+    /* border-radius: 5px; */
+            /* box-shadow: 4px 4px 15px brown; */
         }
         .signinsubmit:hover{
     background-color: #222222 !important;
@@ -34,14 +34,14 @@
 <div class="form">
 
     <form id="login-form">
-        <input type="email" id="email" placeholder="Email Address"/>
-        <input type="password" id="password" placeholder="Password"/>
+        <input type="email" id="email" placeholder="Email Address" required/>
+        <input type="password" id="password" placeholder="Password" required/>
         <input class="signinsubmit" type="submit" value="Sign In " />
         <!-- <button class="signinsubmit">Sign In</button> -->
         
         <ul>
-            <li><a id="forgot" href="forgot.html"> Forgot Your Password?</a></li>/
-            <li><a class="createaccount" href="signup.html">Create  Account </a></li>
+            <li><a id="forgot" href="forgot.html"> <pre>Forgot Your Password?  /</pre> </a></li>
+            <li><a class="createaccount" href="signup.html"><pre>Create  Account</pre> </a></li>
         </ul>
     </form>
     
@@ -64,7 +64,7 @@
             
             if(logininfo[i].email==email&& logininfo[i].password==password){
                 alert("login success")
-                window.location.href = "#"
+                window.location.href='forgot.html'
             }
             else{
                 alert("invalid")

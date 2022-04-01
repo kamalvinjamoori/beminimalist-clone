@@ -8,7 +8,13 @@ li{
     list-style: none;
     text-decoration: underline;
     text-decoration: none;
+    /* font-size: 60px; */
   
+}
+li a pre{
+    font-size: 36px;
+    /* text-decoration: none; */
+    color:#000000
 }
 ul{
     display: flex;
@@ -59,10 +65,10 @@ ul{
     border:2px solid black;
     width:100%;
     border:0;
-    margin:0 0 15px;
-    padding:25px;
+    margin:0 0 35px;
+    padding:30px;
     box-sizing: border-box;
-    font-size: 24px;
+    font-size: 32px;
     border-radius: 5px;
     /* box-shadow: 4px 4px 5px grey; */
 }
@@ -73,10 +79,10 @@ ul{
     border:2px solid black;
     width:100%;
     border:0;
-    margin:0 0 15px;
-    padding:25px;
+    margin:0 0 35px;
+    padding:30px;
     box-sizing: border-box;
-    font-size: 24px;
+    font-size: 32px;
     border-radius: 5px;
     /* box-shadow: 4px 4px 5px grey; */
 }
@@ -87,8 +93,8 @@ ul{
     /* padding: 20px; */
 }
 .loginsubmit:hover{
-    background-color: greenyellow;
-    color:red;
+    background-color: #2222;
+    color:white;
 }
 .reset{
     text-align: center;
