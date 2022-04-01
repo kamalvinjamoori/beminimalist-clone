@@ -10,7 +10,7 @@
     justify-content: space-between;
     /* border: 1px solid red; */
     align-items: center;
-    margin-top: 100px
+    margin-top: 120px
 }
 
 #rleft {
@@ -41,18 +41,22 @@
     width: 361px;
     height: 48px;
     /* border: 1px solid red; */
-    font-size: 48px;
+    font-size: 72px;
+    margin-bottom: 80px;
     font-weight: bold;
     font-family: aperc pro;
+    line-height: 70px;
+    margin-top: -50px;
     /* letter-spacing: -2px; */
 }
 
 #rpara {
     width: 400px;
     height: 60px;
-    font-size: 16px;
+    font-size: 18px;
     font-family: aperc pro;
-    padding-top: 20px
+    padding-top: 20px;
+    margin-bottom: 10px
 }
 
 #rchecknow button {

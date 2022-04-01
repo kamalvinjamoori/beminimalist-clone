@@ -492,5 +492,23 @@ document.querySelector("#mmenu").addEventListener("click", () => {
         // write append data function
     })
 
+    document.getElementById("checkNow").addEventListener("click",()=>{
+        display1()
+    })
+
+    function display1(){
+        data1.map((elem)=>{
+            if(elem.prods === "Glycolic + Tranexamic 11% Body Exfoliator")
+            {
+                let div = document.createElement("div")
+                let image = document.createElement("img")
+                image.src = elem.image
+                let name = document.createElement("h1")
+                name.innerHTML = elem.title
+                
+            }
+        })
+    }
+
 
 </script>
