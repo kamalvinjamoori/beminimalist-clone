@@ -1,224 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
-    <style>
-        #navbar {
-            display: grid;
-            grid-template-columns: 20% 50% 30%;
-            gap: 10px;
-            height: 105px;
-            width: 100%;
-            background-color: black;
-        }
+        <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
 
-        #navbar>div {
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+                font-family: apercu;
+            }
 
-            border: 1px solid white;
-            height: 100%;
-            color: white;
-            text-align: center;
-            font-size: larger;
-        }
+            #mmain {
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+            }
 
-        /* #nav1{
-        margin-top: 40px;
-    } */
-        .material-icons {
-            padding-top: 20px;
-            font-size: 50px;
-            border-width: 1px;
-            color: white;
-            /* background-color: aqua; */
-        }
-
-        #menu{
-            position: fixed;
-            top: 20px;
-            font-size: 50px;
-            border-width: 1px;
-            left: 70px;
-            color: white;
-            cursor: pointer;
-            z-index: 2;
+            #mmenu {
+                width: 35px;
+                height: 30px;
+                margin: 30px 0px 20px 20px;
+                cursor: pointer;
+                z-index: 100;
 
 
-        }
+            }
+
+            .bar {
+                height: 3px;
+                width: 100%;
+                background-color: white;
+                display: block;
+                border-radius: 5px;
+                transition: 0.3s ease;
+                margin: 2px 0;
+            }
+
+            #bar1 {
+                transform: translateY(-4px)
+            }
+
+            #bar3 {
+                transform: translateY(4px)
+            }
+
+            .mnav li a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .mnav li a:hover {
+                color: rgba(255, 255, 255, 0.4);
 
 
-        #search{
-            /* position: fixed; */
-            /* top: 20px; */
-            /* font-size: 50px; */
-            /* border-width: 1px; */
-            /* left: 70px; */
-            color: white;
-            cursor: pointer;
-            z-index: 2;
+            }
+
+            .mnav li {
+                list-style: none;
+                background-color: black;
+                padding: 16px 0;
 
 
-        }
+            }
 
-        #cart{
-            /* position: fixed; */
-            /* top: 20px; */
-            /* font-size: 50px; */
-            /* border-width: 1px; */
-            /* left: 70px; */
-            color: white;
-            cursor: pointer;
-            z-index: 2;
+            .mnav {
+                padding: 0;
+                margin: 0 20px;
+                transition: 1s ease;
+                display: none;
 
+            }
 
-        }
+            .icon .bar {
+                background-color: white;
+            }
 
-        #sidenav{
-       padding: 100px 0px;
-       position: fixed;
-       width: 600px;
-       height: 100vh;
-       backdrop-filter: blur(10px);
-       /* box-shadow: inset 10px 10px 10px gray; */
-       background-color:black;
-       /* background:rgba(17, 15, 15, 0.37); */
-       /* top: 0; */
-       left: 0;
-        }
+            .icon #bar1 {
+                transform: translateY(4px) rotate(-45deg);
+            }
 
-        #sidenav1{
-       padding: 100px 0px;
-       position: fixed;
-       width: 600px;
-       height: 100vh;
-       backdrop-filter: blur(10px);
-       /* box-shadow: inset 10px 10px 10px gray; */
-       background-color:black;
-       /* background:rgba(17, 15, 15, 0.37); */
-       /* top: 0; */
-       right: 0;
-        }
+            .icon #bar3 {
+                transform: translateY(-6px) rotate(45deg);
+            }
 
-        #sidenav2{
-       padding: 100px 0px;
-       position: fixed;
-       width: 600px;
-       height: 100vh;
-       backdrop-filter: blur(10px);
-       /* box-shadow: inset 10px 10px 10px gray; */
-       /* background-color: red; */
-       /* background:rgba(17, 15, 15, 0.37); */
-       background-color: black;
-       /* top: 0; */
-       right: 0;
-        }
+            .icon #bar2 {
+                opacity: 0;
+            }
+
+            .change {
+                background-color: black;
+                height: 100vh;
+                margin: 0;
+                position: absolute;
+                font-size: 26px;
+                top: 0;
+                left: 0;
+                z-index: -100;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: left;
+                font-weight: bold;
+            }
 
 
+            #navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 40px;
+                width: 94%;
+                margin: auto;
+                background-color: black;
+                padding: 28px 40px;
+                color: white
+            }
 
-        .a>li{
-          list-style: none; 
+            #mflex {
+                width: 13%;
+                display: flex;
+                justify-content: space-between;
+                font-size: 30px;
+                color: white;
 
-        }
-        a{
-            text-decoration: none;
-            color: white;
-            font-size: 20px;
-            margin: 10px;
-            display: block;
-            /* padding: 7px; */
-            padding-left:80px;
-            font-size:30px;
-            /* background-color: aqua; */
-        }
-        a:hover{
-            background-color:rgba(255,255,255,0.4);
-            transition: 0.4s;
-        }
+            }
 
-     
+            @font-face {
+                font-family: apercu;
+                src: url(./fonts/apercu_regular_pro.otf);
+            }
 
-input {
-    width: 400px;
-    padding: 0 20px;
-    color: white;
-    background-color: black;
-}
+            #sidenav1 {
+                padding: 100px 0px;
+                position: fixed;
+                width: 600px;
+                height: 100vh;
 
-input,
-input::-webkit-input-placeholder {
-    font-size: 17px;
-    line-height: 3;
-}
+                background-color: black;
 
-#crt{
-    font-size:large;
-    padding-left: 30px;
-}
+                right: 0;
+            }
 
+            #sidenav2 {
+                padding: 100px 0px;
+                position: fixed;
+                width: 50%;
+                height: 100vh;
+                backdrop-filter: blur(10px);
+                background-color: red;
+                background: rgba(17, 15, 15, 0.37);
+                background-color: black;
+                right: 0;
+            }
 
-    </style>
-</head>
+            #change {
+                border: 1px solid red;
+                width: 100px;
+                height: 50px;
+            }
+        </style>
+    </head>
 
-<body>
-    <div id="navbar">
+    <body>
+        <div id="mmain">
+            <div id="navbar">
 
-        <div><span class="material-icons" id="menu">
-                menu
-            </span>
+                <div id="mnavigation">
+                    <div id="mmenu" onclick="onClickMenu()">
+                        <div id="bar1" class="bar"></div>
+                        <div id="bar2" class="bar"></div>
+                        <div id="bar3" class="bar"></div>
+                    </div>
+                    <ul class="mnav" id="mnav">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Knowledge</a></li>
+                        <li><a href="">Track Order</a></li>
+                        <li><a href="">Register / Login</a></li>
+                    </ul>
 
-        </div>
+                </div>
+                <div>
+                    <h1>Minimalist</h1>
+                </div>
+                <div id="mflex">
+                    <div id="msearch" onclick="displaySearch()"> <i class="fa-solid fa-magnifying-glass"></i></div>
 
+                    <i class="fa-solid fa-user" id="msearch" onclick="diaplaySearch()"></i>
+                    <i class="fa-solid fa-bag-shopping" id="mcart" onclick="displayCart()"></i>
 
-        <div>
-            <h2>Minimalist</h2>
-        </div>
-        <div><span class="material-icons" id="search">
-                search
-            </span>
-            <span class="material-icons">
-                person_outline
-            </span>
-            <span class="material-icons" id="cart">
-                shopping_bag
-            </span>
-
-        </div>
-
-
-
-    </div>
-    <div id="sidenav">
-        <div class="a">
-            <li><a href="#">Home</a></li>
-        </div>
-        <div class="a">
-            <li><a href="#">Shop</a></li>
-        </div>
-        <div class="a">
-            <li><a href="#">Knowledge</a></li>
-        </div>
-        <div class="a">
-            <li><a href="#">Track Order</a></li>
-        </div>
-        <div class="a" >
-            <li><a style="font-size: 25px" href="#">Register / Login</a></li>
-        </div>
-        </div>
-
-
-        <div id="sidenav1">
-            <div class="a">
-                <li><a href="#">Search</a></li>
+                </div>
             </div>
-            <div style="padding-left:80px"><input type="text" placeholder="What are you looking for?"> </div>
-           
+
+            <div id="sidenav1">
+
+                <div class="a">
+                    <li><a href="#">Search</a></li>
+                </div>
+                <div style="padding-left:80px"><input type="text" placeholder="What are you looking for?"> </div>
+
             </div>
 
 
@@ -226,67 +216,58 @@ input::-webkit-input-placeholder {
                 <div class="a">
                     <li><a href="#">Cart</a></li>
                 </div>
-               <div><h3 style="color: white" id="crt">Your cart is currently empty.</h3></div>
-               
+                <div>
+                    <h3 style="color: white" id="crt">
+                        <div>Your cart is currently empty.</div>
+                    </h3>
                 </div>
-</body>
+
+            </div>
+        </div>
+
+    </body>
 
 </html>
 
- <script type="text/javascript">
-var menu=document.getElementById("menu");
-var sidenav=document.getElementById("sidenav");
-let count=0;
-//sidenav.style.width="0px";
-sidenav.style.display ="none"
-menu.addEventListener("click",function(){
-   
-    if(count%2===0){
-        sidenav.style.display ="block"
-    }
-    else{
-        sidenav.style.display =  "none"
-    }
-    count++;
-})
+<script type="text/javascript">
 
-var search=document.getElementById("search");
-var sidenav1=document.getElementById("sidenav1");
-let count1=0;
-sidenav1.style.display = "none"
-//sidenav.style.width="0px";
-search.addEventListener("click",function(){
-   
-    if(count1%2===0){
-        sidenav1.style.display ="block" 
+    sidenav2.style.display = "none"
+    function onClickMenu() {
+        document.getElementById("mmenu").classList.toggle("icon")
+        document.getElementById("mnav").classList.toggle("change")
     }
-    else{
-        sidenav1.style.display =  "none"
+    let count2 = 0;
+    function displayCart() {
+
+        var sidenav2 = document.getElementById("sidenav2");
+        sidenav1.style.display = "none"
+
+        if (count2 % 2 === 0) {
+            sidenav2.style.display = "block"
+        }
+        else {
+            sidenav2.style.display = "none"
+        }
+        count2++;
+
     }
-    count1++;
-})
- 
-    
-var cart=document.getElementById("cart");
-var sidenav2=document.getElementById("sidenav2");
-let count2=0;
-sidenav2.style.display = "none"
-//sidenav.style.width="0px";
-cart.addEventListener("click",function(){
-   
-    if(count2%2===0){
-        sidenav2.style.display = "block" 
-    }
-    else{
-        sidenav2.style.display ="none"
-    }
-    count2++;
-})
- 
 
 
+    var search = document.getElementById("search");
+    var sidenav1 = document.getElementById("sidenav1");
+    let count1 = 0;
+    sidenav1.style.display = "none"
+    function displaySearch() {
+        sidenav2.style.display = "none"
+        if (count1 % 2 === 0) {
+            sidenav1.style.display = "block"
+        }
+        else {
+            sidenav1.style.display = "none"
+        }
+        count1++;
 
-
+    }
 
 
 
