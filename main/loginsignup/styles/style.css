@@ -12,7 +12,7 @@ li{
   
 }
 li a pre{
-    font-size: 36px;
+    font-size: 20px;
     /* text-decoration: none; */
     color:#000000
 }
@@ -66,9 +66,9 @@ ul{
     width:100%;
     border:0;
     margin:0 0 35px;
-    padding:30px;
+    padding:18px;
     box-sizing: border-box;
-    font-size: 32px;
+    font-size: 22px;
     border-radius: 5px;
     /* box-shadow: 4px 4px 5px grey; */
 }
@@ -79,10 +79,10 @@ ul{
     border:2px solid black;
     width:100%;
     border:0;
-    margin:0 0 35px;
-    padding:30px;
+    margin:0 0 30px;
+    padding:20px;
     box-sizing: border-box;
-    font-size: 32px;
+    font-size: 22px;
     border-radius: 5px;
     /* box-shadow: 4px 4px 5px grey; */
 }
