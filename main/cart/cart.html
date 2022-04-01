@@ -6,85 +6,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
         #gcontainer{
           width: 90%;
         text-align: center;
-            
+        
         margin: auto;
         margin-top: 100px;
+    font-size: larger;
+    
         }
-
-        #gcontainer>div{
+        .gdetails{
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 18px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        #gcartiteams>img{
-            width: 120px;
-            height: 120px;
         
+            justify-content: space-between;
+            font-family: 'Courier New', Courier, monospace;
+        color:#222222;
         }
-        a{
-            font-weight: bold;
+        #gtotal{
+            display: flex;
+            gap: 400px;
+            color: #222222;
+            
         }
-        .txt{
-            padding: 5%;
-           
+        #gappend{
+            display: flex;
+            justify-content: space-between;
+        align-items: flex-start;
+        justify-items: baseline;
+        margin: auto;
         }
+        #gprice{
+            display: flex;
+            gap: 30px;
+        
+            
+        }
+        #gprice>div img{
+            width: 100px;
+            height: 150px;
+            
+        }
+        #btndiv{
+        
+            width: 100px;
+height: 50px;
+border: 0.5px solid;
+display: flex;
+align-items: center;
+justify-content: center;
+
+        }
+#btndiv>button{
+            border: none;
+            width: 100%;
+            height: 100%;
+            font-size: larger;
+            background-color: white;}
+            #btndiv>button:hover{
+                border: #222222 solid 0.5px;
+            }
+            #gsubmit{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            #gsubmit>button{
+                width: 150px;
+                padding: 15px;
+                background-color: black;
+                color: white;
+                font-size: large;
+            }
     </style>
 </head>
 <body>
     
-    <div id="gcontainer">
-        <h1>Your cart</h1>
-        <div id="gdetails">
+<div id="gcontainer">
+        <h2>Your cart</h2>
+           <div class="gdetails">
+             <div><p>product</p></div>
+               <div id="gtotal">
+                 <p>Quantity</p>
+                  <p>Total</p>
+                 </div>
+                
         </div>
-        <div id="gcartiteams" ></div>
-        </div>
+        <hr>
+        <div id="showdata"></div>
+        <hr>
+        <div id="gsubmit"></div>
+</div>
     
 </body>
 </html>
 <script>
-    let count=0;
-let main = document.getElementById("gcontainer");
-let detail = document.getElementById("gdetails");
-let items = document.getElementById("gcartiteams");
+
+
+let cart = [
+{
+img:'https://cdn.shopify.com/s/files/1/0410/9608/5665/products/VitaminC10_1200-1-min_180x.png?v=1646543848',
+name:'product1',
+price:'599',
+qty:5,
+
+},
+{
+img:'https://cdn.shopify.com/s/files/1/0410/9608/5665/products/VitaminC10_1200-1-min_180x.png?v=1646543848',
+name:'product2',
+price:'599',
+qty:4,
+
+},
+]
+let perent = document.getElementById("showdata");
+
+if(cart.length!=0){
+    let subtotal=0;
+
+cart.forEach(({img,name,price,qty}) => {
+let div = document.createElement("div");
 let div1 = document.createElement("div");
-let div2 = document.createElement("div");
-div1.innerText="Product";
-div2.innerHTML=`${'Quantity'} ${'.    .   .'} ${'Total'}`
-div2.setAttribute("class","txt")
-detail.append(div1,div2)
-let img = document.createElement("img");
-img.src="https://cdn.shopify.com/s/files/1/0410/9608/5665/products/AlphaArbutin2_1200-1-min_180x.png?v=1646543550"
+let div2 =document.createElement("div");
+div2.setAttribute("id","btndiv");
 
-let div3 = document.createElement("div");
-let div4 = document.createElement("div")
-let name = document.createElement("a");
-name.innerHTML="Glycolic + Tranexamic 11% Body Exfoliator";
+let div3 =document.createElement("div");
+
+let div4 =document.createElement("div");
+div4.setAttribute("id","gappend")
+
 let div5 = document.createElement("div");
+div5.setAttribute("id","gprice")
+//product img
+let image = document.createElement("img");
+image.src=img;
+//product name
+let pname = document.createElement("p");
+pname.innerHTML=name;
+//product price
+let pr = document.createElement("p");
+pr.innerHTML=price;
 
-let price = document.createElement("div");
-price.innerHTML=`₹ 650`;
-let btn =document.createElement("button");
-btn.innerHTML="-";
-div5.append(name,price);
+//increase decrease button 
+let btn1= document.createElement("button");
+btn1.addEventListener("click",()=>{
+    
+    
+    qty = quantity.innerHTML=--qty;
+    
+})
+
+let btn2=document.createElement("button");
+btn2.addEventListener("click",()=>{
+    qty = quantity.innerHTML=++qty;
+    
+})
+
+btn1.innerHTML='-';
+btn2.innerHTML='+';
+
+let quantity=document.createElement("p");
+quantity.innerHTML=qty;
+
+total = Number(price)*qty;
+//appending
+
+div.append(image)
+div1.append(pname,pr);
+div5.append(div,div1)
+div2.append(btn1,quantity,btn2);
+div3.append(`₹ ${total}`);
+div4.append(div5,div2,div3);
+perent.append(div4)
+
+subtotal=total+subtotal;
+});
+
+    let gmain = document.getElementById("gsubmit");
+let p = document.createElement("p");
+let at = document.createElement("h4");
+let submit = document.createElement("button");
+submit.addEventListener("click",()=>{
+    cheakout();
+})
+p.innerHTML="Taxes and shipping calculated at checkout";
+submit.innerHTML="Check out";
+at.innerHTML=`₹ ${subtotal}`;
+gmain.append(at,p,submit);
 
 
-let btn1 =document.createElement("button");
-btn1.innerHTML="+";
+function cheakout(){
+   
+localStorage.setItem("cartiteams",JSON.stringify(cart));
+window.location.href="./checkout.html"
 
-let div6= document.createElement("div");
-div6.append(btn,count,btn1)
-let div7=document.createElement("div");
-div7.innerHTML="650"
+}
+}
 
-div4.append(div5);
-div3.append(div4)
-items.append(img,div3,div6,div7);
-main.append(detail,items);
+
+
+
+
+else{
+let heading = document.createElement("h4");
+let a = document.createElement("a");
+a.innerHTML="Continue Shopping";
+heading.innerHTML="Your cart is currently empty."
+perent.append(heading,a);
+}
+
+
+
 
 
 </script>
