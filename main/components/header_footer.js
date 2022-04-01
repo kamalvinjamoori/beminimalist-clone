@@ -1,4 +1,4 @@
-function header() {
+const header = () => {
     return `<div id="mmain">
             <div id="navbar">
 
