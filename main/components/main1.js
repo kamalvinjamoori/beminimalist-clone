@@ -88,7 +88,7 @@ const footer = () => {
             </div>
 
 
-            <div class="a"><a href="#">Knowledge</a></div>
+            <div class="a"><a href="../knowledge/index.html">Knowledge</a></div>
 
             <div class="a"><a href="#">FAQs</a></div>
 
@@ -103,8 +103,9 @@ const footer = () => {
 
         <div id="footlogo">
             <div class="logo">
-                <a href="#"> <i class="fa fa-facebook" id="face"></i></a>
-                <a href="#"><i class="fa fa-instagram" id="insta"></i></a>
+            <a href="https://www.facebook.com/minimalistinc"> <i class="fa fa-facebook" id="face"></i></a>
+            <a href="https://www.instagram.com/beminimalist__/"><i class="fa fa-instagram"
+                    id="insta"></i></a>
             </div>
 
             <div></div>
