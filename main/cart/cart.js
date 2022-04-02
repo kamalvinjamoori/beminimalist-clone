@@ -1,5 +1,5 @@
 
-var cartList = JSON.parse(localStorage.getItem("cart"))||[];
+var cartList= JSON.parse(localStorage.getItem("cart"))||[];
 let perent = document.getElementById("showdata");
 
 if(cartList.length!=0){
@@ -31,11 +31,7 @@ let finel;
 for(let i=0; i<cartList.length; i++){
 
  finel = elem.originalPrice.trim().split(" ");
-
  
-
- 
-    
 }
 finel = +finel[1];
 
@@ -47,8 +43,6 @@ let btn1= document.createElement("button");
 btn1.addEventListener("click",()=>{
     
     decrease(elem,index);
-    
-    
 })
 
 let btn2=document.createElement("button");
@@ -106,11 +100,24 @@ perent.append(heading,a);
  function decrease(elem,index){
 elem.qty--;
 
-
 if(elem.qty==0){
-    cartList.splice(index,1);
-    console.log(cartList)
+cartList.splice(index,1);
+console.log(cartList)
+localStorage.setItem("cart",JSON.stringify(cartList))
+location.reload();
 }
+else{
+    addToCart(elem);
+    location.reload();
+}
+
+
+
+
+
+
+
+
 
 
 
