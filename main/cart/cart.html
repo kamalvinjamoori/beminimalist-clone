@@ -111,7 +111,7 @@ justify-content: center;
 <div id="gfooter"></div>
 </body>
 </html>
-<script type="module">
+<!-- <script type="module">
 
 
 // import {header,footer} from "../components/main1.js";
@@ -143,6 +143,55 @@ justify-content: center;
 
 // ]
 
+var cartList= JSON.parse(localStorage.getItem("cart"))||[];
+let perent = document.getElementById("showdata");
+
+if(cartList.length!=0){
+    let subtotal=0;
+
+cartList.forEach(elem => {
+let div = document.createElement("div");
+let div1 = document.createElement("div");
+let div2 =document.createElement("div");
+div2.setAttribute("id","btndiv");
+
+let div3 =document.createElement("div");
+
+let div4 =document.createElement("div");
+div4.setAttribute("id","gappend")
+
+let div5 = document.createElement("div");
+div5.setAttribute("id","gprice")
+//product img
+let image = document.createElement("img");
+image.src=elem.img;
+//product name
+let pname = document.createElement("p");
+pname.innerHTML=elem.name;
+//product price
+let pr = document.createElement("p");
+pr.innerHTML=elem.price;
+
+//increase decrease button 
+let btn1= document.createElement("button");
+btn1.addEventListener("click",()=>{
+    
+    decrease(elem);
+    
+    
+})
+
+let btn2=document.createElement("button");
+btn2.addEventListener("click",()=>{
+    increase(elem);
+    
+})
+
+btn1.innerHTML='-';
+btn2.innerHTML='+';
+
+let quantity=document.createElement("p");
+quantity.innerHTML=elem.qty;
 
 
 
@@ -150,5 +199,6 @@ justify-content: center;
 
 
 
-</script>
+
+</script> -->
 <script src="./cart.js"></script>
