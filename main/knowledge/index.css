@@ -7,7 +7,7 @@
 }
 #s_lab{
     width: auto;
-    height:320px;
+    height:500px;
     /* border: 2px solid red; */
     background-color: black;
 }
@@ -15,7 +15,7 @@
     /* border: 1px solid red; */
     max-width: 700px;
     margin: auto;
-    padding-top:50px;
+    padding-top:150px;
     height:200px;
     display: flex;
     align-items: center;
