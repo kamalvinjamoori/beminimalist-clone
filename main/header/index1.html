@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent {
+            width: 100%;
+            /* background-color: burlywood; */
+            /* border: 1px solid black; */
+        }
+
+        #upper {
+            display: flex;
+            margin: auto;
+            display: grid;
+            grid-template-rows: repeat(1, 1fr);
+            height: 740px;
+            width: 40%;
+        margin-bottom: 160px;
+            /* border: 1px solid red; */
+        }
+
+        #lower {
+            height: 600px;
+            width: 98%;
+            /* border: 1px solid brown; */
+        }
+
+        #middle {
+            padding-left: 30px;
+            padding-top: 20px;
+            height: 250px;
+            width: 100%;
+            /* border: 4px solid rgb(18, 178, 237); */
+            border-left: 4px solid rgb(18, 178, 237);
+        }
+
+       
+
+        #lower {
+        
+            width: 100%;
+            /* background-color: cadetblue; */
+        }
+
+       
+        #lowerSecond {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            height: 400px;
+            width: 70%;
+            /* border: 3px solid pink; */
+            gap: 20px;
+            margin:auto;
+        }
+
+       
+        #s{
+            display: flex;
+            justify-content: center;
+        }
+        #s>img{
+           padding-top: 10px;
+            background-size: cover;
+            height:290px;
+            width:100%;
+            justify-content: center;
+        }
+        #p{
+            height: 90px;
+            width: 100%;
+            /* background-color: blue; */
+        }
+        #lowerFirst {
+            height: 80px;
+            width: 70%;
+            /* border: 3px solid blue; */
+            margin: auto;
+        }
+
+        #lowerFirst{
+            display: flex;
+            /* text-align: center; */
+            justify-content: center;
+            padding-top: 25px;
+        }
+        #bottom {
+            /* position: fixed; */
+            margin-top: 70px;
+            height: 40px;
+            width: 100%;
+            /* border: 1px solid black; */
+            padding-left: 10px;
+            padding-bottom: 13px;
+            color: white;
+            background-color: black;
+            cursor: pointer;
+            z-index: 2;
+        }
+        #bottomFirst{
+            /* background-color: burlywood; */
+            height: 160px;
+            backdrop-filter: blur(10px);
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="parent">
+        <div id="upper">
+            <div>
+                <h2>A Summary </h2>
+
+
+                <p>Although not as gold-standard as retinol, peptides deserve some attention. Peptides, after all, have
+                    abilities to target many aging woes, from fine and wrinkles to sagging, and they work out well as
+                    our bodies know them.</p>
+                <p>The right peptide will help you preserve your resilient skin until the biological clock takes over.
+                </p>
+            </div>
+            <div id="middle">
+                <h4>Advice By Minimalist</h4>
+
+                <p>For your cells to act healthy, you need to pay close attention. So, adding peptides to other
+                    beneficial ingredients for sun protection will go a long way.</p>
+
+                <p>Do not fall for boastful claims of a botox-like transformation. Peptides do not imitate botox
+                    effects.</p>
+
+
+                <p>If you cannot tolerate retinoids, peptides are a must. But if you can and are currently using them,
+                    peptides will compliment them </p>
+            </div>
+            <div id="bottom">
+                <h3>+ Reference</h3>
+            </div>
+            <div id="bottomFirst">
+                <ol>
+                    <li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6016997/</li>
+                    <li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6684887/ </li>
+                    <li>https://pubmed.ncbi.nlm.nih.gov/15648443/</li>
+                    <li> https://pubmed.ncbi.nlm.nih.gov/18045359/</li>
+                    <li> https://pubmed.ncbi.nlm.nih.gov/18412569/</li>
+                    <li> https://pubmed.ncbi.nlm.nih.gov/33103342/</li>
+                    <li>https://pubmed.ncbi.nlm.nih.gov/15648443/ </li>
+                </ol>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    <div id="lower">
+
+        <div id="lowerFirst">
+            <h2>Related Posts</h2>
+        </div>
+        <div id="lowerSecond">
+            <div>
+                <div id="s"><img src="https://cdn.shopify.com/s/files/1/0410/9608/5665/t/3/assets/pf-3e428388--cover-image-2.jpg?v=1615378262" alt=""> </div>
+                <div id="p"> <h4>The No BS Guide to Using Peptides in Skincare</h4>
+                <p>Mar 11, 2021Shopify API</p>
+                </div>
+            </div>
+            <div>
+                <div id="s"><img src="https://cdn.shopify.com/s/files/1/0410/9608/5665/articles/cover_image_2_b9636a4c-b0c5-4445-8be1-6c7cf8e796a1_350x300_crop_center.jpg?v=1613711302" alt=""></div>
+                <div id="p">
+                    <h4>Supercharge Your Skin With Colloidal Oatmeal</h4>
+                    <p>Feb 19, 2021Shopify API</p>
+                </div>
+            </div>
+            <div>
+                <div id="s"><img src="https://cdn.shopify.com/s/files/1/0410/9608/5665/articles/blog_creative_-_2020-12-22T183226.959_350x300_crop_center.jpg?v=1608701277" alt=""></div>
+                <div id="p">
+                 <h4>No BS Guide to Using Squalane</h4>
+                 <p>Dec 23, 2020Shopify API</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+
+
+
+var bottom=document.getElementById("bottom");
+var bottomFirst=document.getElementById("bottomFirst");
+let count=0;
+//bottomFirst.style.width="0px";
+bottomFirst.style.display ="none"
+bottom.addEventListener("click",function(){
+   
+    if(count%2===0){
+        bottomFirst.style.display ="block"
+    }
+    else{
+        bottomFirst.style.display =  "none"
+    }
+    count++;
+})
+
+</script>
