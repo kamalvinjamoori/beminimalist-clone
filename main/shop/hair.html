@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bath & Body - Minimalist</title>
+    <title>Hair - Minimalist </title>
     <link rel="stylesheet" href="./main.css">
     <link href="//db.onlinewebfonts.com/c/74c3c29282b604a9eed88ac6ede61463?family=Apercu+Pro" rel="stylesheet"
         type="text/css" />
@@ -19,10 +19,10 @@
             <div id="Adetails">
                 <div id="Adetailsinnerdiv">
                     <div id="AdetailsinnerdivName">
-                        <h3>Bath & Body</h3>
+                        <h3>Hair</h3>
                     </div>
                     <div id="AdetailsinnerdivDetail">
-                        <p>Treat your body from head to toe with our range of science-backed &  efficacious range of body care products. Protect every last inch of your skin</p>
+                        <p>Shop our haircare products, developed with best-in-class & highly efficacious ingredients to address your hair concerns.</p>
                     </div>
                 </div>
             </div>
@@ -38,10 +38,6 @@
                     </div>
                 </div>
                 <hr>
-                <div id="AviewSelectedFilters">
-                    <div id="FILTER"></div>
-                    <div id="SORT"></div>
-                </div>
                 <div id="Aitems">
 
                 </div>
@@ -101,7 +97,7 @@
             </div>
             <div>
                 <p>Category</p>
-                <div class="AinnerDiv">
+                <!-- <div class="AinnerDiv">
                     <label class="Acheckbox" for="AmyCheckboxIdbody">
                         <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdbody"
                             value="Body">
@@ -110,8 +106,8 @@
                     </label>
                     <span>1</span>
 
-                </div>
-                <!-- <div class="AinnerDiv">
+                </div> -->
+                <div class="AinnerDiv">
                     <label class="Acheckbox" for="AmyCheckboxIdhair">
                         <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdhair"
                             value="Hair">
@@ -121,7 +117,7 @@
                     <span>1</span>
 
                 </div>
-                <div class="AinnerDiv">
+                <!-- <div class="AinnerDiv">
                     <label class="Acheckbox" for="AmyCheckboxIdskin">
                         <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdskin"
                             value="skin">
@@ -288,12 +284,12 @@
 <script type="module">
     import {get, displaydata} from "./main.js"
     let response = await get(`http://demo3901492.mockable.io/data`)
-    let bodyresponse = response.filter((ele) => {
-        return ele.title.includes("Body")
+    let hairresponse = response.filter((ele) => {
+        return ele.title.includes("Hair")
     })
     let parent = document.getElementById("Aitems")
     // console.log('response:', response)
-    displaydata(bodyresponse, parent)
+    displaydata(hairresponse, parent)
 
 
 

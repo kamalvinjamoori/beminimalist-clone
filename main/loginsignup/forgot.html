@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <style>
+        .forgotsubmit{
+            font-family: "Roboto",sans-serif;
+    outline:1;
+    
+    background-color: black !important;
+    color: white;
+    width:100%;
+    border:0;
+    margin:0 0 15px;
+    padding:25px;
+    box-sizing: border-box;
+    font-size: 24px;
+    /* border-radius: 5px; */
+            /* box-shadow: 4px 4px 15px brown; */
+        }
+        .forgotsubmit:hover{
+    background-color:  #222222  !important;
+    /* color:red; */
+}
+li a{
+   text-decoration: underline;
+   font-size: 30px;
+}
+    </style>
+</head>
+<body>
+    <div id="forgot-page">
+        <h1 id="hlogin">Reset your password</h1>
+        <h2 class="reset"> We will send you an email to reset your password</h2>
+        <div class="form">
+        
+            <form id="login-form">
+                <input type="email" id="email" placeholder="Email Address"/>
+
+                <input class="forgotsubmit" type="submit" value="Submit " />
+            
+                <!-- <button type = "submit" class="forgotsubmit">submit</button> -->
+                <ul>
+                    <li><a id="forgot" onclick="window.location.href='login.html'">Cancel</a></li>
+    
+                </ul>
+            </form>
+            
+        </div>
+           
+        
+        
+            </div>
+</body>
+</html>
+<script>
+    let customerinfo = JSON.parse(localStorage.getItem("signupdetails"))
+    const forgot= ()=>{
+        event.preventDefault()
+        let email = document.getElementById("email").value 
+        for(i = 0;i<customerinfo.length;i++){
+            if(customerinfo.length===null){
+                return false
+            }
+            if(customerinfo[i].email ===email){
+                
+                alert("Otp Send to Your Registered Email")
+            }
+            else{
+                alert("You are not registered")
+            }
+        }
+    }
+    document.getElementById("login-form").addEventListener("submit",forgot)
+</script>
