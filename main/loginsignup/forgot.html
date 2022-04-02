@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="../header/header.css">
     <style>
         .forgotsubmit{
             font-family: "Roboto",sans-serif;
@@ -29,10 +32,12 @@
 li a{
    text-decoration: underline;
    font-size: 30px;
+   color:black
 }
     </style>
 </head>
 <body>
+    <div id="head"></div>
     <div id="forgot-page">
         <h1 id="hlogin">Reset your password</h1>
         <h2 class="reset"> We will send you an email to reset your password</h2>
@@ -43,11 +48,12 @@ li a{
 
                 <input class="forgotsubmit" type="submit" value="Submit " />
             
+                
                 <!-- <button type = "submit" class="forgotsubmit">submit</button> -->
                 <ul>
                     <li><a id="forgot" onclick="window.location.href='login.html'">Cancel</a></li>
     
-                </ul>
+           
             </form>
             
         </div>
@@ -55,8 +61,23 @@ li a{
         
         
             </div>
+            <div id="foot"></div>
 </body>
 </html>
+
+<script type="module">
+    import {header,footer} from "../components/main1.js"
+    console.log(header)
+    console.log(footer)
+let head = document.getElementById("head")
+let foot = document.getElementById("foot")
+head.innerHTML=header()
+foot.innerHTML = footer()
+
+
+import {scriptimp} from "../header/header.js"
+scriptimp()
+</script>
 <script>
     let customerinfo = JSON.parse(localStorage.getItem("signupdetails"))
     const forgot= ()=>{
