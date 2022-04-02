@@ -114,7 +114,7 @@
 }
 
 #mflex {
-    width: 13%;
+    width: 17%;
     display: flex;
     justify-content: space-between;
     font-size: 30px;
@@ -149,6 +149,8 @@
     background: rgba(17, 15, 15, 0.37);
     background-color: black;
     right: 0;
+    height: 400px;
+    overflow: scroll;
 }
 
 #change {
@@ -161,25 +163,30 @@
     color: white;
     font-weight: bold;
     font-size: 32px;
-    padding: 30px;
-    margin-top: -100px
+    padding: 0px 40px;
+    margin-top: -100px;
+    margin-left: 40px;
+
 }
 
 #cartItems {
     /* border: 1px solid red; */
+    padding: 0px 50px;
     margin: 30px;
     color: white;
+    text-align: right;
+
 }
 
 #goTocart {
     width: 464px;
     height: 66px;
-    padding: 18px 34px;
+    padding: 18px 32px;
     font-size: 18px;
     color: white;
     background-color: black;
     border: 1px solid rgb(54, 53, 53);
-    margin-left: 30px;
+    margin-left: 75px;
 }
 
 #productSearch {
@@ -217,6 +224,19 @@ a {
     color: rgba(255, 255, 255, 0.4);
 
 
+}
+
+#numofItems {
+    width: 23px;
+    height: 20px;
+    font-size: 14px;
+    background-color: rgb(172, 160, 141);
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 2px;
+    margin-left: -60px;
+    margin-top: -8px;
 }
 
 

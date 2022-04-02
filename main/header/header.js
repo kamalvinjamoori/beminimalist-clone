@@ -104,6 +104,46 @@ function scriptimp() {
 
     }
 
+
+    let cartitems = document.querySelector("#cartItems")
+
+    let rajarr = JSON.parse(localStorage.getItem("cart")) || []
+    cartitems.innerHTML = ""
+    document.getElementById("numofItems").innerHTML = rajarr.length
+    rajarr.map((elem) => {
+        let div = document.createElement("div")
+
+        let image = document.createElement("img")
+        image.src = elem.image
+        image.style.width = "120px"
+        image.style.height = "150px"
+
+        let name = document.createElement("h3")
+        name.innerHTML = elem.title
+
+        let price = document.createElement("h4")
+        price.innerHTML = elem.offerPrice
+
+        let div1 = document.createElement("div")
+        let div2 = document.createElement("div")
+
+        div1.append(image)
+        div2.append(name, price)
+
+        div.append(div1, div2)
+        div.style.display = "flex"
+        div.style.justifyContent = "space-between"
+        div.style.padding = "20px"
+        div.style.borderBottom = "1px solid grey"
+
+        cartitems.append(div)
+
+
+
+    })
+
+
+
 }
 
 export { scriptimp }
