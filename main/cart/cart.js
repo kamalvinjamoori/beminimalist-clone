@@ -8,6 +8,9 @@ if(cartList.length!=0){
 cartList.forEach((elem,index) => {
 let div = document.createElement("div");
 let div1 = document.createElement("div");
+
+div1.setAttribute("id","pricename")
+
 let div2 =document.createElement("div");
 div2.setAttribute("id","btndiv");
 
@@ -35,7 +38,7 @@ for(let i=0; i<cartList.length; i++){
 }
 finel = +finel[1];
 
-pr.innerHTML=finel;
+pr.innerHTML=`₹ ${finel}`;
 
 
 //increase decrease button 
@@ -89,7 +92,11 @@ gmain.append(at,p,submit);
 
 else{
 let heading = document.createElement("h4");
-let a = document.createElement("a");
+let a = document.createElement("h3");
+a.style.margin="50px";
+a.addEventListener("click",()=>{
+    window.location.href="../shop/allproducts.html"
+})
 a.innerHTML="Continue Shopping";
 heading.innerHTML="Your cart is currently empty."
 perent.append(heading,a);
