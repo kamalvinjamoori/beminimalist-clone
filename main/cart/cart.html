@@ -83,7 +83,7 @@ justify-content: center;
                 font-size: large;
             }
     </style>
-    <!-- <link rel="stylesheet" href="../header/header.css"> -->
+    <link rel="stylesheet" href="../header/header.css">
     <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -111,13 +111,13 @@ justify-content: center;
 <div id="gfooter"></div>
 </body>
 </html>
-<!-- <script type="module">
+<script type="module">
 
 
-// import {header,footer} from "../components/main1.js";
+import {header,footer} from "../components/main1.js";
 
-// document.querySelector("#gnav").innerHTML=header();
-// document.getElementById("gfooter").innerHTML=footer();
+document.querySelector("#gnav").innerHTML=header();
+document.getElementById("gfooter").innerHTML=footer();
 // let cart = [
 // // {
 // // img:'https://cdn.shopify.com/s/files/1/0410/9608/5665/products/VitaminC10_1200-1-min_180x.png?v=1646543848',
@@ -143,62 +143,63 @@ justify-content: center;
 
 // ]
 
-var cartList= JSON.parse(localStorage.getItem("cart"))||[];
-let perent = document.getElementById("showdata");
+// var cartList= JSON.parse(localStorage.getItem("cart"))||[];
+// let perent = document.getElementById("showdata");
 
-if(cartList.length!=0){
-    let subtotal=0;
+// if(cartList.length!=0){
+//     let subtotal=0;
 
-cartList.forEach(elem => {
-let div = document.createElement("div");
-let div1 = document.createElement("div");
-let div2 =document.createElement("div");
-div2.setAttribute("id","btndiv");
+// cartList.forEach(elem => {
+// let div = document.createElement("div");
+// let div1 = document.createElement("div");
+// let div2 =document.createElement("div");
+// div2.setAttribute("id","btndiv");
 
-let div3 =document.createElement("div");
+// let div3 =document.createElement("div");
 
-let div4 =document.createElement("div");
-div4.setAttribute("id","gappend")
+// let div4 =document.createElement("div");
+// div4.setAttribute("id","gappend")
 
-let div5 = document.createElement("div");
-div5.setAttribute("id","gprice")
-//product img
-let image = document.createElement("img");
-image.src=elem.img;
-//product name
-let pname = document.createElement("p");
-pname.innerHTML=elem.name;
-//product price
-let pr = document.createElement("p");
-pr.innerHTML=elem.price;
+// let div5 = document.createElement("div");
+// div5.setAttribute("id","gprice")
+// //product img
+// let image = document.createElement("img");
+// image.src=elem.img;
+// //product name
+// let pname = document.createElement("p");
+// pname.innerHTML=elem.name;
+// //product price
+// let pr = document.createElement("p");
+// pr.innerHTML=elem.price;
 
-//increase decrease button 
-let btn1= document.createElement("button");
-btn1.addEventListener("click",()=>{
+// //increase decrease button 
+// let btn1= document.createElement("button");
+// btn1.addEventListener("click",()=>{
     
-    decrease(elem);
+//     decrease(elem);
     
     
-})
+// })
 
-let btn2=document.createElement("button");
-btn2.addEventListener("click",()=>{
-    increase(elem);
+// let btn2=document.createElement("button");
+// btn2.addEventListener("click",()=>{
+//     increase(elem);
     
-})
+// })
 
-btn1.innerHTML='-';
-btn2.innerHTML='+';
+// btn1.innerHTML='-';
+// btn2.innerHTML='+';
 
-let quantity=document.createElement("p");
-quantity.innerHTML=elem.qty;
-
-
+// let quantity=document.createElement("p");
+// quantity.innerHTML=elem.qty;
 
 
 
+import { scriptimp } from "../header/header.js";
+scriptimp();
 
 
 
-</script> -->
+
+</script>
 <script src="./cart.js"></script>
