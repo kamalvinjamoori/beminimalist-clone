@@ -388,7 +388,6 @@
 
 
 
-
     let res = await fetch(`http://demo3901492.mockable.io/data`)
     let data1 = await res.json()
 
@@ -409,6 +408,12 @@ import {header,footer} from "../components/main1.js"
 // console.log('header:', header)
 
 document.getElementById("rheader").innerHTML = header()
+
+
+
+document.getElementById("goTocart").addEventListener("click",()=>{
+    window.location.href = "../cart/cart.html"
+})
 
 
 document.querySelector("#mmenu").addEventListener("click", () => {
@@ -486,8 +491,8 @@ document.querySelector("#mmenu").addEventListener("click", () => {
 
     document.querySelector("#shopopt").addEventListener("click", () => {
 
-event.preventDefault()
-console.log("mjhsg")
+    event.preventDefault()
+    console.log("mjhsg")
 
 
 
