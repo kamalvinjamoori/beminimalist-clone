@@ -6,9 +6,15 @@
 }
 
 #container {
-    width: 1170px;
-    margin: auto;
-    padding: 0px 15px;
+    /* width: 1170px;
+    /* max-width: 7000px; */
+    /* width: 100%; */
+    /* margin: auto; */
+    /* padding: 0px 100px; */ 
+    margin:0 auto;
+    width:1319px;
+    position:relative;
+    overflow: hidden;
 }
 
 #nameDiv {
