@@ -9,9 +9,6 @@ const get = async(url) => {
     }
 }
 
-
-
-
     const displaydata = (objectArray,parent) => {
         objectArray.map( (ele) => {
             let div = document.createElement("div")
