@@ -212,7 +212,18 @@ input[name="coupn"]{
       color: rgb(189, 29, 29);
       font-weight: lighter;
   }
- 
+  #qut{
+      position:relative;
+      left: -25px;
+      bottom: 10px;
+      width: 20px;
+height: 20px;
+background-color: rgb(161, 155, 155);
+color: black;
+text-align: center;
+border-radius: 50%;
+
+  }
 </style>
 
 </head>
@@ -250,13 +261,13 @@ input[name="coupn"]{
 
 <div id="gaddress">
     <div id="gdetails">
-        <div class="gdelivery"><input type="radio" name="radio" class="radio" onclick="clickr(false)">
+        <div class="gdelivery"><input type="radio" name="radio" class="radio" onclick="clickr()">
             <p>	Prepaid - Net banking, UPI, Debit/Credit Card</p></div>
         <p>Free</p>
         </div>
         <hr>
 <div id="gdetails">
-    <div class="gdelivery"><input type="radio" name="radio" class="radio" onclick="clickr(true)">
+    <div class="gdelivery"><input type="radio" name="radio" class="radio" >
         <p>Cash on Delivery</p></div>
     
     <p>₹70</p>
@@ -268,7 +279,7 @@ input[name="coupn"]{
 
 <div id="gfooter">
 <span id="perivious"> < Return to information</span>
-<button>Continue to shipping</button>
+<button id="gsubmit">Continue to shipping</button>
 </div>
 
 <div id="copyright">
@@ -325,8 +336,12 @@ price = +price[1];
 
 
 
+let qty = document.createElement("span");
+qty.innerHTML=elem.qty;
+qty.setAttribute("id","qut")
+
 pr.innerHTML=`₹  ${price*elem.qty}`;
-div.append(image,nam);
+div.append(image,qty,nam);
 div1.append(div,pr)
 parent.append(div1);
 
@@ -440,4 +455,16 @@ document.getElementById("perivious").addEventListener("click",()=>{
     window.location.href="./checkout.html";
 })
 
+let payment =[];
+payment.push(total);
+localStorage.setItem("price",JSON.stringify(payment));
+
+
+function clickr(){
+document.getElementById("gsubmit").addEventListener("click",()=>{
+    window.location.href="../cart/payment.html"
+})
+
+
+}
 </script>

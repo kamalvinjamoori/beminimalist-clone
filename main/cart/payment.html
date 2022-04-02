@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    background-color: rgb(64,64,64);
+    align-items: center;
+    justify-content: center;
+    
+}
+.container{
+    width: 369px;
+    height: 500px;
+    background: white;
+    margin-top: 50px;
+    box-sizing: border-box;
+    display: grid;
+    gap: 35px;
+    
+   
+}
+
+
+h1{
+    padding: 20px 30px 30px 0px;
+    font-size:xx-large;
+    font-weight: bold;
+}
+form label{
+    
+    text-transform: uppercase;
+    position: relative;
+    font-size: 10px;
+    word-spacing: 4px;
+}
+form select{
+    width: 100%;
+    outline: none;
+    border:none;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    text-transform: capitalize;
+    padding-top: 3px;
+    
+    padding-bottom: 3px;
+    font-size: 18px;
+    margin-left: -3px;
+    margin-bottom: 20px;
+    background-color:transparent;
+}
+form #cardno{
+    width: 100%;
+    outline: none;
+    border:none;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding-top: 5px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    padding-right: 30px;
+    
+    font-size: 18px;
+    background-color:transparent;
+}
+.float{
+    display: flex;
+}
+#validtill, #cvv{
+    border: none;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    outline: none;
+    width: 130px;
+    padding-top: 14px;
+    margin-bottom: 56px;
+    color: var(text-color);
+    background-color:transparent;
+    font-size: 18px;
+}
+
+button{
+    border: none;
+    
+    background: black;
+    color: white;
+    
+    height:40px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0px;
+    
+}
+#glogo{
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 35px;
+    padding: 0px;
+    background-color: black;
+    color: white;
+}
+#glogo>img{
+    width: 50px;
+    height: 50px;
+    margin: 20px 0px 20px 20px;
+}
+#glogo>span{
+    font-size: 20px;
+    font-weight:lighter;
+    margin: 0px 0px 0px 30px;
+
+}
+#cheakboxdiv{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+margin-left: 5px;
+}
+#cheakboxdiv>input{
+    width: 15px;
+    height: 15px;
+    
+}
+
+#cheakboxdiv>p{
+    font-size: small;
+}
+
+#formdiv{
+    padding: 5px;
+}
+#preloader{
+    background: black url('https://i.gifer.com/PG23.gif') no-repeat center;
+    height: 100vh;
+    background-size: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+iframe{
+    display: none;
+}
+    </style>
+</head>
+<body>
+<div id="preloader"></div>
+
+    <div class="container">
+        
+
+        <div id="glogo">
+            <img src="https://cdn.razorpay.com/logos/FCmlM1XZSppN17_medium.png" alt="">
+            <h1>Minimalist</h1>
+        <span id="cut">×</span>
+        </div>
+       <div id="formdiv">
+
+        <form action="/">
+            <label for="country">Country
+            <select name="country" id="country">
+            
+            <option value="india">india</option>
+            
+            </select>
+            </label>
+            <label for="cardno">Card Number
+            <input type="text" name="cardno" id="cardno" maxlength="19" onkeypress="cardspace()" />
+            </label>
+            <div class="float">
+            <label for="validtill">Valid till
+            <input type="text" name="validtill" id="validtill" maxlength="7" onkeypress="addSlashes()" />
+            </label>
+            <label for="cvv">Cvv
+            <input  name="cvv" id="cvv" maxlength="3" type="password" />
+            </label>
+            </div>
+
+       </div>
+        
+        <div id="cheakboxdiv">
+            <input type="checkbox" name="checkbox" id="checkbox" />
+            <p>Save card securely for future payments
+                </p>
+            </div>
+        
+        <button id="gsubmit"></button>
+        </form>
+        </div>
+
+
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</body>
+</html>
+<script>
+
+function cardspace(){
+       var carddigit = document.getElementById('cardno').value;
+if(carddigit.length == 4 || carddigit.length == 9 || carddigit.length == 14){
+       document.getElementById('cardno').value = carddigit+' ';
+       document.getElementById('cardno').max = 1;
+}
+}
+
+function addSlashes(){
+       var expire_date = document.getElementById('validtill').value;
+       if(expire_date.length == 2){
+              document.getElementById('validtill').value = expire_date+'/';
+              document.getElementById('validtill').max = 1;
+}
+}
+let cut=document.getElementById("cut");
+cut.style.cursor="pointer"
+cut.addEventListener("click",()=>{
+window.location.href="../cart/shipping.html"
+})
+
+let price = JSON.parse(localStorage.getItem("price"));
+let btn = document.getElementById("gsubmit");
+price.forEach(ele => {
+    btn.innerHTML=`${'Pay'}   ${'₹'} ${ele}`;
+});
+
+let loader = document.getElementById("preloader");
+
+
+setTimeout(() => {
+
+},0);
+
+window.addEventListener("load",()=>{
+loader.style.display="none";
+})
+</script>
