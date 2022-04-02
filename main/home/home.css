@@ -1,6 +1,6 @@
 * {
     font-family: aperc pro;
-    z-index: ;
+
 }
 
 #rcontainer1 {
@@ -99,7 +99,7 @@
     margin: 0;
     left: 0;
     animation: 10s rslide1 infinite;
-    z-index: -1;
+    /* z-index: -1; */
 
 }
 
@@ -355,6 +355,6 @@
     font-weight: bold;
 }
 
-#rpa{
+#rpa {
     border: 1px solid red;
 }
