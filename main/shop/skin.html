@@ -258,7 +258,7 @@
     let response = await get(`http://demo3901492.mockable.io/data`)
     response = response.slice(0, 18)
     let parent = document.getElementById("Aitems")
-    // console.log('response:', response)
+    console.log('response:', response)
     displaydata(response, parent)
 
 
@@ -323,7 +323,8 @@
     })
     let Pricel2h = document.getElementById("Pricel2h")
     Pricel2h.addEventListener("click", () => {
-        console.log(Pricel2h.value)
+       let Pricel2hV = Number(Pricel2h.value)
+        console.log('Pricel2hV:', Pricel2hV)
         localStorage.setItem("sort", Pricel2h.value)
     })
     let Priceh2l = document.getElementById("Priceh2l")
@@ -350,6 +351,7 @@
         let selectedsort = localStorage.getItem("sort")
         console.log('selectedsort:', selectedsort)
         if (selectedsort === "Pricel2h") {
+            
             response.sort((a, b) => {
                 return a.offerPrice - b.offerPrice
             })
@@ -388,17 +390,17 @@
             displaydata(response, parent)
         }
 
-        let selectedSort = localStorage.getItem("sort")
-        console.log('selectedSort:', selectedSort)
-        //     let clear = document.createElement("div");
-        //    clear.innerText = "Clear filters"
-        //    clear.addEventListener("click", () =>{
-        //        localStorage.removeItem("filter")
-        //        localStorage.removeItem("sort")
-        //        window.location.reload()
-        //    })
-        //    document.getElementById("AviewSelectedFilters").append(clear)
-        document.getElementById("SORT").innerText = selectedSort
+        // let selectedSort = localStorage.getItem("sort")
+        // console.log('selectedSort:', selectedSort)
+        // //     let clear = document.createElement("div");
+        // //    clear.innerText = "Clear filters"
+        // //    clear.addEventListener("click", () =>{
+        // //        localStorage.removeItem("filter")
+        // //        localStorage.removeItem("sort")
+        // //        window.location.reload()
+        // //    })
+        // //    document.getElementById("AviewSelectedFilters").append(clear)
+        // document.getElementById("SORT").innerText = selectedSort
 
     })
 
@@ -463,20 +465,20 @@
         console.log(spf.value)
         localStorage.setItem("filter", spf.value)
     })
-    let serum = document.getElementById("AmyCheckboxIdserum")
-    console.log('serum:', serum)
+    // let serum = document.getElementById("AmyCheckboxIdserum")
+    // console.log('serum:', serum)
 
-    serum.addEventListener("click", () => {
-        console.log(serum.value)
-        localStorage.setItem("filter", serum.value)
-    })
-    let tone = document.getElementById("AmyCheckboxIdtoner")
-    console.log('tone:', tone)
+    // serum.addEventListener("click", () => {
+    //     console.log(serum.value)
+    //     localStorage.setItem("filter", serum.value)
+    // })
+    // let tone = document.getElementById("AmyCheckboxIdtoner")
+    // console.log('tone:', tone)
 
-    tone.addEventListener("click", () => {
-        console.log(tone.value)
-        localStorage.setItem("filter", tone.value)
-    })
+    // tone.addEventListener("click", () => {
+    //     console.log(tone.value)
+    //     localStorage.setItem("filter", tone.value)
+    // })
 
     let price1 = document.getElementById("AmyCheckboxIdprice1")
     price1.addEventListener("click", () => {
