@@ -10,9 +10,12 @@
     <link href="//db.onlinewebfonts.com/c/74c3c29282b604a9eed88ac6ede61463?family=Apercu+Pro" rel="stylesheet"
         type="text/css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../header/header.css">
 </head>
 
 <body>
+    <div id="Anavbar"></div>
     <div id="Aoutercontainer">
         <div id="Aall">
 
@@ -272,10 +275,22 @@
             </div>
             <!-- </div> -->
         </div>
+    </div>
+    <div id="Afooter"></div>
 </body>
 
 <script type="module">
-    import {get, displaydata} from "./main.js"
+    import { header, footer } from "../components/main1.js"
+    let nav = document.getElementById("Anavbar")
+    let foot = document.getElementById("Afooter")
+    nav.innerHTML = header()
+    foot.innerHTML = footer()
+    import { scriptimp } from "../header/header.js"
+    scriptimp()
+
+
+
+    import { get, displaydata } from "./main.js"
     let response = await get(`http://demo3901492.mockable.io/data`)
     let parent = document.getElementById("Aitems")
     // console.log('response:', response)

@@ -10,9 +10,12 @@
     <link href="//db.onlinewebfonts.com/c/74c3c29282b604a9eed88ac6ede61463?family=Apercu+Pro" rel="stylesheet"
         type="text/css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../header/header.css">
 </head>
 
 <body>
+    <div id="Anavbar"></div>
     <div id="Aoutercontainer">
         <div id="Aall">
 
@@ -22,7 +25,8 @@
                         <h3>Bath & Body</h3>
                     </div>
                     <div id="AdetailsinnerdivDetail">
-                        <p>Treat your body from head to toe with our range of science-backed &  efficacious range of body care products. Protect every last inch of your skin</p>
+                        <p>Treat your body from head to toe with our range of science-backed & efficacious range of body
+                            care products. Protect every last inch of your skin</p>
                     </div>
                 </div>
             </div>
@@ -111,40 +115,8 @@
                     <span>1</span>
 
                 </div>
-                <!-- <div class="AinnerDiv">
-                    <label class="Acheckbox" for="AmyCheckboxIdhair">
-                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdhair"
-                            value="Hair">
-                        <div class="Acheckbox__box"></div>
-                        Hair
-                    </label>
-                    <span>1</span>
 
-                </div>
-                <div class="AinnerDiv">
-                    <label class="Acheckbox" for="AmyCheckboxIdskin">
-                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdskin"
-                            value="skin">
-                        <div class="Acheckbox__box"></div>
-                        Skin
-                    </label>
-                    <span>24</span>
-
-                </div> -->
             </div>
-            <!-- <hr> -->
-            <!-- <div>
-                    <p>Step</p>
-                    <div class="AinnerDiv">
-                        <label class="Acheckbox" for="AmyCheckboxIdtreat">
-                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
-                                id="AmyCheckboxIdtreat" value="treat">
-                            <div class="Acheckbox__box"></div>
-                            Treat
-                        </label>
-                        <span>1</span>
-                    </div>
-                </div> -->
             <hr>
             <div>
                 <p>Type of Product</p>
@@ -273,7 +245,7 @@
                     </label>
                     <!-- <span>1</span> -->
                 </div>
-               
+
             </div>
             <hr>
             <div>
@@ -284,9 +256,21 @@
             </div>
             <!-- </div> -->
         </div>
+        <div id="Afooter"></div>
+    </div>
 </body>
 <script type="module">
-    import {get, displaydata} from "./main.js"
+
+import { header, footer } from "../components/main1.js"
+    let nav = document.getElementById("Anavbar")
+    let foot = document.getElementById("Afooter")
+    nav.innerHTML = header()
+    foot.innerHTML = footer()
+    import { scriptimp } from "../header/header.js"
+    scriptimp()
+
+
+    import { get, displaydata } from "./main.js"
     let response = await get(`http://demo3901492.mockable.io/data`)
     let bodyresponse = response.filter((ele) => {
         return ele.title.includes("Body")
@@ -444,20 +428,20 @@
         console.log(body.value)
         localStorage.setItem("filter", body.value)
     })
-    let hair = document.getElementById("AmyCheckboxIdhair")
-    console.log('hair:', hair)
+    // let hair = document.getElementById("AmyCheckboxIdhair")
+    // console.log('hair:', hair)
 
-    hair.addEventListener("click", () => {
-        console.log(hair.value)
-        localStorage.setItem("filter", hair.value)
-    })
-    let skin = document.getElementById("AmyCheckboxIdskin")
-    console.log('skin:', skin)
+    // hair.addEventListener("click", () => {
+    //     console.log(hair.value)
+    //     localStorage.setItem("filter", hair.value)
+    // })
+    // let skin = document.getElementById("AmyCheckboxIdskin")
+    // console.log('skin:', skin)
 
-    skin.addEventListener("click", () => {
-        console.log(skin.value)
-        localStorage.setItem("filter", skin.value)
-    })
+    // skin.addEventListener("click", () => {
+    //     console.log(skin.value)
+    //     localStorage.setItem("filter", skin.value)
+    // })
     let Anti = document.getElementById("AmyCheckboxIdantiox")
     console.log('Anti:', Anti)
 

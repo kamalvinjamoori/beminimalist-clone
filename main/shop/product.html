@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="../header/header.css">
+    <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
+    <div id="Anavbar"></div>
     <div id="container">
         <div id="nameDiv"></div>
         <div id="imgDiv"></div>
@@ -58,6 +61,18 @@
             <iframe src="" id="video" width="100%" height="100%"></iframe>
         </div>
     </div>
+    <div id="Afooter"></div>
 </body>
 <script src="./product.js"></script>
+<script type="module">
+   import { header, footer } from "../components/main1.js"
+    let nav = document.getElementById("Anavbar")
+    let foot = document.getElementById("Afooter")
+    nav.innerHTML = header()
+    foot.innerHTML = footer()
+    import { scriptimp } from "../header/header.js"
+    scriptimp()
+
+
+</script>
 </html>

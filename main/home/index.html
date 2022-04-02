@@ -437,9 +437,19 @@
     //     // write append data function
     // })
 
-    // document.getElementById("checkNow").addEventListener("click",()=>{
-    //     display1()
-    // })
+    document.getElementById("rchecknow").addEventListener("click",()=>{
+        data1.map((elem)=>{
+            if(elem.prods === "Glycolic + Tranexamic 11% Body Exfoliator")
+            {
+                let arr1 = []
+                arr1.push(elem)
+                localStorage.setItem("product",JSON.stringify(arr1))
+                window.location.href = "../shop/product.html"
+            }
+        })
+
+        // display1()
+    })
 
     
   
