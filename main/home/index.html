@@ -399,7 +399,7 @@
   // data1.map((elem)=>{
   //     if(elem.prods ===  "Niacinamide 10%")
   //     {
-          console.log("rah")
+          console.log("rahaa")
       // }
   // })
   
@@ -419,9 +419,7 @@
 
     scriptimp()
 
-    document.getElementById("goTocart").addEventListener("click",()=>{
-    window.location.href = "../cart/cart.html"
-})
+    
 
 
 
@@ -439,9 +437,19 @@
     //     // write append data function
     // })
 
-    // document.getElementById("checkNow").addEventListener("click",()=>{
-    //     display1()
-    // })
+    document.getElementById("rchecknow").addEventListener("click",()=>{
+        data1.map((elem)=>{
+            if(elem.prods === "Glycolic + Tranexamic 11% Body Exfoliator")
+            {
+                let arr1 = []
+                arr1.push(elem)
+                localStorage.setItem("product",JSON.stringify(arr1))
+                window.location.href = "../shop/product.html"
+            }
+        })
+
+        // display1()
+    })
 
     
   
