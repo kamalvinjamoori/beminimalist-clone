@@ -25,7 +25,10 @@
                     </div>
                     <ul class="mnav" id="mnav">
                         <li><a href="">Home</a></li>
-                        <li><a href="">Shop</a></li>
+                        <div id="shopopt">
+                            <li><a href="">Shop</a></li>
+                        </div>
+
                         <li><a href="">Knowledge</a></li>
                         <li><a href="">Track Order</a></li>
                         <li><a href="">Register / Login</a></li>
@@ -64,6 +67,15 @@
                 </div>
                 <button id="goTocart">Go to cart</button>
             </div>
+
+            <div id="mshop">
+                <ul class="mshopselect" id="mshopselect1">
+                    <li><a href="">Skin</a></li>
+                    <li><a href="">Hair</a></li>
+                    <li><a href="">Bath & Body</a></li>
+                    <li><a href="">All Products</a></li>
+                </ul>
+            </div>
         </div>
 
     </body>
@@ -81,7 +93,7 @@
         document.getElementById("mnav").classList.toggle("change")
     }
 
-
+    let x = document.querySelector("#mnav")
 
 
     let sidenav2 = document.getElementById("sidenav2")
@@ -92,7 +104,22 @@
     console.log('count1:', count1)
     let count2 = 0;
     console.log('count2:', count2)
+    let mshop = document.getElementById("mshop")
+    mshop.style.display = "none"
+    let count3 = 0
+    console.log('count3:', count3)
 
+
+
+
+    document.querySelector("#shopopt").addEventListener("click", () => {
+
+        event.preventDefault()
+        console.log("mjhsg")
+
+        displayshop()
+        // displayshop()
+    })
 
 
     document.querySelector("#msearch").addEventListener("click", () => {
@@ -110,6 +137,20 @@
         displayCart()
     })
 
+
+
+    function displayshop() {
+
+        if (count3 % 2 === 0) {
+            mshop.style.display = "block"
+        }
+        else {
+            mshop.style.display = "none"
+
+        }
+        count3++;
+
+    }
 
 
     function displayCart() {
@@ -140,6 +181,8 @@
         count1++;
 
     }
+
+
 
 
 
