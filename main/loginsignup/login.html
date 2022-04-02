@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="../header/header.css">
+  <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
  <style>
             .signinsubmit{
             font-family: "Roboto",sans-serif;
@@ -29,6 +31,7 @@
  </style>
 </head>
 <body>
+    <div id="head"></div>
     <div id="login-page">
 <h1 id="hlogin">Login</h1>
 <div class="form">
@@ -44,6 +47,7 @@
             <li><a class="createaccount" href="signup.html"><pre>Create  Account</pre> </a></li>
         </ul>
     </form>
+    <div id="foot"></div>
     
 </div>
    
@@ -53,7 +57,18 @@
     
 </body>
 </html>
-<script>
+<script type="module">
+    import {header,footer} from "../components/main1.js"
+    console.log(header)
+    console.log(footer)
+let head = document.getElementById("head")
+let foot = document.getElementById("foot")
+head.innerHTML=header()
+foot.innerHTML = footer()
+</script>
+<script >
+
+
 
     let logininfo = JSON.parse(localStorage.getItem("signupdetails"))
 

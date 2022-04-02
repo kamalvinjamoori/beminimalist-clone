@@ -143,6 +143,11 @@ function scriptimp() {
     })
 
 
+    document.getElementById("goTocart").addEventListener("click",()=>{
+        window.location.href = "../cart/cart.html"
+    })
+
+
 
 }
 
