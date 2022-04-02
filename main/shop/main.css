@@ -23,7 +23,7 @@
   margin-top: 60px;
   display: flex;
   position: relative;
-  /* z-index: -1; */
+  z-index: 0;
 }
 #Aall{
   width: 90%;
