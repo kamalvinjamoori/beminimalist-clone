@@ -28,6 +28,7 @@ const header = () => {
 
             <a href="../loginsignup/login.html"><i class="fa-solid fa-user"></i></a>
             <i class="fa-solid fa-bag-shopping" id="mcart"></i>
+            <div id="numofItems">0</div>
 
         </div>
     </div>

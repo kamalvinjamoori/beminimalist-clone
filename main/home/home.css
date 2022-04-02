@@ -198,6 +198,7 @@
     width: 91%;
     margin: auto;
     margin-top: 100px;
+    z-index: -2;
 }
 
 #rcontainer3>span:nth-child(1) {
@@ -217,6 +218,7 @@
 #rposter1 img {
     width: 100%;
     margin-top: 40px;
+    z-index: -1;
     /* position: relative; */
 
 }
@@ -261,6 +263,7 @@
     /* border: 1px solid red; */
     font-size: 22px;
     font-weight: bold;
+    z-index: 0;
 }
 
 #test2 {
