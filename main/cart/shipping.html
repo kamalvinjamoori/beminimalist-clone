@@ -122,8 +122,8 @@ padding: 0px;
     color: white;
     font-weight: bold;
     width: 100%;
-    height: auto;
-    overflow: auto;
+    height: 280px;
+    overflow-y: scroll;
     margin-bottom: 50px;
 }
 #parent>div{
@@ -232,12 +232,12 @@ input[name="coupn"]{
 
 <div id="gaddress">
     <div id="gdetails"><p>Contact</p>
-        <p>Gaganrajput@gmail.com</p>
+        <p id="gmail"></p>
         <a href="./checkout.html" id="gback"><p>Change</p></a>
         </div>
         <hr>
 <div id="gdetails"><p>Ship to</p>
-<p>addresshghfghfhgh</p>
+<p id="gaddres">addresshghfghfhgh</p>
 <a href="./checkout.html" id="gback"><p>Change</p></a></div>
 
 </div>
@@ -267,7 +267,7 @@ input[name="coupn"]{
 
 
 <div id="gfooter">
-<span> < Return to information</span>
+<span id="perivious"> < Return to information</span>
 <button>Continue to shipping</button>
 </div>
 
@@ -299,20 +299,33 @@ input[name="coupn"]{
 </html>
 <script>
 
-let data = JSON.parse(localStorage.getItem("cartList"))
+let price;
+let gdetails=JSON.parse(localStorage.getItem("payment"));
+let data = JSON.parse(localStorage.getItem("cart"));
 let parent = document.getElementById("parent");
 let parent2 = document.getElementById("subtotal");
 
-data.forEach(({img,name,price,qty}) => {
+data.forEach((elem) => {
     let div1 =document.createElement("div");
  let div =document.createElement("div");
  div.setAttribute("class","gproducts");
     let image =document.createElement("img");
     let nam=document.createElement("p");
     let pr=document.createElement("p");
-image.src=img;
-nam.innerHTML=name;
-pr.innerHTML=`₹  ${price*qty}`;
+image.src=elem.image;
+nam.innerHTML=elem.prods;
+
+
+for(let i=0; i<data.length; i++){
+
+ price = elem.originalPrice.trim().split(" ");
+
+}
+price = +price[1];
+
+
+
+pr.innerHTML=`₹  ${price*elem.qty}`;
 div.append(image,nam);
 div1.append(div,pr)
 parent.append(div1);
@@ -321,11 +334,10 @@ parent.append(div1);
 
 
 
-
 let total = data.reduce(function(acc,ele){
-return acc+ele.qty*ele.price;
+return acc+ele.qty*price;
 
-},0)
+},1)
 subtotal(total);
 
  function validate(coupon) {
@@ -373,7 +385,6 @@ subtotal.innerHTML='Subtotal';
 shipping.innerHTML='Shipping';
 rate.innerHTML=`₹ ${price}`;
 
-
 charge.innerHTML='Free';
 div1.append(subtotal,rate);
 div2.append(shipping,charge);
@@ -408,13 +419,25 @@ parent2.append(div1,div2,coupnediv,line,div3);
 
 }
 
-function clickr(e){
+let email = document.getElementById("gmail");
+let add = document.getElementById("gaddres");
 
-return e;
-}
+gdetails.map(function(elem){
+email.innerHTML=elem.email;
+add.innerHTML=elem.adderess;
 
-if(charge==true){
-    console.log("gagan")
-}
+})
+
+
+
+
+
+
+
+
+
+document.getElementById("perivious").addEventListener("click",()=>{
+    window.location.href="./checkout.html";
+})
 
 </script>

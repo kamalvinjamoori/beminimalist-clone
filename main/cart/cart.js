@@ -26,7 +26,21 @@ let pname = document.createElement("p");
 pname.innerHTML=elem.prods;
 //product price
 let pr = document.createElement("p");
-pr.innerHTML=elem.originalPrice;
+
+let finel;
+for(let i=0; i<cartList.length; i++){
+
+ finel = elem.originalPrice.trim().split(" ");
+
+ 
+
+ 
+    
+}
+finel = +finel[1];
+
+pr.innerHTML=finel;
+
 
 //increase decrease button 
 let btn1= document.createElement("button");
@@ -49,7 +63,7 @@ btn2.innerHTML='+';
 let quantity=document.createElement("p");
 quantity.innerHTML=elem.qty;
 
-total = Number(elem.price)*elem.qty;
+total = finel*elem.qty;
 //appending
 
 div.append(img)
@@ -92,13 +106,27 @@ perent.append(heading,a);
  function decrease(elem){
 elem.qty--;
 
-if(elem.qty==0){
-   elem.qty=1;
+if(elem.qty<1){
+
+    localStorage.clear();
+
+    
 }
 else{
     addToCart(elem);
     location.reload();
 }
+
+
+
+
+
+
+
+
+
+
+
 
 }
 function increase(elem){
@@ -111,13 +139,13 @@ location.reload();
 function addToCart(elem) {
   if(cartList.length==0){
     cartList.push(elem);
-    localStorage.setItem("cartList",JSON.stringify(cart));
+    localStorage.setItem("cart",JSON.stringify(cartList));
     
   }else{
     var check = check_already_existing(elem);
     if(check==0){
       cartList.push(elem);
-      localStorage.setItem("cartList",JSON.stringify(cart));
+      localStorage.setItem("cart",JSON.stringify(cartList));
       
     }
   } 
@@ -128,7 +156,7 @@ function check_already_existing(elem){
   for(var i=0;i<cartList.length;i++){
     if(cartList[i].name==elem.name){
         
-        localStorage.setItem("cartList",JSON.stringify(cart));
+        localStorage.setItem("cart",JSON.stringify(cartList));
       return 1;
     }
   
@@ -140,7 +168,20 @@ function check_already_existing(elem){
 
 
 
-
+// function removeItemFromCart(qty) {
+//     for (var i in elem) {
+//       if (elem[i].qty === qty) {
+//           elem[i].count --;
+          
+//           if (elem[i].count === 0) {
+//              elem.splice(i, 1); // removes item from the array
+//           }
+//           break;
+//       }
+//     }
+//   }
+  
+//   console.log(elem[0].count);
 
 
 
