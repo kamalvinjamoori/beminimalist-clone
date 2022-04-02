@@ -1,0 +1,346 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Apercu Pro Regular' !important; */
+  font-family: sans-serif;
+ 
+}
+#AdetailsinnerdivName h3{
+  font-size: 25px
+}
+#AdetailsinnerdivDetail p{
+  line-height: 26px;
+  word-spacing: 5px;
+  font-size: 20px;
+}
+#Aoutercontainer {
+  width: 1440px;
+  margin: auto;
+  display: flex;
+  position: relative;
+}
+#Adetails {
+  margin: 100px 0px 0px;
+}
+#Adetailsinnerdiv {
+  /* margin: 0px 234px;
+    padding: 0px 80px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #222222;
+  font-size: 18px;
+  text-align: center;
+  /* font-family: 'Apercu Pro Regular' ; */
+}
+#AdetailsinnerdivDetail p {
+  width: 434px;
+  /* text-align: justify; */
+  margin: auto;
+}
+#Acontentcontainer {
+  margin: 100px 0px 160px 0px;
+  padding: 0px 80px;
+}
+
+#Asortfilter {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 30px 30px;
+}
+#Asortfilter > div {
+  border: 1px solid #d3d2d2;
+  /* border: 1px solid black;  */
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 108.8px;
+  height: 48px;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-radius: 3px;
+  /* opacity: .4; */
+}
+
+#Asortfilter > div:hover{
+    border: 1px solid black; 
+    opacity: 1; 
+}
+#Asortfilter > div span{
+    margin-left: 10px;
+}
+hr{
+    margin: 50px 0px;
+    border: 1px solid #d3d2d2;
+}
+#Aitems {
+  width: 1280px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+#Aitems img {
+  width: 100%;
+}
+#Aitems h5 {
+  text-align: center;
+  font-size: 16px;
+}
+#Areview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Aprice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* for sort and filter container  */
+#Asortconatiner{
+  position: absolute;
+  position: fixed;
+  background-color: #000;
+  color: white;
+  position: relative;
+  padding: 30px 50px 10px 80px;
+  display: none;
+  top: 0;
+  /* right: -10; */
+  bottom: 0;
+  right: 490px;
+  /* height: 100vh; */
+  /* width: 0px; */
+}
+#Asortconatiner li{
+ list-style: none;
+}
+#Asortclose{
+display: flex;
+justify-content: space-between;
+font-size: 25px;
+padding: 40px 0px;
+}
+#Asortclose h3{
+  font-size: 25px;
+  margin-left: 25px;
+}
+#Asortcategory{
+  border-bottom: 1px solid white;
+}
+
+
+input[type="radio"] {
+  position: absolute;
+  /* display: none; */
+  opacity: -1;
+/* padding: 5px; */
+  left: 30px;
+
+}
+.label {
+  display: block;
+  position: relative;
+  margin: 20px 0px;
+}
+.label::before{
+content: "";
+border: 2px solid white;
+display: inline-block;
+width: 30px;
+height: 30px;
+margin: -8px 20px;
+margin-left: 8;
+border-radius: 50%;
+}
+.label::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0);
+   left: 7px;
+   top: 8px;
+  margin: -8px 20px;
+  margin-left: 8;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+input[type="radio"]:checked+label::after{
+  background: rgba(255, 255, 255, 1);
+  color: red;
+}
+#Asortapply{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 50px;
+}
+#Asortapply button{
+  padding: 22px 180px;
+  width: 0px;
+}
+#Close{
+  font-family: sans-serif;
+  padding: 4px;
+  border-radius: 50%;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+/* #Close::after{
+
+} */
+#ORIG{
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+#Afilterclose{
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  padding: 40px 0px;
+}
+#Aclosesign{
+    font-weight: lighter;
+  }
+/* #Close:hover{
+transform: scale(1.15);
+background-color: #f5f5f523;
+} */
+
+
+
+
+
+
+
+#Afiltercontainer{
+  position: relative;
+  position: absolute;
+  /* position: fixed; */
+  background-color: #000;
+  color: white;
+  width: 540px;
+  padding: 30px 50px 10px 80px;
+  top: 0;
+  bottom: 0;
+  right: -98px; 
+  height: 100vh;
+  overflow: scroll;
+  display: none
+}
+::-webkit-scrollbar{
+  display: none;
+}
+#filterclose{
+display: flex;
+justify-content: space-between;
+margin-bottom: 30px;
+}
+#Afiltercontainer p{
+  margin: 30px 0px 20px;
+}
+.Acheckbox{
+  padding: 20px 0px 20px 0px ;
+}
+#filterclose{
+  display: flex;
+}
+#Aclosesign{
+  font-family: sans-serif;
+}
+#Afiltercontainer >div+div>div{
+  display: flex;
+  justify-content: space-between;
+}
+.AinnerDiv{
+  display: flex;
+ 
+  justify-content: space-between;
+}
+.Acheckbox{
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.Acheckbox__input{
+
+  display: none;
+}
+.Acheckbox__box{
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s;
+}
+.Acheckbox__box::after{
+  content: "\2714";
+  color: #000;
+
+}
+.Acheckbox__input:checked+.Acheckbox__box{
+  background: #fff;
+  border-color: #fff;
+}
+#Afilterapply{
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 540px;
+  height:150px;
+  /* padding: 20px 60px 20px 64px; */
+  position: absolute;
+  bottom: -923px;
+  right: 0;
+  background-color: #000;
+  display: none;
+
+}
+#Afilterapply button{
+  padding: 22px 180px;
+  width: 0px;
+}
+#Aclosesign{
+  cursor: pointer;
+}
+h5{
+  cursor: pointer;
+}
+#AviewSelectedFilters{
+  display: flex;
+  margin-bottom: 10px;
+}
+#FILTER{
+  margin: 0px 15px ;
+  /* border: 1px solid black; */
+  padding: 5px;
+  border-radius: 5px;
+}
+#SORT{
+  margin: 0px 15px ;
+  padding: 5px;
+}
+#CLEAR{
+  margin: 0px 15px ;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
