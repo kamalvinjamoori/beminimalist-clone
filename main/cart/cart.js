@@ -1,11 +1,11 @@
 
-var cartList= JSON.parse(localStorage.getItem("cart"))||[];
+var cartList = JSON.parse(localStorage.getItem("cart"))||[];
 let perent = document.getElementById("showdata");
 
 if(cartList.length!=0){
     let subtotal=0;
 
-cartList.forEach(elem => {
+cartList.forEach((elem,index) => {
 let div = document.createElement("div");
 let div1 = document.createElement("div");
 let div2 =document.createElement("div");
@@ -46,7 +46,7 @@ pr.innerHTML=finel;
 let btn1= document.createElement("button");
 btn1.addEventListener("click",()=>{
     
-    decrease(elem);
+    decrease(elem,index);
     
     
 })
@@ -103,27 +103,14 @@ perent.append(heading,a);
 
 
 
- function decrease(elem){
+ function decrease(elem,index){
 elem.qty--;
 
-if(elem.qty<1){
 
-    localStorage.clear();
-
-    
+if(elem.qty==0){
+    cartList.splice(index,1);
+    console.log(cartList)
 }
-else{
-    addToCart(elem);
-    location.reload();
-}
-
-
-
-
-
-
-
-
 
 
 
