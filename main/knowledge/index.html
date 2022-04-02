@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Knowledge Lab</title>
     <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../header/header.css">
     <link rel="stylesheet" href="index.css"></link>
@@ -19,9 +19,9 @@
         <div id="s_cont">
         <h3 id="s_h1">Guides - Ingredients you should know</h3>
         <div id="s_div">
-            <div>
+            <div >
                 <img src="https://cdn.shopify.com/s/files/1/0410/9608/5665/articles/cover_image_2_a998f2b3-ab10-4d02-8c47-2d8d554bea71.jpg?v=1615437318">
-                <h3 onclick="func()">
+                <h3 id="cl">
                     The No BS Guide to Using Peptides in Skincare
                 </h3>
                 <a id="d">
@@ -380,6 +380,13 @@
 </body>
 </html>
 <script type="module">
+    document.getElementById("cl").addEventListener("click",cld) 
+    
+    function cld(){
+        window.location.href = "internal.html"
+        //console.log(1)
+    } 
+
     import {header,footer} from "../components/main1.js"
     console.log(header)
     console.log(footer)
@@ -387,9 +394,6 @@
     document.getElementById("Sfooter").innerHTML = footer()
     import {scriptimp} from "../header/header.js"
     scriptimp() 
-    
-    function func(){
-        window.location.href = "internal.html"
-    }      
+        
 </script>
 
