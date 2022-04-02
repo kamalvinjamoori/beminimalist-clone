@@ -9,7 +9,7 @@ const header = () => {
                 <div id="bar3" class="bar"></div>
             </div>
             <ul class="mnav" id="mnav">
-                <li><a href="">Home</a></li>
+                <li><a href="../home/index.html">Home</a></li>
                 <div id="shopopt">
                     <li><a href="">Shop</a></li>
                 </div>
@@ -21,7 +21,8 @@ const header = () => {
 
         </div>
         <div>
-            <h1>Minimalist</h1>
+            <a href="../home/index.html"><h1>Minimalist</h1>
+            </a>
         </div>
         <div id="mflex">
             <div id="msearch"><i class="fa-solid fa-magnifying-glass"></i></div>

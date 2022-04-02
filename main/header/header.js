@@ -113,6 +113,7 @@ function scriptimp() {
     let rajarr = JSON.parse(localStorage.getItem("cart")) || []
     cartitems.innerHTML = ""
     document.getElementById("numofItems").innerHTML = rajarr.length
+    
     rajarr.map((elem) => {
         let div = document.createElement("div")
 
