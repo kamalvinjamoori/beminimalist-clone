@@ -64,7 +64,7 @@
                                         Brightens & illuminates
                                     </h3>
 
-                                    <button id="rpa">Learn More</button>
+                                    <button class="rp0">Learn More</button>
 
                                 </div>
                             </div>
@@ -392,16 +392,87 @@
     let data1 = await res.json()
 
 // console.log('data:', data1)
-    let a = document.getElementById('rpa')
+    let a = document.querySelector('.rp0')
     console.log('a:', a)
     a.addEventListener("click",()=>{
   
-  // data1.map((elem)=>{
-  //     if(elem.prods ===  "Niacinamide 10%")
-  //     {
-          console.log("rahaa")
-      // }
-  // })
+  data1.map((elem)=>{
+      if(elem.prods ===  "Vitamin C 10%")
+      {
+            let arr1 = []
+                arr1.push(elem)
+                localStorage.setItem("product",JSON.stringify(arr1))
+                window.location.href = "../shop/product.html"
+            console.log("rahaa")
+      }
+  })
+  
+})
+
+let b = document.querySelector('.rp1')
+   
+    b.addEventListener("click",()=>{
+  
+  data1.map((elem)=>{
+      if(elem.prods ===  "Alpha Arbutin 02%")
+      {
+            let arr1 = []
+                arr1.push(elem)
+                localStorage.setItem("product",JSON.stringify(arr1))
+                window.location.href = "../shop/product.html"
+            console.log("rahaa")
+      }
+  })
+  
+})
+
+let c = document.querySelector('.rp2')
+   
+    c.addEventListener("click",()=>{
+  
+  data1.map((elem)=>{
+      if(elem.prods ===  "Niacinamide 10%")
+      {
+            let arr1 = []
+                arr1.push(elem)
+                localStorage.setItem("product",JSON.stringify(arr1))
+                window.location.href = "../shop/product.html"
+            console.log("rahaa")
+      }
+  })
+  
+})
+
+let d = document.querySelector('.rp3')
+   
+    d.addEventListener("click",()=>{
+  
+  data1.map((elem)=>{
+      if(elem.prods ===  "Hyaluronic + PGA 02%")
+      {
+            let arr1 = []
+                arr1.push(elem)
+                localStorage.setItem("product",JSON.stringify(arr1))
+                window.location.href = "../shop/product.html"
+            console.log("rahaa")
+      }
+  })
+  
+})
+let e = document.querySelector('.rp4')
+   
+    e.addEventListener("click",()=>{
+  
+  data1.map((elem)=>{
+      if(elem.prods ===  "SPF 50 Sunscreen")
+      {
+            let arr1 = []
+                arr1.push(elem)
+                localStorage.setItem("product",JSON.stringify(arr1))
+                window.location.href = "../shop/product.html"
+            console.log("rahaa")
+      }
+  })
   
 })
 
@@ -449,7 +520,7 @@
         })
 
         // display1()
-    })
+    },{once:true})
 
     
   
