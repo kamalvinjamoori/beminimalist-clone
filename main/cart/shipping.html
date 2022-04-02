@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#gcontainer{
+display: grid;
+grid-template-columns: 50% 50%;
+
+}
+#gcontainer>div{
+    
+
+padding: 60px;
+}
+.gtext{
+display: flex;
+gap: 10px;
+margin-top: 20px;
+font-size: smaller;
+font-weight: bold;
+align-items: center;
+}
+
+h2{
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+
+#gfooter{
+display: flex;
+width: 100%;
+
+justify-content: space-between;
+align-items: center;
+margin-top: 20px;
+
+
+}
+#gfooter>span{
+    font-size: small;
+    cursor: pointer;
+}
+#gfooter>button{
+    padding: 15px;
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    
+}
+#copyright{
+    margin-top: 100px;
+    font-size: small;
+}
+#gaddress{
+    width: 100%;
+    border: 0.5px solid;
+    font-size: small;
+    margin-top: 20px;
+    
+    border-radius: 5px;
+    
+
+}
+
+hr{
+    width: 90%;
+    height: 0.5px;
+    background-color: black;
+    border: none;
+    
+}
+#gback{
+   text-decoration: none;
+    cursor: pointer;
+
+    color: black;
+}
+#gdetails{
+     display: flex;
+    justify-content: space-between;
+    text-align: justify;
+  text-justify: inter-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  align-items: center;
+  
+}
+.gdelivery{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+input[type="radio"] {
+  display: block;
+  width: 20px;
+  height: 20px;
+  
+}
+.radio:hover {
+      
+        box-shadow: 0 0 0 4px rgba(rgb(41, 157, 196),0.4);
+      
+    }
+    #parent{
+margin: 0px;
+padding: 0px;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    margin-bottom: 50px;
+}
+#parent>div{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 10px;
+    padding: 0px 20px 0px 0px;
+}
+#gcoupne{
+    display: flex;
+gap: 10px;
+margin: 30px 0px 20px 0px;
+width: 100%;
+    
+    
+}
+input[name="coupn"]{
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+}
+#apply{
+    padding: 10px;
+    width: 20%;
+    border-radius: 5px;
+    background-color: #404040;
+    border: 0.5px;
+    color: #ffff;
+    
+}
+#subtotal{
+    color: white;
+}
+#subtotal>div{
+    display: flex;
+    justify-content: space-between;
+    font-weight: lighter;
+    margin: 0px 5px 0px 5px;
+    align-items: center;
+}
+.gproducts{
+    display: flex;
+    gap: 20px;
+}
+.gproducts>img{
+    width: 80px;
+    height: 80px;
+}
+#message{
+  position: relative;
+
+  color:green;
+}
+#err{
+  position: relative;
+  
+  color:red;
+}
+#spandiv{
+    text-decoration: double;
+    font-size: larger;
+    font-weight: bold;
+    
+    margin-left: 10PX;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(88, 87, 87);
+    border-radius: 10px;
+  }
+  #couponshow{
+      color: rgb(134, 192, 243);
+      font-size: large;
+      font-weight: bold;
+  }
+  #strikeprice{
+      color: rgb(189, 29, 29);
+      font-weight: lighter;
+  }
+ 
+</style>
+
+</head>
+<body>
+<div id="gcontainer">
+<div><header><a href=""><img width="250px" src="https://cdn.shopify.com/s/files/1/0410/9608/5665/files/Minimalist_Logo_Black.png?13343" alt=""></a>
+<div class="gtext"><span>Cart</span>
+>
+<span>Information</span>
+>
+<span>Shipping</span>
+>
+<span>Payment</span>
+</div>
+
+</header>
+
+<div id="gaddress">
+    <div id="gdetails"><p>Contact</p>
+        <p>Gaganrajput@gmail.com</p>
+        <a href="./checkout.html" id="gback"><p>Change</p></a>
+        </div>
+        <hr>
+<div id="gdetails"><p>Ship to</p>
+<p>addresshghfghfhgh</p>
+<a href="./checkout.html" id="gback"><p>Change</p></a></div>
+
+</div>
+
+
+
+
+<h2>Shipping method</h2>
+
+
+<div id="gaddress">
+    <div id="gdetails">
+        <div class="gdelivery"><input type="radio" name="radio" class="radio" onclick="clickr(false)">
+            <p>	Prepaid - Net banking, UPI, Debit/Credit Card</p></div>
+        <p>Free</p>
+        </div>
+        <hr>
+<div id="gdetails">
+    <div class="gdelivery"><input type="radio" name="radio" class="radio" onclick="clickr(true)">
+        <p>Cash on Delivery</p></div>
+    
+    <p>₹70</p>
+</div>
+
+</div>
+
+
+
+<div id="gfooter">
+<span> < Return to information</span>
+<button>Continue to shipping</button>
+</div>
+
+<div id="copyright">
+    <hr>
+    <p>All rights reserve minimalist</p>
+</div>
+</div>
+
+<div style="background-color: black;">
+    <div id="parent"></div>
+    <div id="gcoupne"><input type="text" id= "coupnevalue" type="number" placeholder="Dicount Code" name="coupn">
+    <button id="apply" onclick="validate()">Apply</button>
+    
+    </div>
+    <span id="message"></span>
+    <span id="err"></span>
+    
+    <div id="subtotal">
+    
+    </div>
+    
+    
+    </div>
+
+
+</div>
+</body>
+</html>
+<script>
+
+let data = JSON.parse(localStorage.getItem("cartList"))
+let parent = document.getElementById("parent");
+let parent2 = document.getElementById("subtotal");
+
+data.forEach(({img,name,price,qty}) => {
+    let div1 =document.createElement("div");
+ let div =document.createElement("div");
+ div.setAttribute("class","gproducts");
+    let image =document.createElement("img");
+    let nam=document.createElement("p");
+    let pr=document.createElement("p");
+image.src=img;
+nam.innerHTML=name;
+pr.innerHTML=`₹  ${price*qty}`;
+div.append(image,nam);
+div1.append(div,pr)
+parent.append(div1);
+
+})
+
+
+
+
+let total = data.reduce(function(acc,ele){
+return acc+ele.qty*ele.price;
+
+},0)
+subtotal(total);
+
+ function validate(coupon) {
+    var myRe = "MASAI100";
+    var coupon = myRe.trim();
+    
+    let strike = document.getElementById("strikeprice");
+
+    var input = document.getElementById('coupnevalue').value;
+    if(input.toUpperCase() == coupon.toUpperCase()) {
+        document.getElementById('message').innerHTML="Coupon applied!";
+        document.getElementById('err').innerHTML="";
+        document.getElementById("afterapply").innerHTML="MASAI100"
+        document.getElementById("spandiv").innerHTML=`₹ ${total-100}`;
+        document.getElementById("gtotal").innerHTML=`₹INR ${total-100}`;
+        document.getElementById("couponshow").innerHTML="Hurry! Coupon Applied";
+        strike.innerHTML=`₹ ${total}`;
+
+        
+
+    } else {
+        document.getElementById('err').innerHTML="Invalid coupon";
+        document.getElementById('message').innerHTML="";
+        document.getElementById("afterapply").innerHTML=""
+        document.getElementById("spandiv").innerHTML="";
+        document.getElementById("couponshow").innerHTML=""
+         strike.innerHTML=""
+         document.getElementById("gtotal").innerHTML=`₹INR ${total}`
+        return false;
+        
+    }
+}
+
+
+
+function subtotal(price){
+    let div1 = document.createElement("div");
+let div2 = document.createElement("div");
+let subtotal = document.createElement("p");
+let rate = document.createElement("p");
+let shipping = document.createElement("p");
+let charge = document.createElement("p");
+charge.setAttribute("id","deliverycharge");
+subtotal.innerHTML='Subtotal';
+shipping.innerHTML='Shipping';
+rate.innerHTML=`₹ ${price}`;
+
+
+charge.innerHTML='Free';
+div1.append(subtotal,rate);
+div2.append(shipping,charge);
+let line = document.createElement("hr");
+let div3 = document.createElement("div");
+let total= document.createElement("h3");
+let totalr =document.createElement("h2");
+let span = document.createElement("span").innerHTML="INR";
+
+let coupnediv = document.createElement("div");
+let div4 = document.createElement("div");
+let div5 = document.createElement("div");
+let pr = document.createElement("p");
+let strike = document.createElement("s");
+pr.setAttribute("id","couponshow");
+strike.setAttribute("id","strikeprice");
+
+let coupne = document.createElement("span");
+let coupon2 = document.createElement("p");
+coupon2.setAttribute("id","afterapply");
+coupnediv.setAttribute("id","afterprice");
+coupne.setAttribute("id","spandiv");
+div4.append(pr,coupon2)
+div5.append(strike,coupne);
+coupnediv.append(div4,div5);
+
+total.innerHTML="Total";
+totalr.innerHTML=`${span}  ₹ ${price}`;
+totalr.setAttribute("id","gtotal");
+div3.append(total,totalr)
+parent2.append(div1,div2,coupnediv,line,div3);
+
+}
+
+function clickr(e){
+
+return e;
+}
+
+if(charge==true){
+    console.log("gagan")
+}
+
+</script>
