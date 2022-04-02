@@ -9,111 +9,9 @@
     <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../header/header.css">
     <script src="https://kit.fontawesome.com/5b6d880526.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/5b6d880526.js" crossorigin="anonymous"></script>
-    <style>
-        #parent {
-            width: 100%;
-            /* background-color: burlywood; */
-            /* border: 1px solid black; */
-        }
-
-        #upper {
-            display: flex;
-            margin: auto;
-            display: grid;
-            grid-template-rows: repeat(1, 1fr);
-            height: 740px;
-            width: 40%;
-        margin-bottom: 160px;
-            /* border: 1px solid red; */
-        }
-
-        #lower {
-            height: 600px;
-            width: 98%;
-            /* border: 1px solid brown; */
-        }
-
-        #middle {
-            padding-left: 30px;
-            padding-top: 20px;
-            height: 250px;
-            width: 100%;
-            /* border: 4px solid rgb(18, 178, 237); */
-            border-left: 4px solid rgb(18, 178, 237);
-        }
-
-       
-
-        #lower {
-        
-            width: 100%;
-            /* background-color: cadetblue; */
-        }
-
-       
-        #lowerSecond {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            height: 400px;
-            width: 70%;
-            /* border: 3px solid pink; */
-            gap: 20px;
-            margin:auto;
-        }
-
-       
-        #s{
-            display: flex;
-            justify-content: center;
-        }
-        #s>img{
-           padding-top: 10px;
-            background-size: cover;
-            height:290px;
-            width:100%;
-            justify-content: center;
-        }
-        #p{
-            height: 90px;
-            width: 100%;
-            /* background-color: blue; */
-        }
-        #lowerFirst {
-            height: 80px;
-            width: 70%;
-            /* border: 3px solid blue; */
-            margin: auto;
-        }
-
-        #lowerFirst{
-            display: flex;
-            /* text-align: center; */
-            justify-content: center;
-            padding-top: 25px;
-        }
-        #bottom {
-            /* position: fixed; */
-            margin-top: 70px;
-            height: 40px;
-            width: 100%;
-            /* border: 1px solid black; */
-            padding-left: 10px;
-            padding-bottom: 13px;
-            color: white;
-            background-color: black;
-            cursor: pointer;
-            z-index: 2;
-        }
-        #bottomFirst{
-            /* background-color: burlywood; */
-            height: 160px;
-            backdrop-filter: blur(10px);
-
-        }
-    </style>
 </head>
-    <body>
+<body>
+        <div id="Ssheader"></div>
         <div id="h">
             <span>Medically reviewed by</span>
             <span style="text-decoration: underline;">Minimalist Health Specialist</span>
@@ -130,8 +28,7 @@
             </h1>
         </div>
         <div id="img">
-            <img
-                src="https://cdn.shopify.com/s/files/1/0410/9608/5665/t/3/assets/pf-3e428388--cover-image-2.jpg?v=1615378262">
+            <img src="https://cdn.shopify.com/s/files/1/0410/9608/5665/t/3/assets/pf-3e428388--cover-image-2.jpg?v=1615378262" >
         </div>
         <div id="para1">
             <div id="pa1">
@@ -310,7 +207,7 @@
 
             <br>
             <br>
-            <!-- ......... -->
+            
             <h2>The Masterstroke- Collagen boost <br></h2>
             <p>The protein that we all after, the protein that makes any skincare enthusiast rave, collagen.
                 <br>
@@ -372,7 +269,7 @@
             <br>
             <br>
 
-            <!-- .... -->
+           
             <h2>Firmer the skin, the younger it feels <br></h2>
             <p>Among the several anti-aging features peptides come with, firm and more elastic skin is one. Peptides
                 keep your
@@ -578,15 +475,6 @@
                     </ol>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
         </div>
         <div id="lower">
 
@@ -626,13 +514,12 @@
         </div>
 
         </div>
-    </body>
 
     </div>
     <div id="Ssfooter"></div>
 </body>
 </html>
-<script src="main/knowledge/internal.js"></script>
+
 <script type="module">
     import {header,footer} from "../components/main1.js"
     console.log(header)
@@ -640,20 +527,41 @@
     document.getElementById("Ssheader").innerHTML = header()
     document.getElementById("Ssfooter").innerHTML = footer()
     import {scriptimp} from "../header/header.js"
+    scriptimp()
+    var counter = 1;
+    let inp = document.getElementById("b2");
+    let b3 = document.getElementById("b3");
+    b3.onclick = function func(){
+        counter++; 
+        inp.innerText = counter;
+        // console.log(counter);
+        let b1 = document.getElementById("b1");
+        b1.onclick = function funcc(){
+        counter--;
+        inp.innerText=counter;
+        if(inp.innerText<=0){
+            inp.innerText=0;
+        }  
+    }
+    }
 
     var bottom=document.getElementById("bottom");
-var bottomFirst=document.getElementById("bottomFirst");
-let count=0;
-//bottomFirst.style.width="0px";
-bottomFirst.style.display ="none"
-bottom.addEventListener("click",function(){
-   
-    if(count%2===0){
-        bottomFirst.style.display ="block"
-    }
-    else{
-        bottomFirst.style.display =  "none"
-    }
-    count++;
-})
+    var bottomFirst=document.getElementById("bottomFirst");
+    let count=0;
+    //bottomFirst.style.width="0px";
+    bottomFirst.style.display ="none"
+    bottom.addEventListener("click",function(){
+       
+        if(count%2===0){
+            bottomFirst.style.display ="block"
+        }
+        else{
+            bottomFirst.style.display =  "none"
+        }
+        count++;
+    })
+
+
+    
 </script>
+
