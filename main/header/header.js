@@ -10,9 +10,12 @@ function scriptimp() {
         onClickMenu()
     })
     function onClickMenu() {
+
         document.getElementById("mmenu").classList.toggle("icon")
         document.getElementById("mnav").classList.toggle("change")
     }
+
+
 
 
 
@@ -143,7 +146,7 @@ function scriptimp() {
     })
 
 
-    document.getElementById("goTocart").addEventListener("click",()=>{
+    document.getElementById("goTocart").addEventListener("click", () => {
         window.location.href = "../cart/cart.html"
     })
 

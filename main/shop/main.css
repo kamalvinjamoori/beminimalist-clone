@@ -1,13 +1,11 @@
 * {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   margin: 0;
   padding: 0;
   /* font-family: 'Apercu Pro Regular' !important; */
   font-family: sans-serif;
 
 }
-
-
 
 #AdetailsinnerdivName h3 {
   font-size: 25px
@@ -22,13 +20,19 @@
 #Aoutercontainer {
   width: 90%;
   margin: auto;
+  margin-top: 60px;
   display: flex;
   position: relative;
+  z-index: 0;
+}
+#Aall{
+  width: 90%;
+  margin: auto;
 }
 
 #Adetails {
   margin: 100px 0px 0px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 #Adetailsinnerdiv {
@@ -46,16 +50,16 @@
 
 #AdetailsinnerdivDetail p {
   width: 434px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   /* text-align: justify; */
   margin: auto;
 }
 
-#Acontentcontainer {
+ #Acontentcontainer { 
 
-  /* margin: 100px 0px 160px 0px;
-  padding: 0px 80px; */
-}
+  margin: 100px 0px 160px 0px;
+  padding: 0px 80px; 
+   }   
 
 #Asortfilter {
   display: flex;
@@ -135,9 +139,10 @@ hr {
   top: 0;
   /* right: -10; */
   bottom: 0;
-  right: 490px;
-  /* height: 100vh; */
+  right: -80px;
+  height: 90vh;
   /* width: 0px; */
+  overflow: scroll;
 }
 
 #Asortconatiner li {
@@ -252,11 +257,6 @@ background-color: #f5f5f523;
 } */
 
 
-
-
-
-
-
 #Afiltercontainer {
   position: relative;
   position: absolute;
@@ -268,7 +268,7 @@ background-color: #f5f5f523;
   top: 0;
   bottom: 0;
   right: -98px;
-  height: 100vh;
+  height: 89vh;
   overflow: scroll;
   display: none
 }
@@ -346,15 +346,15 @@ background-color: #f5f5f523;
 }
 
 #Afilterapply {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 540px;
   height: 150px;
   /* padding: 20px 60px 20px 64px; */
-  position: absolute;
-  bottom: -923px;
+  /* position: absolute; */
+  /* bottom: -303px; */
   right: 0;
   background-color: #000;
   display: none;
@@ -393,7 +393,7 @@ h5 {
 
 #CLEAR {
   margin: 0px 15px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
