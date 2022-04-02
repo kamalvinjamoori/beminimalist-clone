@@ -151,3 +151,9 @@
 #origPrice {
     text-decoration: line-through;
 }
+#origPrice::before{
+    content: "₹";
+}
+#offerPrice::before{
+    content: "₹";
+}

@@ -398,3 +398,9 @@ h5 {
   border-radius: 5px;
   cursor: pointer;
 }
+#OFFER::before{
+  content: "₹";
+}
+#ORIG::before{
+  content: "₹";
+}

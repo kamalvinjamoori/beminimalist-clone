@@ -389,14 +389,15 @@
                 return a.offerPrice - b.offerPrice
             })
             parent.innerHTML = ""
+            console.log(response)
             displaydata(response, parent)
         }
         if (selectedsort === "Priceh2l") {
-            response.sort((a, b) => {
+            let one = response.sort((a, b) => {
                 return b.offerPrice - a.offerPrice
             })
             parent.innerHTML = ""
-            displaydata(response, parent)
+            displaydata(one, parent)
         }
         if (selectedsort === "Alphabeticallya_z") {
             response.sort((a, b) => {
@@ -423,8 +424,8 @@
             displaydata(response, parent)
         }
 
-        let selectedSort = localStorage.getItem("sort")
-        console.log('selectedSort:', selectedSort)
+        // let selectedSort = localStorage.getItem("sort")
+        // console.log('selectedSort:', selectedSort)
         //     let clear = document.createElement("div");
         //    clear.innerText = "Clear filters"
         //    clear.addEventListener("click", () =>{
@@ -433,7 +434,7 @@
         //        window.location.reload()
         //    })
         //    document.getElementById("AviewSelectedFilters").append(clear)
-        document.getElementById("SORT").innerText = selectedSort
+        // document.getElementById("SORT").innerText = selectedSort
 
     })
 
@@ -579,17 +580,17 @@
             parent.innerHTML = ""
             displaydata(FilterArray, parent)
         }
-        let selectedFilter = localStorage.getItem("filter")
-        document.getElementById("FILTER").innerText = selectedFilter
-        let clear = document.createElement("div");
-        clear.id = "CLEAR"
-        clear.innerText = "Clear filters"
-        clear.addEventListener("click", () => {
-            localStorage.removeItem("filter")
-            localStorage.removeItem("sort")
-            window.location.reload()
-        })
-        document.getElementById("AviewSelectedFilters").append(clear)
+        // let selectedFilter = localStorage.getItem("filter")
+        // document.getElementById("FILTER").innerText = selectedFilter
+        // let clear = document.createElement("div");
+        // clear.id = "CLEAR"
+        // clear.innerText = "Clear filters"
+        // clear.addEventListener("click", () => {
+        //     localStorage.removeItem("filter")
+        //     localStorage.removeItem("sort")
+        //     window.location.reload()
+        // })
+        // document.getElementById("AviewSelectedFilters").append(clear)
     })
 </script>
 
