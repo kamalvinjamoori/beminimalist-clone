@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+ <style>
+            .signinsubmit{
+            font-family: "Roboto",sans-serif;
+    outline:1;
+    
+    background-color: black !important;
+    color: white;
+    width:100%;
+    border:0;
+    margin:0 0 15px;
+    padding:15px;
+    box-sizing: border-box;
+    font-size: 18px;
+    /* border-radius: 5px; */
+            /* box-shadow: 4px 4px 15px brown; */
+        }
+        .signinsubmit:hover{
+    background-color: #222222 !important;
+    /* color:red; */
+}
+ </style>
+</head>
+<body>
+    <div id="login-page">
+<h1 id="hlogin">Login</h1>
+<div class="form">
+
+    <form id="login-form">
+        <input type="email" id="email" placeholder="Email Address" required/>
+        <input type="password" id="password" placeholder="Password" required/>
+        <input class="signinsubmit" type="submit" value="Sign In " />
+        <!-- <button class="signinsubmit">Sign In</button> -->
+        
+        <ul>
+            <li><a id="forgot" href="forgot.html"> <pre>Forgot Your Password?  /</pre> </a></li>
+            <li><a class="createaccount" href="signup.html"><pre>Create  Account</pre> </a></li>
+        </ul>
+    </form>
+    
+</div>
+   
+
+
+    </div>
+    
+</body>
+</html>
+<script>
+
+    let logininfo = JSON.parse(localStorage.getItem("signupdetails"))
+
+    const login= ()=>{
+        let email = document.getElementById("email").value 
+        let password = document.getElementById("password").value
+        for(i = 0; i<logininfo.length;i++){
+            
+            if(logininfo[i].email==email&& logininfo[i].password==password){
+                alert("login success")
+                window.location.href="forgot.html"
+            }
+            else{
+                alert("invalid")
+            }
+        }
+    }
+    document.getElementById("login-form").addEventListener("submit",login)
+</script>
