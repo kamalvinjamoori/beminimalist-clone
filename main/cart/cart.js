@@ -1,5 +1,5 @@
 
-var cartList= JSON.parse(localStorage.getItem("cartList"))||[];
+var cartList= JSON.parse(localStorage.getItem("cart"))||[];
 let perent = document.getElementById("showdata");
 
 if(cartList.length!=0){
@@ -19,14 +19,14 @@ div4.setAttribute("id","gappend")
 let div5 = document.createElement("div");
 div5.setAttribute("id","gprice")
 //product img
-let image = document.createElement("img");
-image.src=elem.img;
+let img = document.createElement("img");
+img.src=elem.image;
 //product name
 let pname = document.createElement("p");
-pname.innerHTML=elem.name;
+pname.innerHTML=elem.prods;
 //product price
 let pr = document.createElement("p");
-pr.innerHTML=elem.price;
+pr.innerHTML=elem.originalPrice;
 
 //increase decrease button 
 let btn1= document.createElement("button");
@@ -52,7 +52,7 @@ quantity.innerHTML=elem.qty;
 total = Number(elem.price)*elem.qty;
 //appending
 
-div.append(image)
+div.append(img)
 div1.append(pname,pr);
 div5.append(div,div1)
 div2.append(btn1,quantity,btn2);
@@ -111,13 +111,13 @@ location.reload();
 function addToCart(elem) {
   if(cartList.length==0){
     cartList.push(elem);
-    localStorage.setItem("cartList",JSON.stringify(cartList));
+    localStorage.setItem("cartList",JSON.stringify(cart));
     
   }else{
     var check = check_already_existing(elem);
     if(check==0){
       cartList.push(elem);
-      localStorage.setItem("cartList",JSON.stringify(cartList));
+      localStorage.setItem("cartList",JSON.stringify(cart));
       
     }
   } 
@@ -128,7 +128,7 @@ function check_already_existing(elem){
   for(var i=0;i<cartList.length;i++){
     if(cartList[i].name==elem.name){
         
-        localStorage.setItem("cartList",JSON.stringify(cartList));
+        localStorage.setItem("cartList",JSON.stringify(cart));
       return 1;
     }
   
