@@ -13,7 +13,7 @@ const header = () => {
                 <li><a href="">Shop</a></li>
                 <li><a href="">Knowledge</a></li>
                 <li><a href="">Track Order</a></li>
-                <li><a href="">Register / Login</a></li>
+                <li><a href="../loginsignup/login.html">Register / Login</a></li>
             </ul>
 
         </div>
@@ -23,7 +23,7 @@ const header = () => {
         <div id="mflex">
             <div id="msearch"><i class="fa-solid fa-magnifying-glass"></i></div>
 
-            <i class="fa-solid fa-user"></i>
+            <a href="../loginsignup/login.html"><i class="fa-solid fa-user"></i></a>
             <i class="fa-solid fa-bag-shopping" id="mcart"></i>
 
         </div>
