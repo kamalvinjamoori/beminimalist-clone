@@ -145,8 +145,8 @@ padding: 0px;
     color: white;
     font-weight: bold;
     width: 100%;
-    height: auto;
-    overflow: auto;
+    height: 300px;
+    overflow-y: scroll;
     margin-bottom: 50px;
 }
 #parent>div{
@@ -278,7 +278,7 @@ input[name="coupn"]{
         <input type="text" name="" id="aname" placeholder="Last name">
         </div>
         
-        <input type="text" name="address" placeholder="Address" required>
+        <input type="text" name="address" placeholder="Address" required id="gaddress">
         <div id="gcity">
         <input type="text" placeholder="City" required id="acity">
         <input type="text" placeholder="State" required id="astate">
@@ -290,7 +290,7 @@ input[name="coupn"]{
             <label for="">Save this information for next time</label></div>
         </div>
         <div id="gfooter">
-        <span> < Return to cart</span>
+        <span id="previous"> < Return to cart</span>
         <button onclick="nextpage(event)">Continue to shipping</button>
         </div>
     
@@ -326,21 +326,32 @@ input[name="coupn"]{
 </body>
 </html>
 <script>
-
-let data = JSON.parse(localStorage.getItem("cartList"))
+let price;
+let data = JSON.parse(localStorage.getItem("cart"))||[];
 let parent = document.getElementById("parent");
 let parent2 = document.getElementById("subtotal");
 
-data.forEach(({img,name,price,qty}) => {
+data.forEach((elem) => {
     let div1 =document.createElement("div");
  let div =document.createElement("div");
  div.setAttribute("class","gproducts");
     let image =document.createElement("img");
     let nam=document.createElement("p");
     let pr=document.createElement("p");
-image.src=img;
-nam.innerHTML=name;
-pr.innerHTML=`₹  ${price*qty}`;
+image.src=elem.image;
+nam.innerHTML=elem.prods;
+
+
+for(let i=0; i<data.length; i++){
+
+ price = elem.originalPrice.trim().split(" ");
+
+}
+price = +price[1];
+
+
+
+pr.innerHTML=`₹  ${price*elem.qty}`;
 div.append(image,nam);
 div1.append(div,pr)
 parent.append(div1);
@@ -350,9 +361,9 @@ parent.append(div1);
 
 
 let total = data.reduce(function(acc,ele){
-return acc+ele.qty*ele.price;
+return acc+ele.qty*price;
 
-},0)
+},1)
 subtotal(total);
 
  function validate(coupon) {
@@ -435,19 +446,28 @@ parent2.append(div1,div2,coupnediv,line,div3);
 
 function nextpage(event){
     event.preventDefault()
-let email = document.getElementById("gmail").value;
-let phone = document.getElementById("aphone").value;
-let name = document.getElementById("aname").value;
-let state = document.getElementById("astate").value;
-let city = document.getElementById("acity").value;
-;
-
-if(email==0||phone==0||name==0||state==0||city==0){
+let email = document.getElementById("gmail")
+let phone = document.getElementById("aphone")
+let name = document.getElementById("aname")
+let state = document.getElementById("astate")
+let city = document.getElementById("acity")
+let address = document.getElementById("gaddress")
+let arr1= [];
+if(email.value==0||phone.value==0||name.value==0||state.value==0||city.value==0||address.value==0){
     
-    alert("fill")
+    alert("Plese fil");
 }
 else{
-console.log(email)
+
+let arr ={
+    email:email.value,
+adderess:address.value,
+}
+arr1.push(arr);
+localStorage.setItem("payment",JSON.stringify(arr1));
+
+window.location.href="./shipping.html";
+
 }
 
 
@@ -457,6 +477,10 @@ console.log(email)
 
 
 
+
+document.getElementById("previous").addEventListener("click",()=>{
+    window.location.href="./cart.html";
+})
 
 
 </script>
