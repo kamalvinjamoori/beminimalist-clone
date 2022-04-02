@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="../header/header.css">
-  <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
  <style>
             .signinsubmit{
             font-family: "Roboto",sans-serif;
@@ -28,6 +28,9 @@
     background-color: #222222 !important;
     /* color:red; */
 }
+li a{
+    text-decoration: underline;
+}
  </style>
 </head>
 <body>
@@ -47,7 +50,6 @@
             <li><a class="createaccount" href="signup.html"><pre>Create  Account</pre> </a></li>
         </ul>
     </form>
-    <div id="foot"></div>
     
 </div>
    
@@ -55,6 +57,7 @@
 
     </div>
     
+    <div id="foot"></div>
 </body>
 </html>
 <script type="module">
@@ -65,6 +68,10 @@ let head = document.getElementById("head")
 let foot = document.getElementById("foot")
 head.innerHTML=header()
 foot.innerHTML = footer()
+
+
+import {scriptimp} from "../header/header.js"
+scriptimp()
 </script>
 <script >
 
@@ -79,7 +86,7 @@ foot.innerHTML = footer()
             
             if(logininfo[i].email==email&& logininfo[i].password==password){
                 alert("login success")
-                window.location.href="forgot.html"
+                window.location.href="../home/index.html"
             }
             else{
                 alert("invalid")

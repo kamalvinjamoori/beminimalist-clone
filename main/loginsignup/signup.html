@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../header/header.css">
+    <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
     <style>
         #createsubmit {
             font-family: "Roboto", sans-serif;
@@ -33,6 +35,7 @@
 </head>
 
 <body>
+    <div id="head2"></div>
     <div id="signup-page">
         <h1 id="hlogin">Create Account</h1>
         <div class="form">
@@ -52,12 +55,26 @@
 
 
     </div>
+    <div id="foot2"></div>
 
 </body>
 <h1>hello</h1>
 </html>
+<script type="module">
+    import {header,footer} from "../components/main1.js"
+    console.log(header)
+    console.log(footer)
+let head = document.getElementById("head2")
+let foot = document.getElementById("foot2")
+head.innerHTML=header()
+foot.innerHTML = footer()
 
+
+import {scriptimp} from "../header/header.js"
+scriptimp()
+</script>
 <script>
+    
     let arr = []
     const createAcc=()=>{
 
