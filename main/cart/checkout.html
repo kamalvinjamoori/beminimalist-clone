@@ -190,7 +190,7 @@ input[name="coupn"]{
 }
 .gproducts{
     display: flex;
-    gap: 20px;
+    gap: 5px;
 }
 .gproducts>img{
     width: 80px;
@@ -234,6 +234,18 @@ input[name="coupn"]{
   #strikeprice{
       color: rgb(189, 29, 29);
       font-weight: lighter;
+  }
+  #qut{
+      position:relative;
+      left: -10px;
+      bottom: 10px;
+      width: 20px;
+height: 20px;
+background-color: rgb(161, 155, 155);
+color: black;
+text-align: center;
+border-radius: 50%;
+gap: 0px;
   }
 </style>
 
@@ -349,10 +361,11 @@ for(let i=0; i<data.length; i++){
 }
 price = +price[1];
 
-
-
+let qty = document.createElement("span");
+qty.innerHTML=elem.qty;
+qty.setAttribute("id","qut")
 pr.innerHTML=`₹  ${price*elem.qty}`;
-div.append(image,nam);
+div.append(image,qty,nam);
 div1.append(div,pr)
 parent.append(div1);
 
@@ -364,7 +377,7 @@ let total = data.reduce(function(acc,ele){
 return acc+ele.qty*price;
 
 },1)
-subtotal(total);
+subtotal(total)
 
  function validate(coupon) {
     var myRe = "MASAI100";
@@ -481,6 +494,7 @@ window.location.href="./shipping.html";
 document.getElementById("previous").addEventListener("click",()=>{
     window.location.href="./cart.html";
 })
+
 
 
 </script>

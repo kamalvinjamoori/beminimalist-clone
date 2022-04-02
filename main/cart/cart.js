@@ -97,6 +97,7 @@ a.style.margin="50px";
 a.addEventListener("click",()=>{
     window.location.href="../shop/allproducts.html"
 })
+a.style.cursor="pointer"
 a.innerHTML="Continue Shopping";
 heading.innerHTML="Your cart is currently empty."
 perent.append(heading,a);
