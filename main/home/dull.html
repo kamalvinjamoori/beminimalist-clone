@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Skin - Minimalist</title>
+        <link rel="stylesheet" href="../shop/main.css">
+        <link href="//db.onlinewebfonts.com/c/74c3c29282b604a9eed88ac6ede61463?family=Apercu+Pro" rel="stylesheet"
+            type="text/css" />
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="https://kit.fontawesome.com/3075c3c5e4.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../header/header.css">
+    </head>
+
+    <body>
+        <div id="Anavbar"></div>
+        <div id="Aoutercontainer">
+            <div id="Aall">
+
+                <div id="Adetails">
+                    <div id="Adetailsinnerdiv">
+                        <div id="AdetailsinnerdivName">
+                            <h2>Skin Brightening</h2>
+                        </div>
+                        <!-- <div id="AdetailsinnerdivDetail">
+                            <p>Shop our efficacious, transparent, and research-backed range of skincare products. Each
+                                product is formulated to target your specific skin concerns.</p>
+                        </div> -->
+                    </div>
+                </div>
+                <div id="Acontentcontainer">
+
+                    <div id="Asortfilter">
+                        <div id="filter">
+                            <span>Filter</span>
+                            <span class="fas fa-caret-down"></span>
+                        </div>
+                        <div id="sort">
+                            Sort<span class="fas fa-caret-down"></span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="Aitems">
+
+                    </div>
+
+                </div>
+            </div>
+            <div id="Asortconatiner">
+                <div id="Asortinnercontainer1">
+                    <div id="Asortclose">
+                        <h3>Sort</h3>
+                        <span id="Close">X</span>
+                    </div>
+                    <div id="Asortcategory">
+                        <ul>
+                            <li>
+                                <input type="radio" name="selected" id="Featured" value="Featured">
+                                <label class="label" for="Featured">Featured</label>
+
+                                <input type="radio" name="selected" id="Bestselling" value="Bestselling">
+                                <label class="label" for="Bestselling">Best selling</label>
+
+                                <input type="radio" name="selected" id="Alphabeticallya_z" value="Alphabeticallya_z">
+                                <label class="label" for="Alphabeticallya_z">Alphabetically, A-Z</label>
+
+                                <input type="radio" name="selected" id="Alphabeticallyz_a" value="Alphabeticallyz_a">
+                                <label class="label" for="Alphabeticallyz_a">Alphabetically, Z-A</label>
+
+                                <input type="radio" name="selected" id="Pricel2h" value="Pricel2h">
+                                <label class="label" for="Pricel2h">Price,low to high</label>
+
+                                <input type="radio" name="selected" id="Priceh2l" value="Priceh2l">
+                                <label class="label" for="Priceh2l">Price,high to low</label>
+
+                                <input type="radio" name="selected" id="Dateo2n" value="Dateo2n">
+                                <label class="label" for="Dateo2n">Date,old to new</label>
+
+                                <input type="radio" name="selected" id="Daten2o" value="Daten2o">
+                                <label class="label" for="Daten2o">Date,new to old</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="Asortapply">
+                        <button id="Aapply">Apply</button>
+                    </div>
+                </div>
+                <!-- <div id="Asortinnercontainer2"></div> -->
+            </div>
+            <!---------------- filterdata ---------------------->
+
+            <!-- <div> -->
+
+
+            <div id="Afiltercontainer">
+                <div id="Afilterclose">
+                    <h3 id="filtername">Filter</h3>
+                    <h3 id="Aclosesign">X</h3>
+                </div>
+                <div>
+                    <p>Category</p>
+
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdskin">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdskin"
+                                value="skin">
+                            <div class="Acheckbox__box"></div>
+                            Skin
+                        </label>
+                        <span>18</span>
+
+                    </div>
+                </div>
+
+                <hr>
+                <div>
+                    <p>Type of Product</p>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdantiox">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIdantiox" value="Anti">
+                            <div class="Acheckbox__box"></div>
+                            Anti Oxidant
+                        </label>
+                    </div>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdbodyx">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIdbodyx" value="Exfoliator">
+                            <div class="Acheckbox__box"></div>
+                            Body Exfolicator
+                        </label>
+                    </div>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdcleanser">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIdcleanser" value="Cleanser">
+                            <div class="Acheckbox__box"></div>
+                            Cleanser
+                        </label>
+
+                    </div>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdfacacid">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIdfacacid" value="Acid">
+                            <div class="Acheckbox__box"></div>
+                            Face Acids
+                        </label>
+
+                    </div>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdfaceoil">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIdfaceoil" value="Oil">
+                            <div class="Acheckbox__box"></div>
+                            Face Oils
+                        </label>
+
+                    </div>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdmoisturizer">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIdmoisturizer" value="Moisturizer">
+                            <div class="Acheckbox__box"></div>
+                            Moisturizer
+                        </label>
+
+                    </div>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdSPF">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdSPF"
+                                value="SPF">
+                            <div class="Acheckbox__box"></div>
+                            SPF
+                        </label>
+
+                    </div>
+                    <!-- <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdserum">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdserum">
+                        <div class="Acheckbox__box"></div>
+                        Serum
+                    </label>
+
+                </div> -->
+                    <!-- <div class="AinnerDiv">
+                    <label class="Acheckbox" for="AmyCheckboxIdtoner">
+                        <input class="Acheckbox__input" type="checkbox" name="myCheckboxName" id="AmyCheckboxIdtoner"
+                            value="Toner">
+                        <div class="Acheckbox__box"></div>
+                        Toner
+                    </label> -->
+
+                    <!-- </div> -->
+                </div>
+
+                <hr>
+                <div>
+                    <p>Price</p>
+                    <p>The highest price is Rs 795</p>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdprice1">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIdprice1" value=300>
+                            <div class="Acheckbox__box"></div>
+                            Less than 300
+                        </label>
+
+                    </div>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdprice2">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIdprice2" value=300_500>
+                            <div class="Acheckbox__box"></div>
+                            300 - 500
+                        </label>
+
+                    </div>
+                    <div class="AinnerDiv">
+                        <label class="Acheckbox" for="AmyCheckboxIdprice3">
+                            <input class="Acheckbox__input" type="checkbox" name="myCheckboxName"
+                                id="AmyCheckboxIdprice3" value=500above>
+                            <div class="Acheckbox__box"></div>
+                            More than 500
+                        </label>
+                    </div>
+
+                </div>
+                <hr>
+                <div>
+                    <div id="Afilterapply">
+                        <button id="AapplyF">Apply</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="Afooter"></div>
+    </body>
+
+    <script type="module">
+
+        import { header, footer } from "../components/main1.js"
+        let nav = document.getElementById("Anavbar")
+        let foot = document.getElementById("Afooter")
+        nav.innerHTML = header()
+        foot.innerHTML = footer()
+        import { scriptimp } from "../header/header.js"
+        scriptimp()
+
+
+
+
+        import { get, displaydata } from "../shop/main.js"
+        let response = await get(`http://demo3901492.mockable.io/data`)
+        console.log('response:', response)
+        response = response.slice(7, 12)
+        let parent = document.getElementById("Aitems")
+        // console.log('response:', response)
+        displaydata(response, parent)
+
+
+
+        let Sort = document.getElementById("sort")
+        Sort.addEventListener("click", () => {
+            document.getElementById("Asortconatiner").style.display = "block"
+            document.querySelector("#Aall").style.opacity = .3
+            // document.querySelector("body").style.backgroundColor = "rgba(0, 0, 0, 0.267)"
+            document.querySelector("body").style.position = "fixed"
+            document.getElementById("Asortconatiner").style.opacity = 1
+        })
+
+        let Close = document.getElementById("Close")
+        Close.addEventListener("click", () => {
+            document.getElementById("Asortconatiner").style.display = "none"
+            // document.querySelector("body").style.backgroundColor = "white"
+            document.querySelector("#Aall").style.opacity = 1
+            document.querySelector("body").style.position = "relative"
+        })
+
+        let Filter = document.getElementById("filter")
+        Filter.addEventListener("click", () => {
+            document.getElementById("Afiltercontainer").style.display = "block"
+            document.getElementById("Afilterapply").style.display = "flex"
+            document.querySelector("#Aall").style.opacity = .3
+            // document.querySelector("body").style.position = "fixed"
+
+        })
+
+        let FClose = document.getElementById("Aclosesign")
+        FClose.addEventListener("click", () => {
+            document.getElementById("Afiltercontainer").style.display = "none"
+            document.getElementById("Afilterapply").style.display = "none"
+            // document.querySelector("body").style.backgroundColor = "white"
+            document.querySelector("#Aall").style.opacity = 1
+            document.querySelector("body").style.position = "relative"
+        })
+
+
+
+        let Featured = document.getElementById("Featured")
+        Featured.addEventListener("click", () => {
+
+            console.log(Featured.value)
+            localStorage.setItem("sort", Featured.value)
+        })
+        let Bestselling = document.getElementById("Bestselling")
+        Bestselling.addEventListener("click", () => {
+            console.log(Bestselling.value)
+            localStorage.setItem("sort", Bestselling.value)
+        })
+        let Alphabeticallya_z = document.getElementById("Alphabeticallya_z")
+        Alphabeticallya_z.addEventListener("click", () => {
+            console.log(Alphabeticallya_z.value)
+            localStorage.setItem("sort", Alphabeticallya_z.value)
+        })
+        let Alphabeticallyz_a = document.getElementById("Alphabeticallyz_a")
+        Alphabeticallyz_a.addEventListener("click", () => {
+            console.log(Alphabeticallyz_a.value)
+            localStorage.setItem("sort", Alphabeticallyz_a.value)
+        })
+        let Pricel2h = document.getElementById("Pricel2h")
+        Pricel2h.addEventListener("click", () => {
+            console.log(Pricel2h.value)
+            localStorage.setItem("sort", Pricel2h.value)
+        })
+        let Priceh2l = document.getElementById("Priceh2l")
+        Priceh2l.addEventListener("click", () => {
+            console.log(Priceh2l.value)
+            localStorage.setItem("sort", Priceh2l.value)
+        })
+        let Dateo2n = document.getElementById("Dateo2n")
+        Dateo2n.addEventListener("click", () => {
+            console.log(Dateo2n.value)
+            localStorage.setItem("sort", Dateo2n.value)
+        })
+        let Daten2o = document.getElementById("Daten2o")
+        Daten2o.addEventListener("click", () => {
+            console.log(Daten2o.value)
+            localStorage.setItem("sort", Daten2o.value)
+        })
+
+
+
+        //function to sort
+        const sort = document.getElementById("Aapply")
+        sort.addEventListener("click", () => {
+            let selectedsort = localStorage.getItem("sort")
+            console.log('selectedsort:', selectedsort)
+            if (selectedsort === "Pricel2h") {
+                response.sort((a, b) => {
+                    return a.offerPrice - b.offerPrice
+                })
+                parent.innerHTML = ""
+                displaydata(response, parent)
+            }
+            if (selectedsort === "Priceh2l") {
+                response.sort((a, b) => {
+                    return b.offerPrice - a.offerPrice
+                })
+                parent.innerHTML = ""
+                displaydata(response, parent)
+            }
+            if (selectedsort === "Alphabeticallya_z") {
+                response.sort((a, b) => {
+                    if (a.title > b.title) {
+                        return 1
+                    }
+                    else {
+                        return -1
+                    }
+                })
+                parent.innerHTML = ""
+                displaydata(response, parent)
+            }
+            if (selectedsort === "Alphabeticallyz_a") {
+                response.sort((a, b) => {
+                    if (b.title > a.title) {
+                        return 1
+                    }
+                    else {
+                        return -1
+                    }
+                })
+                parent.innerHTML = ""
+                displaydata(response, parent)
+            }
+
+            let selectedSort = localStorage.getItem("sort")
+            console.log('selectedSort:', selectedSort)
+            //     let clear = document.createElement("div");
+            //    clear.innerText = "Clear filters"
+            //    clear.addEventListener("click", () =>{
+            //        localStorage.removeItem("filter")
+            //        localStorage.removeItem("sort")
+            //        window.location.reload()
+            //    })
+            //    document.getElementById("AviewSelectedFilters").append(clear)
+            document.getElementById("SORT").innerText = selectedSort
+
+        })
+
+
+
+        let skin = document.getElementById("AmyCheckboxIdskin")
+        console.log('skin:', skin)
+
+        skin.addEventListener("click", () => {
+            console.log(skin.value)
+            localStorage.setItem("filter", skin.value)
+        })
+        let Anti = document.getElementById("AmyCheckboxIdantiox")
+        console.log('Anti:', Anti)
+
+        Anti.addEventListener("click", () => {
+            console.log(Anti.value)
+            localStorage.setItem("filter", Anti.value)
+        })
+
+        let bodyEx = document.getElementById("AmyCheckboxIdbodyx")
+        console.log('bodyEx:', bodyEx)
+
+        bodyEx.addEventListener("click", () => {
+            console.log(bodyEx.value)
+            localStorage.setItem("filter", bodyEx.value)
+        })
+
+        let cleanser = document.getElementById("AmyCheckboxIdcleanser")
+        console.log('cleanser:', cleanser)
+
+        cleanser.addEventListener("click", () => {
+            console.log(cleanser.value)
+            localStorage.setItem("filter", cleanser.value)
+        })
+        let Acids = document.getElementById("AmyCheckboxIdfacacid")
+        console.log('Acids:', Acids)
+
+        Acids.addEventListener("click", () => {
+            console.log(Acids.value)
+            localStorage.setItem("filter", Acids.value)
+        })
+        let oils = document.getElementById("AmyCheckboxIdfaceoil")
+        console.log('oils:', oils)
+
+        oils.addEventListener("click", () => {
+            console.log(oils.value)
+            localStorage.setItem("filter", oils.value)
+        })
+
+        let moisturizer = document.getElementById("AmyCheckboxIdmoisturizer")
+        console.log('moisturizer:', moisturizer)
+
+        moisturizer.addEventListener("click", () => {
+            console.log(moisturizer.value)
+            localStorage.setItem("filter", moisturizer.value)
+        })
+        let spf = document.getElementById("AmyCheckboxIdSPF")
+        console.log('spf:', spf)
+
+        spf.addEventListener("click", () => {
+            console.log(spf.value)
+            localStorage.setItem("filter", spf.value)
+        })
+        let serum = document.getElementById("AmyCheckboxIdserum")
+        console.log('serum:', serum)
+
+        serum.addEventListener("click", () => {
+            console.log(serum.value)
+            localStorage.setItem("filter", serum.value)
+        })
+        let tone = document.getElementById("AmyCheckboxIdtoner")
+        console.log('tone:', tone)
+
+        tone.addEventListener("click", () => {
+            console.log(tone.value)
+            localStorage.setItem("filter", tone.value)
+        })
+
+        let price1 = document.getElementById("AmyCheckboxIdprice1")
+        price1.addEventListener("click", () => {
+            localStorage.setItem("filter", price1.value)
+            console.log('price1.value:', price1.value)
+        })
+        let price2 = document.getElementById("AmyCheckboxIdprice2")
+        price2.addEventListener("click", () => {
+            localStorage.setItem("filter", price2.value)
+            console.log('price2.value:', price2.value)
+        })
+        let price3 = document.getElementById("AmyCheckboxIdprice3")
+        price3.addEventListener("click", () => {
+            localStorage.setItem("filter", price3.value)
+            console.log('price3.value:', price3.value)
+        })
+
+        let applyFilter = document.getElementById("AapplyF")
+        applyFilter.addEventListener("click", () => {
+            let selectedfilter = localStorage.getItem("filter")
+            if (selectedfilter === "skin") {
+                let response = response.slice(0, 24)
+                parent.innerHTML = ""
+                displaydata(response, parent)
+            }
+            else if (selectedfilter === "300") {
+                let FilterArray = response.filter((ele) => {
+                    return ele.offerPrice < 300
+                })
+                parent.innerHTML = ""
+                displaydata(FilterArray, parent)
+            }
+            else if (selectedfilter === "300_500") {
+                let FilterArray = response.filter((ele) => {
+                    return ele.offerPrice > 300 && ele.offerPrice < 500
+                })
+                parent.innerHTML = ""
+                displaydata(FilterArray, parent)
+            }
+            else if (selectedfilter === "500above") {
+                let FilterArray = response.filter((ele) => {
+                    return ele.offerPrice > 500
+                })
+                parent.innerHTML = ""
+                displaydata(FilterArray, parent)
+            }
+            else {
+
+                let FilterArray = response.filter((ele) => {
+                    return ele.title.includes(selectedfilter)
+                })
+                parent.innerHTML = ""
+                displaydata(FilterArray, parent)
+            }
+            let selectedFilter = localStorage.getItem("filter")
+            document.getElementById("FILTER").innerText = selectedFilter
+            let clear = document.createElement("div");
+            clear.innerText = "Clear filters"
+            clear.addEventListener("click", () => {
+                localStorage.removeItem("filter")
+                localStorage.removeItem("sort")
+                window.location.reload()
+            })
+            document.getElementById("AviewSelectedFilters").append(clear)
+        })
+    </script>
+
+</html>

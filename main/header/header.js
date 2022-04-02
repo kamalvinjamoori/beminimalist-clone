@@ -2,8 +2,15 @@
 function scriptimp() {
 
 
+    // let res = fetch(`http://demo3901492.mockable.io/data`)
+
+    // console.log('res:', res)
+    // let data1 = res.json()
+    // console.log('data1:', data1)
+
+
     let mmenu1 = document.getElementById("mnavigation")
-    console.log('mmenu1:', mmenu1)
+    // console.log('mmenu1:', mmenu1)
 
     // console.log(document.getElementById("mmenu"))
     document.getElementById("mmenu").addEventListener("click", () => {
@@ -25,13 +32,13 @@ function scriptimp() {
     var sidenav1 = document.getElementById("sidenav1");
     sidenav1.style.display = "none"
     let count1 = 0;
-    console.log('count1:', count1)
+    // console.log('count1:', count1)
     let count2 = 0;
-    console.log('count2:', count2)
+    // console.log('count2:', count2)
     let mshop = document.getElementById("mshop")
     mshop.style.display = "none"
     let count3 = 0
-    console.log('count3:', count3)
+    // console.log('count3:', count3)
 
 
 
@@ -39,7 +46,7 @@ function scriptimp() {
     document.querySelector("#shopopt").addEventListener("click", () => {
 
         event.preventDefault()
-        console.log("mjhsg")
+        // console.log("mjhsg")
 
 
 
@@ -113,7 +120,7 @@ function scriptimp() {
     let rajarr = JSON.parse(localStorage.getItem("cart")) || []
     cartitems.innerHTML = ""
     document.getElementById("numofItems").innerHTML = rajarr.length
-    
+
     rajarr.map((elem) => {
         let div = document.createElement("div")
 
@@ -150,6 +157,9 @@ function scriptimp() {
     document.getElementById("goTocart").addEventListener("click", () => {
         window.location.href = "../cart/cart.html"
     })
+
+
+
 
 
 

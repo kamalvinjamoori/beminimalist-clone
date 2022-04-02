@@ -42,6 +42,8 @@ const header = () => {
         <div style="padding-left:80px"><input type="text" id="productSearchinp"
                 placeholder="What are you looking for?"> </div>
 
+                <div id="rshowitems"></div>
+
     </div>
 
 

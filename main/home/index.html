@@ -388,6 +388,17 @@
 
 <script type=module>
 
+    document.querySelector('#test').addEventListener('click', ()=>{
+        window.location.href = "./pigment.html"
+    })
+
+    document.querySelector('#test1').addEventListener('click', ()=>{
+        window.location.href = "./acne.html"
+    })
+
+    document.querySelector('#test2').addEventListener('click', ()=>{
+        window.location.href = "./dull.html"
+    })
 
 
     let res = await fetch(`http://demo3901492.mockable.io/data`)
@@ -395,7 +406,7 @@
 
 // console.log('data:', data1)
     let a = document.querySelector('.rp0')
-    console.log('a:', a)
+    // console.log('a:', a)
     a.addEventListener("click",()=>{
   
   data1.map((elem)=>{
@@ -405,7 +416,7 @@
                 arr1.push(elem)
                 localStorage.setItem("product",JSON.stringify(arr1))
                 window.location.href = "../shop/product.html"
-            console.log("rahaa")
+            // console.log("rahaa")
       }
   })
   
@@ -422,7 +433,7 @@ let b = document.querySelector('.rp1')
                 arr1.push(elem)
                 localStorage.setItem("product",JSON.stringify(arr1))
                 window.location.href = "../shop/product.html"
-            console.log("rahaa")
+            // console.log("rahaa")
       }
   })
   
@@ -439,7 +450,7 @@ let c = document.querySelector('.rp2')
                 arr1.push(elem)
                 localStorage.setItem("product",JSON.stringify(arr1))
                 window.location.href = "../shop/product.html"
-            console.log("rahaa")
+            // console.log("rahaa")
       }
   })
   
@@ -456,7 +467,7 @@ let d = document.querySelector('.rp3')
                 arr1.push(elem)
                 localStorage.setItem("product",JSON.stringify(arr1))
                 window.location.href = "../shop/product.html"
-            console.log("rahaa")
+            // console.log("rahaa")
       }
   })
   
@@ -472,7 +483,7 @@ let e = document.querySelector('.rp4')
                 arr1.push(elem)
                 localStorage.setItem("product",JSON.stringify(arr1))
                 window.location.href = "../shop/product.html"
-            console.log("rahaa")
+            // console.log("rahaa")
       }
   })
   
@@ -524,6 +535,69 @@ let e = document.querySelector('.rp4')
         // display1()
     },{once:true})
 
+
+
+    document.getElementById("productSearchinp").addEventListener("keypress",(event)=>{
+        document.getElementById("rshowitems").innerHTML = ""
+        
+        if(event.key === "Enter")
+        {
+            console.log('data1:', data1)
+            let value = document.getElementById("productSearchinp").value
+            console.log('value:', value)
+            value.toLowerCase()
+        data1.map((elem)=>{
+            
+            
+            if(value==="")
+            {
+                document.getElementById("rshowitems").innerHTML = ""
+                return
+            }
+            let x = elem.title.toLowerCase()
+            if(x.includes(value))
+            {
+                
+                let div = document.createElement("div")
+
+                let image = document.createElement("img")
+                image.src = elem.image
+                image.style.width = "120px"
+                image.style.height = "150px"
+
+                let name = document.createElement("h3")
+                name.innerHTML = elem.title
+
+                let price = document.createElement("h4")
+                price.innerHTML = "₹  " + elem.offerPrice
+
+                let div1 = document.createElement("div")
+                let div2 = document.createElement("div")
+
+                div1.append(image)
+                div2.append(name, price)
+
+                div.append(div1, div2)
+                div.style.display = "flex"
+                div.style.justifyContent = "space-between"
+                div.style.padding = "20px"
+                div.style.borderBottom = "1px solid grey"
+                div.addEventListener("click",()=>{
+                    let arr2 = []
+                    arr2.push(elem)
+                    localStorage.setItem("product",JSON.stringify(arr2))
+                    window.location.href = "../shop/product.html"
+                })
+
+                document.getElementById("rshowitems").append(div)
+            }
+        })
+        }
+        
+        // console.log(data1)  
+       
+
+    })
     
   
 </script>
