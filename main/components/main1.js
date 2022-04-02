@@ -10,10 +10,13 @@ const header = () => {
             </div>
             <ul class="mnav" id="mnav">
                 <li><a href="">Home</a></li>
-                <li><a href="">Shop</a></li>
-                <li><a href="">Knowledge</a></li>
-                <li><a href="">Track Order</a></li>
-                <li><a href="">Register / Login</a></li>
+                <div id="shopopt">
+                    <li><a href="">Shop</a></li>
+                </div>
+
+                <li><a href="../knowledge/index.html">Knowledge</a></li>
+                <li><a href=>Track Order</a></li>
+                <li><a href="../loginsignup/login.html">Register / Login</a></li>
             </ul>
 
         </div>
@@ -23,7 +26,7 @@ const header = () => {
         <div id="mflex">
             <div id="msearch"><i class="fa-solid fa-magnifying-glass"></i></div>
 
-            <i class="fa-solid fa-user"></i>
+            <a href="../loginsignup/login.html"><i class="fa-solid fa-user"></i></a>
             <i class="fa-solid fa-bag-shopping" id="mcart"></i>
 
         </div>
@@ -31,25 +34,34 @@ const header = () => {
 
     <div id="sidenav1">
 
-    <div id="productSearch">
-    Search
-</div>
-<div style="padding-left:80px"><input type="text" id="productSearchinp"
-        placeholder="What are you looking for?"> </div>
+        <div id="productSearch">
+            Search
+        </div>
+        <div style="padding-left:80px"><input type="text" id="productSearchinp"
+                placeholder="What are you looking for?"> </div>
 
     </div>
 
 
     <div id="sidenav2">
-    <div id="cartheading">
-        Cart
+        <div id="cartheading">
+            Cart
+        </div>
+        <div id="cartItems">
+            Your cart is currently empty.
+        </div>
+        <button id="goTocart">Go to cart</button>
     </div>
-    <div id="cartItems">
-        Your cart is currently empty.
+
+    <div id="mshop">
+        <ul class="mshopselect" id="mshopselect1">
+            <li><a href="../shop/skin.html">Skin</a></li>
+            <li><a href="../shop/hair.html">Hair</a></li>
+            <li><a href="../shop/bathandbody.html">Bath & Body</a></li>
+            <li><a href="../shop/allproducts.html">All Products</a></li>
+        </ul>
     </div>
-    <button id="goTocart">Go to cart</button>
-</div>
-    </div>`
+</div>`
 }
 
 

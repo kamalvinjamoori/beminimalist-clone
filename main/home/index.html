@@ -431,6 +431,11 @@ document.querySelector("#mmenu").addEventListener("click", () => {
     let count2 = 0;
     // console.log('count2:', count2)
 
+    let mshop = document.getElementById("mshop")
+    mshop.style.display = "none"
+    let count3 = 0
+    console.log('count3:', count3)
+
 
 
     document.querySelector("#msearch").addEventListener("click", () => {
@@ -478,6 +483,30 @@ document.querySelector("#mmenu").addEventListener("click", () => {
         count1++;
 
     }
+
+    document.querySelector("#shopopt").addEventListener("click", () => {
+
+event.preventDefault()
+console.log("mjhsg")
+
+
+
+displayshop()
+})
+
+
+    function displayshop() {
+
+if (count3 % 2 === 0) {
+    mshop.style.display = "block"
+}
+else {
+    mshop.style.display = "none"
+
+}
+count3++;
+
+}
 
     
     document.getElementById("rfooter").innerHTML = footer()
