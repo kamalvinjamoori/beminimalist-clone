@@ -30,15 +30,9 @@ pname.innerHTML=elem.prods;
 //product price
 let pr = document.createElement("p");
 
-let finel;
-for(let i=0; i<cartList.length; i++){
 
- finel = elem.originalPrice.trim().split(" ");
- 
-}
-finel = +finel[1];
 
-pr.innerHTML=`₹ ${finel}`;
+pr.innerHTML=`₹ ${elem.offerPrice}`;
 
 
 //increase decrease button 
@@ -60,7 +54,7 @@ btn2.innerHTML='+';
 let quantity=document.createElement("p");
 quantity.innerHTML=elem.qty;
 
-total = finel*elem.qty;
+total = elem.offerPrice*elem.qty;
 //appending
 
 div.append(img)
