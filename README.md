@@ -20,7 +20,7 @@ you can view the demo of our project:
 
 ---
 ## Contributors
-1. [Adityanath](https://github.com/Adithyanathkv)
+1. [Adithyanath](https://github.com/Adithyanathkv)
 2. [Chhatrapal](https://github.com/Chhattoo25)
 3. [Gagan](https://github.com/gaganrajput7)
 4. [Md.Saif](https://github.com/Saif-herry)
