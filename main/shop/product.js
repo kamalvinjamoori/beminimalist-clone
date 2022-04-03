@@ -88,6 +88,7 @@ const displaydata = (SelectedProduct)=> {
             ele.qty = 1
            cartProduct.push(ele)
            localStorage.setItem("cart",JSON.stringify(cartProduct))
+           location.reload()
         },{once:true})
 
 

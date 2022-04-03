@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                background-image: url("https://www.leaderbiography.com/wp-content/uploads/2020/10/imgpsh_fullsize_anim-683x375.png");
+                background-repeat: no-repeat;
+                background-size: cover
+            }
+
+            button {
+                display: block;
+                width: 20%;
+                margin: auto;
+                height: 70px;
+                margin-top: 35%;
+                font-size: 32px;
+                background-color: black;
+                color: white;
+                border: 1px solid rgb(113, 111, 111);
+                border-radius: 5px;
+
+
+            }
+
+            button:hover {
+                background-color: grey;
+                color: black
+            }
+        </style>
+    </head>
+
+    <body>
+        <button>
+            Click here
+        </button>
+
+    </body>
+
+</html>
+
+<script>
+    document.querySelector("button").addEventListener("click", () => {
+        window.location.href = "./home/index.html"
+    })
+</script>

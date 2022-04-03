@@ -303,7 +303,7 @@
     // navbar script end
 
     import { get, displaydata } from "./main.js"
-    let response = await get(`http://demo3901492.mockable.io/data`)
+    let response = await get(`https://demo3901492.mockable.io/data`)
     let hairresponse = response.filter((ele) => {
         return ele.title.includes("Hair")
     })

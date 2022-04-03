@@ -271,7 +271,7 @@ import { header, footer } from "../components/main1.js"
 
 
     import { get, displaydata } from "./main.js"
-    let response = await get(`http://demo3901492.mockable.io/data`)
+    let response = await get(`https://demo3901492.mockable.io/data`)
     let bodyresponse = response.filter((ele) => {
         return ele.title.includes("Body")
     })
