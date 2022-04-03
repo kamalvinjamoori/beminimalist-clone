@@ -62,12 +62,12 @@ form #cardno{
     width: 100%;
     outline: none;
     border:none;
-    border-bottom: 0.5px solid black;
+    border-bottom: 0.5px solid white;
     padding-top: 5px;
     margin-bottom: 20px;
     padding-bottom: 5px;
     padding-right: 30px;
-    
+    color: white;
     font-size: 18px;
     background-color:transparent;
 }
@@ -76,14 +76,15 @@ form #cardno{
 }
 #validtill, #cvv{
     border: none;
-    border-bottom: 0.5px solid black;
+    border-bottom: 0.5px solid white;
     outline: none;
     width: 130px;
     padding-top: 14px;
     margin-bottom: 56px;
-    
+    color: white;
     background-color:transparent;
     font-size: 18px;
+    padding: 10px;
 }
 #otp{
     width: 100%;
@@ -161,17 +162,17 @@ margin-top: 30px;
 position: relative;
 
 }
-/* #preloader{
+#preloader{
     background: black url("https://i.gifer.com/PG23.gif") no-repeat center;
     height: 100vh;
     background-size: 100%;
     width: 100%;
     position: fixed;
     z-index: 100;
-} */
-/* iframe{
+}
+iframe{
     display: none;
-} */
+}
 #main{
     height: 200px;
     width: 100%;
@@ -190,8 +191,8 @@ transform: rotateY(180deg);
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background-color: #72aa18;
-    color: #333;
+    background-image: url('https://media.istockphoto.com/photos/blank-credit-or-smart-cards-with-emv-chip-on-dark-background-and-picture-id1221346149?k=20&m=1221346149&s=612x612&w=0&h=RD-V4A3MPUNuwGxyeh859VlreB8QF4wQEyJ_yexuJxg=');
+    color: white;
     border-radius: 5px;
     padding: 5px;
 
@@ -209,11 +210,17 @@ transform: rotateY(180deg);
     padding: 5px;
     text-align: center;
 }
+#back>button{
+    padding: 0px 10px 0px 10px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
 
     </style>
 </head>
 <body>
 <div id="preloader"></div>
+
 
     <div class="container">
         
@@ -247,9 +254,13 @@ transform: rotateY(180deg);
                     </div>
             </div>
             <div id="back">
-<h1>Otp Sent</h1>
+                
+<h1 class="resend">Otp Sent</h1>
 <input type="number" placeholder="Enter-otp" nmae="otp"  maxlength="4" id="otp">
+<label for="">Don't Recive Otp</label>
+<p id="resendotp">Resend Otp</p>
 
+<button id="gsucess">Submit Otp</button>
             </div>
            </div>
 
@@ -270,7 +281,7 @@ transform: rotateY(180deg);
 
 
  
-
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        
 </body>
 </html>
@@ -306,9 +317,7 @@ price.forEach(ele => {
 let loader = document.getElementById("preloader");
 
 
-setTimeout(() => {
 
-},0);
 
 window.addEventListener("load",()=>{
 loader.style.display="none";
@@ -325,7 +334,7 @@ event.preventDefault();
 let value = document.getElementById("validtill").value
 let value1 = document.getElementById("cardno").value
 let value2 = document.getElementById("cvv").value
-
+let cheakbox = document.getElementById("cheakboxdiv");
 if(value==0||value1==0||value2==0){
 alert("fill All Details")
 }
@@ -333,7 +342,31 @@ else{
 
 main.style.transform="rotateY(180deg)";
 front.style.display='none';
+cheakbox.style.display="none"
+btn.style.display="none"
+window.addEventListener("load",()=>{
+loader.style.display="none";
+})
 }
 })
+ let resend =document.getElementById("resendotp");
+ resend.style.cursor="pointer";
+resend.addEventListener("click",()=>{
+document.querySelector(".resend").innerHTML="Otp Sent Success";
+
+
+})
+
+document.getElementById("gsucess").addEventListener("click",(event)=>{
+event.preventDefault();
+window.location.href="./sucess.html"
+
+})
+
+  
+        
+    
+
+
 
 </script>

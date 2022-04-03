@@ -17,22 +17,41 @@
 iframe{
     display: none;
 }
-
+#oder{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+span{
+    cursor: pointer;
+}
     </style>
 </head>
 <body>
     <div id="loader"></div>
+    <div id="oder">
+<h1>Your Order Is Successfully Placed</h1>
+<h4>It will shipped ASAP!</h4>
+<h3>Thanks For shopping</h3>
+<span onclick="home(event)">Redirect To Home Page</span>
+    </div>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
 </body>
 </html>
 <script>
 
 
 window.addEventListener("load",()=>{
-document.getElementById("loader").style.display="block";
+document.getElementById("loader").style.display="none";
 
 })
+function home(e){
+    window.location.href="../home/index.html"
+}
 
 </script>
