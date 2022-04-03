@@ -1,22 +1,25 @@
-*{
+* {
     font-family: aperc pro;
 }
+
 @font-face {
     font-family: "aperc pro";
     src: url(./fonts/apercu_regular_pro.otf);
 }
-#s_lab{
+
+#s_lab {
     width: auto;
-    height:500px;
+    height: 500px;
     /* border: 2px solid red; */
     background-color: black;
 }
-#s_lab h3{
+
+#s_lab h3 {
     /* border: 1px solid red; */
     max-width: 700px;
     margin: auto;
-    padding-top:150px;
-    height:200px;
+    padding-top: 150px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,65 +28,80 @@
     font-family: aperc pro;
 
 }
-img{
-    width:360px;
-    height:202.5px;
+
+img {
+    width: 360px;
+    height: 202.5px;
 }
-#s_div{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 28px; 
-} 
-#s_div1{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
+
+#s_div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 28px;
-} 
+}
+
+#s_div1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
 /* #s_main{
     border: 1px solid red;
     
 } */
-#s_cont{
+#s_cont {
     /* border:1px solid black; */
     padding: 50px;
-     margin: 50px; 
+    margin: 50px;
     display: grid;
-    place-content: center;    
+    place-content: center;
 }
-a+h3{
+
+a+h3 {
     font-size: 16px;
 }
-span{
+
+span {
     font-size: 14px;
 }
-#s_h1{
+
+#s_h1 {
     font-size: 22px;
 }
-#s_h2{
+
+#s_h2 {
     font-size: 22px;
 }
-h3 a{
+
+h3 a {
     text-decoration: none;
     color: #222222;
 }
-#d{
+
+#d {
     text-decoration: none;
     color: #006CE5;
 }
-#sbutton_1{
+
+#sbutton_1 {
     width: auto;
     height: 150px;
     /* border: 2px solid red; */
     display: grid;
     place-items: center;
-    
+
 
 }
 
-#s_1{
+#s_1 {
     padding: 16px 64px;
     font-size: 24px;
     background-color: #000000;
-    color:  #FFFFFF;
+    color: #FFFFFF;
     border: none;
+}
+
+#cl {
+    cursor: pointer;
 }
