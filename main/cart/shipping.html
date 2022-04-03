@@ -327,12 +327,7 @@ image.src=elem.image;
 nam.innerHTML=elem.prods;
 
 
-for(let i=0; i<data.length; i++){
 
- price = elem.originalPrice.trim().split(" ");
-
-}
-price = +price[1];
 
 
 
@@ -340,7 +335,7 @@ let qty = document.createElement("span");
 qty.innerHTML=elem.qty;
 qty.setAttribute("id","qut")
 
-pr.innerHTML=`₹  ${price*elem.qty}`;
+pr.innerHTML=`₹  ${elem.offerPrice*elem.qty}`;
 div.append(image,qty,nam);
 div1.append(div,pr)
 parent.append(div1);
@@ -350,7 +345,7 @@ parent.append(div1);
 
 
 let total = data.reduce(function(acc,ele){
-return acc+ele.qty*price;
+return acc+ele.qty*ele.offerPrice;
 
 },1)
 subtotal(total);

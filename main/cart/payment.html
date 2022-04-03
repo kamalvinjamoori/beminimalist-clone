@@ -22,12 +22,11 @@ body{
 }
 .container{
     width: 369px;
-    height: 500px;
+    height: 450px;
     background: white;
     margin-top: 50px;
     box-sizing: border-box;
     display: grid;
-    gap: 35px;
     
    
 }
@@ -51,19 +50,19 @@ form select{
     border:none;
     border-bottom: 1px solid rgb(223, 223, 223);
     text-transform: capitalize;
-    padding-top: 3px;
+     
     
     padding-bottom: 3px;
     font-size: 18px;
     margin-left: -3px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
     background-color:transparent;
 }
 form #cardno{
     width: 100%;
     outline: none;
     border:none;
-    border-bottom: 1px solid rgb(223, 223, 223);
+    border-bottom: 0.5px solid black;
     padding-top: 5px;
     margin-bottom: 20px;
     padding-bottom: 5px;
@@ -77,14 +76,27 @@ form #cardno{
 }
 #validtill, #cvv{
     border: none;
-    border-bottom: 1px solid rgb(207, 207, 207);
+    border-bottom: 0.5px solid black;
     outline: none;
     width: 130px;
     padding-top: 14px;
     margin-bottom: 56px;
-    color: var(text-color);
+    
     background-color:transparent;
     font-size: 18px;
+}
+#otp{
+    width: 100%;
+    outline: none;
+    border:none;
+    border-bottom: 0.5px solid black;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    padding-right: 30px;
+    
+    font-size: 18px;
+    background-color:transparent;
 }
 
 button{
@@ -97,7 +109,7 @@ button{
     padding: 10px;
     text-align: center;
     font-weight: bold;
-    margin-bottom: 0px;
+
     
 }
 #glogo{
@@ -105,7 +117,7 @@ button{
     height: 100px;
     box-sizing: border-box;
     display: flex;
-    gap: 35px;
+    gap: 36px;
     padding: 0px;
     background-color: black;
     color: white;
@@ -126,6 +138,8 @@ button{
     align-items: center;
     gap: 10px;
 margin-left: 5px;
+margin-top: 60px;
+margin-bottom: 10px;
 }
 #cheakboxdiv>input{
     width: 15px;
@@ -138,19 +152,64 @@ margin-left: 5px;
 }
 
 #formdiv{
-    padding: 5px;
+    
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+margin-top: 30px;
+
+position: relative;
+
 }
-#preloader{
-    background: black url('https://i.gifer.com/PG23.gif') no-repeat center;
+/* #preloader{
+    background: black url("https://i.gifer.com/PG23.gif") no-repeat center;
     height: 100vh;
     background-size: 100%;
     width: 100%;
     position: fixed;
     z-index: 100;
-}
-iframe{
+} */
+/* iframe{
     display: none;
+} */
+#main{
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 0.2s ease;
+    
+    border-radius: 5px;
+    
 }
+/* #main:hover{
+transform: rotateY(180deg);
+} */
+#frontdiv{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #72aa18;
+    color: #333;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+#back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: white;
+    color: #333;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
     </style>
 </head>
 <body>
@@ -165,26 +224,37 @@ iframe{
         <span id="cut">×</span>
         </div>
        <div id="formdiv">
-
-        <form action="/">
-            <label for="country">Country
-            <select name="country" id="country">
-            
-            <option value="india">india</option>
-            
-            </select>
-            </label>
-            <label for="cardno">Card Number
-            <input type="text" name="cardno" id="cardno" maxlength="19" onkeypress="cardspace()" />
-            </label>
-            <div class="float">
-            <label for="validtill">Valid till
-            <input type="text" name="validtill" id="validtill" maxlength="7" onkeypress="addSlashes()" />
-            </label>
-            <label for="cvv">Cvv
-            <input  name="cvv" id="cvv" maxlength="3" type="password" />
-            </label>
+           <div id="main">
+            <div id="frontdiv">
+                <form action="/">
+                    <label for="country">Country
+                    <select name="country" id="country">
+                    
+                    <option value="india">india</option>
+                    
+                    </select>
+                    </label>
+                    <label for="cardno">Card Number
+                    <input type="text" name="cardno" id="cardno" maxlength="19" required onkeypress="cardspace()" />
+                    </label>
+                    <div class="float">
+                    <label for="validtill">Valid till
+                    <input type="text" name="validtill" id="validtill" maxlength="7" onkeypress="addSlashes()" />
+                    </label>
+                    <label for="cvv">Cvv
+                    <input  name="cvv" id="cvv" maxlength="3" type="password" />
+                    </label>
+                    </div>
             </div>
+            <div id="back">
+<h1>Otp Sent</h1>
+<input type="number" placeholder="Enter-otp" nmae="otp"  maxlength="4" id="otp">
+
+            </div>
+           </div>
+
+
+       
 
        </div>
         
@@ -199,9 +269,9 @@ iframe{
         </div>
 
 
+ 
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+       
 </body>
 </html>
 <script>
@@ -230,7 +300,7 @@ window.location.href="../cart/shipping.html"
 let price = JSON.parse(localStorage.getItem("price"));
 let btn = document.getElementById("gsubmit");
 price.forEach(ele => {
-    btn.innerHTML=`${'Pay'}   ${'₹'} ${ele}`;
+    btn.innerHTML=`${'Pay'}${'₹'} ${ele}`;
 });
 
 let loader = document.getElementById("preloader");
@@ -243,4 +313,27 @@ setTimeout(() => {
 window.addEventListener("load",()=>{
 loader.style.display="none";
 })
+
+let main = document.getElementById("main");
+let front = document.getElementById("frontdiv");
+
+
+
+
+btn.addEventListener("click",(event)=>{
+event.preventDefault();
+let value = document.getElementById("validtill").value
+let value1 = document.getElementById("cardno").value
+let value2 = document.getElementById("cvv").value
+
+if(value==0||value1==0||value2==0){
+alert("fill All Details")
+}
+else{
+
+main.style.transform="rotateY(180deg)";
+front.style.display='none';
+}
+})
+
 </script>
