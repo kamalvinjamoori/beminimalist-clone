@@ -30,21 +30,22 @@ you can view the demo of our project:
 
 ## Website Sneak Peaks
 
-- **WebsiteWeather Image 1**
+- **Website Image 1**
 
 ![Weather Image 1](./snip/snip1.jpeg?raw=true)
 
-- **Weather Image 2**
+- **Website Image 2**
 
 ![Weather Image 2](./snip/snip2.jpeg?raw=true)
-- **WebsiteWeather Image 1**
+
+- **Website Image 3**
 
 ![Weather Image 1](./snip/snip3.jpeg?raw=true)
 
-- **Weather Image 2**
+- **Website Image 4**
 
 ![Weather Image 2](./snip/snip4.jpeg?raw=true)
 
-- **Weather Image 2**
+- **Website Image 5**
 
-![Weather Image 2](./snip/snip5.jpeg?raw=true)
+![Weather Image 2](./snip/snip5.png?raw=true)
