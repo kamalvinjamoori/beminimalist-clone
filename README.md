@@ -5,7 +5,7 @@ We were a team of 6 members from the Masai web-16 batch who worked on cloning th
 Biminimalist  provides beauty care products across the glob and the company main objectives is to provide a transparency of products.
 
 -If you want to visit our project then just click on the link given below:
-[Project Netlify link](https://heartfelt-rabanadas-eb6e54.netlify.app)
+[Project Netlify link](https://be-minimalist-clone-eb6e54.netlify.app/)
 If you want to read our blog then visit the :
 [medium link](https://link.medium.com/pmtnRxX8Tob)
 you can view the demo of our project:
