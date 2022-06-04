@@ -28,4 +28,23 @@ you can view the demo of our project:
 6. [Sampanna](https://github.com/Sam01-dev)
 
 
-![alt](https://)
+## Website Sneak Peaks
+
+- **WebsiteWeather Image 1**
+
+![Weather Image 1](./snip/snip1.jpeg?raw=true)
+
+- **Weather Image 2**
+
+![Weather Image 2](./snip/snip2.jpeg?raw=true)
+- **WebsiteWeather Image 1**
+
+![Weather Image 1](./snip/snip3.jpeg?raw=true)
+
+- **Weather Image 2**
+
+![Weather Image 2](./snip/snip4.jpeg?raw=true)
+
+- **Weather Image 2**
+
+![Weather Image 2](./snip/snip5.jpeg?raw=true)
