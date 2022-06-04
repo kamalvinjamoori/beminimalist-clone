@@ -26,3 +26,26 @@ you can view the demo of our project:
 4. [Md.Saif](https://github.com/Saif-herry)
 5. [Rajkamal](https://github.com/kamalvinjamoori/beminimalist-clone)
 6. [Sampanna](https://github.com/Sam01-dev)
+
+
+## Website Sneak Peaks
+
+- **Website Image 1**
+
+![Weather Image 1](./snip/snip1.jpeg?raw=true)
+
+- **Website Image 2**
+
+![Weather Image 2](./snip/snip2.jpeg?raw=true)
+
+- **Website Image 3**
+
+![Weather Image 1](./snip/snip3.jpeg?raw=true)
+
+- **Website Image 4**
+
+![Weather Image 2](./snip/snip4.jpeg?raw=true)
+
+- **Website Image 5**
+
+![Weather Image 2](./snip/snip5.png?raw=true)
